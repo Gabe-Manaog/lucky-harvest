@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://nwuq4t4tygad"]
+
+[ext_resource type="PackedScene" uid="uid://i8tqpr2q1kd7" path="res://scenes/player.tscn" id="1_gndf2"]
+[ext_resource type="PackedScene" uid="uid://dfj2suni6lsfx" path="res://scenes/world.tscn" id="2_g8mmo"]
+
+[node name="game" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_gndf2")]
+z_index = 5
+position = Vector2(245, 122)
+
+[node name="world" parent="." instance=ExtResource("2_g8mmo")]
+position = Vector2(11, 42)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(256, 202)
+zoom = Vector2(2, 2)

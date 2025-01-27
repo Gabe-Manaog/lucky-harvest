@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cdty28n65pkho"
-path="res://.godot/imported/farmingTilesheetComplete.png-6515c33eb783483fe6d5b0800c03a5e7.ctex"
+path="res://.godot/imported/farmingTilesheetComplete.png-94cd7a51e25c3f2381a8bc3396b1771f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://farmingTilesheetComplete.png"
-dest_files=["res://.godot/imported/farmingTilesheetComplete.png-6515c33eb783483fe6d5b0800c03a5e7.ctex"]
+source_file="res://assets/farmingTilesheetComplete.png"
+dest_files=["res://.godot/imported/farmingTilesheetComplete.png-94cd7a51e25c3f2381a8bc3396b1771f.ctex"]
 
 [params]
 
