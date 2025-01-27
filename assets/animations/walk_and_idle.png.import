@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpae2gs7bmwd7"
-path="res://.godot/imported/mouse_icon.png-66c363ce39739c1962fedc8d2ee7997d.ctex"
+uid="uid://2vm4ennh4m5w"
+path="res://.godot/imported/walk_and_idle.png-298d89da7f7bde1b79066af36b25574a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/mouse_icon.png"
-dest_files=["res://.godot/imported/mouse_icon.png-66c363ce39739c1962fedc8d2ee7997d.ctex"]
+source_file="res://assets/animations/walk_and_idle.png"
+dest_files=["res://.godot/imported/walk_and_idle.png-298d89da7f7bde1b79066af36b25574a.ctex"]
 
 [params]
 
