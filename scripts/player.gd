@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
-var speed = 50
+var speed = 100
 
 func get_input():
 	var input_dir = Input.get_vector("walk_left", "walk_right", "walk_up", "walk_down")	

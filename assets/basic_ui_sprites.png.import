@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdty28n65pkho"
-path="res://.godot/imported/farmingTilesheetComplete.png-94cd7a51e25c3f2381a8bc3396b1771f.ctex"
+uid="uid://bw7hfvqmww45y"
+path="res://.godot/imported/basic_ui_sprites.png-ada831fcefe4d1b1281491f39e6e06ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/farmingTilesheetComplete.png"
-dest_files=["res://.godot/imported/farmingTilesheetComplete.png-94cd7a51e25c3f2381a8bc3396b1771f.ctex"]
+source_file="res://assets/basic_ui_sprites.png"
+dest_files=["res://.godot/imported/basic_ui_sprites.png-ada831fcefe4d1b1281491f39e6e06ce.ctex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

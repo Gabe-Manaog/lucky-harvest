@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://nwuq4t4tygad"]
+[gd_scene load_steps=4 format=3 uid="uid://nwuq4t4tygad"]
 
 [ext_resource type="PackedScene" uid="uid://i8tqpr2q1kd7" path="res://scenes/player.tscn" id="1_gndf2"]
 [ext_resource type="PackedScene" uid="uid://dfj2suni6lsfx" path="res://scenes/world.tscn" id="2_g8mmo"]
+[ext_resource type="PackedScene" uid="uid://d0jkbxjehcft7" path="res://scenes/tool_panel.tscn" id="3_258yc"]
 
 [node name="game" type="Node2D"]
 
@@ -10,8 +11,19 @@ z_index = 5
 position = Vector2(245, 122)
 
 [node name="world" parent="." instance=ExtResource("2_g8mmo")]
-position = Vector2(11, 42)
+position = Vector2(8, 56)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(256, 202)
+position = Vector2(288, 162)
 zoom = Vector2(2, 2)
+
+[node name="tool_panel" parent="." instance=ExtResource("3_258yc")]
+z_index = 5
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 220.0
+offset_top = 264.0
+offset_right = 358.0
+offset_bottom = 312.0
+grow_vertical = 2
+size_flags_horizontal = 8

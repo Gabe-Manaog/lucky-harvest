@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://i8tqpr2q1kd7"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_2had2"]
-[ext_resource type="Texture2D" uid="uid://cdty28n65pkho" path="res://assets/farmingTilesheetComplete.png" id="2_jddfa"]
+[ext_resource type="Texture2D" uid="uid://cdty28n65pkho" path="res://assets/main_tile_sheet.png" id="2_jddfa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s5xjt"]
 atlas = ExtResource("2_jddfa")
