@@ -6,10 +6,6 @@
 
 [node name="game" type="Node2D"]
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_gndf2")]
-z_index = 5
-position = Vector2(245, 122)
-
 [node name="world" parent="." instance=ExtResource("2_g8mmo")]
 position = Vector2(8, 56)
 
@@ -27,3 +23,7 @@ offset_right = 358.0
 offset_bottom = 312.0
 grow_vertical = 2
 size_flags_horizontal = 8
+
+[node name="Player" parent="." instance=ExtResource("1_gndf2")]
+z_index = 5
+position = Vector2(240, 200)
