@@ -376,11 +376,11 @@ script = ExtResource("1_2had2")
 position = Vector2(0.999999, 20.5)
 scale = Vector2(1.33333, 1.29167)
 sprite_frames = SubResource("SpriteFrames_kx6lq")
-animation = &"walk_right"
+animation = &"idle_right"
 autoplay = "idle_left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3, 22)
+position = Vector2(2, 22)
 shape = SubResource("CapsuleShape2D_g0eoi")
 
 [node name="State_Machine" type="Node" parent="." node_paths=PackedStringArray("initial_node_state")]
