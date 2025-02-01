@@ -27,3 +27,4 @@ size_flags_horizontal = 8
 [node name="Player" parent="." instance=ExtResource("1_gndf2")]
 z_index = 5
 position = Vector2(240, 200)
+current_tool = 1
