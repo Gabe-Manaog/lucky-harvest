@@ -7,8 +7,8 @@
 [ext_resource type="Script" path="res://scripts/walk_state.gd" id="5_1ffu1"]
 [ext_resource type="Script" path="res://scripts/idle_state.gd" id="5_5farf"]
 [ext_resource type="Script" path="res://scripts/chopping_state.gd" id="7_jrs2f"]
-[ext_resource type="Script" path="res://scenes/tilling_state.gd" id="8_ju2vb"]
-[ext_resource type="Script" path="res://scenes/watering_state.gd" id="9_nmho8"]
+[ext_resource type="Script" path="res://scripts/tilling_state.gd" id="8_ju2vb"]
+[ext_resource type="Script" path="res://scripts/watering_state.gd" id="9_nmho8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_np34i"]
 atlas = ExtResource("2_eckuu")
