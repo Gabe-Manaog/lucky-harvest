@@ -14,7 +14,6 @@ texture_margin_right = 7.0
 texture_margin_bottom = 7.0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5latt"]
-load_path = "res://.godot/imported/basic_ui_sprites.png-ada831fcefe4d1b1281491f39e6e06ce.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mpq1s"]
 atlas = SubResource("CompressedTexture2D_5latt")
@@ -28,7 +27,6 @@ texture_margin_right = 4.0
 texture_margin_bottom = 6.0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_itekd"]
-load_path = "res://.godot/imported/basic_ui_sprites.png-ada831fcefe4d1b1281491f39e6e06ce.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yw0vg"]
 atlas = SubResource("CompressedTexture2D_itekd")
@@ -42,7 +40,6 @@ texture_margin_right = 4.0
 texture_margin_bottom = 6.0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wk5xo"]
-load_path = "res://.godot/imported/basic_ui_sprites.png-ada831fcefe4d1b1281491f39e6e06ce.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cym0w"]
 atlas = SubResource("CompressedTexture2D_wk5xo")
@@ -67,7 +64,6 @@ texture_margin_right = 4.0
 texture_margin_bottom = 6.0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ekdyb"]
-load_path = "res://.godot/imported/basic_ui_sprites.png-ada831fcefe4d1b1281491f39e6e06ce.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rhese"]
 atlas = SubResource("CompressedTexture2D_ekdyb")

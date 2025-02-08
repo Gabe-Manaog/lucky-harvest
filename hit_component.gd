@@ -1,22 +1,8 @@
-class_name DataTypes
+class_name HitComponent
+extends Area2D
 
-enum Tools {
-	None,
-	AxeWood,
-	TillGround,
-	WaterCrops,
-	PlantCorn,
-	PlantTomato
-}
-
-enum GrowthStates{
-	Seed,
-	Germination,
-	Vegetative,
-	Reproduction,
-	Maturity,
-	Harvesting
-}
+@export var current_tool : DataTypes.Tools = DataTypes.Tools.None
+@export var hit_damage : int=1
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
