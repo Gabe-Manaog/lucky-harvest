@@ -19,3 +19,12 @@ func _on_tool_water_pressed() -> void:
 
 func _on_tool_plant_pressed() -> void:
 	ToolManager.select_tool(DataTypes.Tools.PlantCorn)
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("release_tool"):
+		ToolManager.select_tool(DataTypes.Tools.None)
+		tool_axe.release_focus()
+		tool_tilling.release_focus()
+		tool_water.release_focus()
+		tool_plant.release_focus()
+		
