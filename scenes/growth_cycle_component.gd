@@ -49,6 +49,8 @@ func harvest_state (starting_day:int, current_day:int) -> void:
 		current_growth_state = DataTypes.GrowthStates.Harvesting
 		crop_harvesting.emit()
 
+func get_current_growth_state() -> DataTypes.GrowthStates: 
+	return current_growth_state
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

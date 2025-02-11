@@ -52,6 +52,10 @@ release_tool={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_6="Collectable"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
