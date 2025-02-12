@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://nwuq4t4tygad"]
+[gd_scene load_steps=7 format=3 uid="uid://nwuq4t4tygad"]
 
 [ext_resource type="PackedScene" uid="uid://i8tqpr2q1kd7" path="res://scenes/player.tscn" id="1_gndf2"]
 [ext_resource type="PackedScene" uid="uid://dfj2suni6lsfx" path="res://scenes/world.tscn" id="2_g8mmo"]
 [ext_resource type="PackedScene" uid="uid://d0jkbxjehcft7" path="res://scenes/tool_panel.tscn" id="3_258yc"]
 [ext_resource type="PackedScene" uid="uid://ceiunirt4htmx" path="res://scenes/day_night_panel.tscn" id="4_c5vpc"]
+[ext_resource type="PackedScene" uid="uid://bi2jrymtf1lyb" path="res://scenes/corn.tscn" id="5_8fpbf"]
 [ext_resource type="PackedScene" uid="uid://duhcjiowp78cb" path="res://scenes/day_and_night_cycle_component.tscn" id="5_wiegy"]
 
 [node name="game" type="Node2D"]
@@ -22,7 +23,7 @@ size_flags_horizontal = 8
 [node name="DayAndNightCycleComponent" parent="." instance=ExtResource("5_wiegy")]
 
 [node name="world" parent="." instance=ExtResource("2_g8mmo")]
-position = Vector2(8, 56)
+position = Vector2(36, 94)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(288, 162)
@@ -31,6 +32,10 @@ zoom = Vector2(2, 2)
 [node name="Player" parent="." instance=ExtResource("1_gndf2")]
 z_index = 5
 position = Vector2(240, 200)
+
+[node name="Corn" parent="." instance=ExtResource("5_8fpbf")]
+top_level = true
+position = Vector2(140, 96)
 
 [node name="day_night_panel" parent="." instance=ExtResource("4_c5vpc")]
 z_index = 3
