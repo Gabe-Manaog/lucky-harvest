@@ -395,14 +395,15 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g0eoi"]
-radius = 8.0
-height = 26.0
+radius = 7.0
+height = 18.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_scfoi"]
 radius = 3.69465
 
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(-3, -24)
+collision_layer = 2
 script = ExtResource("1_2had2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
