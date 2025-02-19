@@ -20,6 +20,19 @@ config/icon="res://icon.svg"
 ToolManager="*res://scripts/tool_manager.gd"
 DayAndNightManager="*res://scripts/day_and_night_manager.gd"
 
+[display]
+
+window/size/resizable=false
+
+[file_customization]
+
+folder_colors={
+"res://assets/": "green",
+"res://scenes/": "red",
+"res://scripts/": "blue",
+"res://tilesets/": "pink"
+}
+
 [input]
 
 walk_up={

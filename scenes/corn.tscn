@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bi2jrymtf1lyb"]
 
 [ext_resource type="Texture2D" uid="uid://bru7qbddfgcn5" path="res://assets/art/Basic_Plants.png" id="1_8kfsp"]
-[ext_resource type="Script" path="res://scenes/corn.gd" id="1_flx05"]
+[ext_resource type="Script" path="res://scripts/corn.gd" id="1_flx05"]
 [ext_resource type="Script" path="res://scripts/hurt_component.gd" id="2_jansx"]
 [ext_resource type="PackedScene" uid="uid://80fagpuasf0m" path="res://scenes/water_particles.tscn" id="3_gdcd7"]
 [ext_resource type="PackedScene" uid="uid://p25yu4aw8ut8" path="res://scenes/flowering_particles.tscn" id="4_f1mti"]
