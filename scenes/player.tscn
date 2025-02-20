@@ -395,8 +395,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g0eoi"]
-radius = 7.0
-height = 18.0
+radius = 6.0
+height = 14.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_scfoi"]
 radius = 2.4631
@@ -410,13 +410,11 @@ script = ExtResource("1_2had2")
 position = Vector2(3, 15.5)
 scale = Vector2(1.30502, 1.19948)
 sprite_frames = SubResource("SpriteFrames_kx6lq")
-animation = &"chopping_right"
+animation = &"idle_back"
 autoplay = "idle_left"
-frame = 1
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3, 15)
+position = Vector2(3, 17)
 shape = SubResource("CapsuleShape2D_g0eoi")
 
 [node name="State_Machine" type="Node" parent="." node_paths=PackedStringArray("initial_node_state")]

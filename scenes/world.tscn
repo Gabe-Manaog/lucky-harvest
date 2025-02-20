@@ -27,5 +27,5 @@ tile_map_data = PackedByteArray("AAAkABAABAAAAAAAAQA=")
 tile_set = ExtResource("1_iru77")
 
 [node name="trees" type="TileMapLayer" parent="GameTileMap"]
-tile_map_data = PackedByteArray("AAAWABkABQAAAAAAAQAZABkABQAAAAAAAQAcABkABQAAAAAAAQA=")
+tile_map_data = PackedByteArray("AAAWABkABQAAAAAAAQAZABkABQAAAAAAAQAcABkABQAAAAAAAQAiABkABgAAAAAAAQAmABkABgAAAAAAAQAqABkABgAAAAAAAQA=")
 tile_set = ExtResource("1_iru77")
