@@ -21,6 +21,7 @@ position = Vector2(249, 167)
 [node name="Player" parent="." instance=ExtResource("1_gndf2")]
 z_index = 5
 position = Vector2(402, 235)
+current_tool = 1
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(1, 24)
