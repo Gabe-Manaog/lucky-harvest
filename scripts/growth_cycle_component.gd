@@ -11,7 +11,6 @@ var is_watered: bool
 var starting_day: int
 var current_day: int
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	DayAndNightManager.time_tick_day.connect(on_time_tick_day)
 
@@ -50,6 +49,3 @@ func harvest_state (starting_day:int, current_day:int) -> void:
 
 func get_current_growth_state() -> DataTypes.GrowthStates: 
 	return current_growth_state
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
