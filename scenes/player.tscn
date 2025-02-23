@@ -410,8 +410,10 @@ script = ExtResource("1_2had2")
 position = Vector2(3, 15.5)
 scale = Vector2(1.30502, 1.19948)
 sprite_frames = SubResource("SpriteFrames_kx6lq")
-animation = &"idle_back"
+animation = &"watering_right"
 autoplay = "idle_left"
+frame = 1
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(3, 17)
@@ -451,7 +453,7 @@ hit_component_collision_shape = NodePath("../../HitComponent/HitComponentCollisi
 [node name="HitComponent" parent="." instance=ExtResource("10_k4mmy")]
 
 [node name="HitComponentCollisionShape2D" type="CollisionShape2D" parent="HitComponent"]
-position = Vector2(15, 27)
+position = Vector2(32, 21)
 scale = Vector2(1.62397, 1.05133)
 shape = SubResource("CircleShape2D_scfoi")
 debug_color = Color(0.928454, 3.25364e-05, 0.664601, 0.42)

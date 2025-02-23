@@ -24,6 +24,10 @@ DayAndNightManager="*res://scripts/day_and_night_manager.gd"
 
 window/size/resizable=false
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gaea/plugin.cfg")
+
 [file_customization]
 
 folder_colors={
