@@ -19,7 +19,7 @@ tile_map_data = PackedByteArray("AAATABAAAgACAAIAAAATAA8AAgACAAEAAAATAA4AAgACAAE
 tile_set = ExtResource("1_iru77")
 
 [node name="nature" type="TileMapLayer" parent="GameTileMap"]
-tile_map_data = PackedByteArray("AAAWAAkAAwADAAAAAAAZAAkAAwADAAAAAAAcAAkAAwADAAAAAAAKAAkAAwAAAAMAAAAKAAsAAwAAAAMAAAAKAA0AAwAAAAMAAAANAAcAAwAIAAIAAAAOAAcAAwAIAAIAAAAPAAcAAwAIAAIAAAAYAAwAAwAIAAEAAAAcAAwAAwAIAAEAAAA=")
+tile_map_data = PackedByteArray("AAAKAAkAAwAAAAMAAAAKAAsAAwAAAAMAAAAKAA0AAwAAAAMAAAANAAcAAwAIAAIAAAAOAAcAAwAIAAIAAAAPAAcAAwAIAAIAAAA=")
 tile_set = ExtResource("1_iru77")
 
 [node name="houses" type="TileMapLayer" parent="GameTileMap"]
@@ -27,5 +27,9 @@ tile_map_data = PackedByteArray("AAAkABAABAAAAAAAAQA=")
 tile_set = ExtResource("1_iru77")
 
 [node name="trees" type="TileMapLayer" parent="GameTileMap"]
-tile_map_data = PackedByteArray("AAAWABkABQAAAAAAAQAZABkABQAAAAAAAQAcABkABQAAAAAAAQAiABkABgAAAAAAAQAmABkABgAAAAAAAQAqABkABgAAAAAAAQA=")
+tile_map_data = PackedByteArray("AAAWABkABQAAAAAAAQAZABkABQAAAAAAAQAcABkABQAAAAAAAQAiABkABgAAAAAAAQAmABkABgAAAAAAAQAqABkABgAAAAAAAQAXAAkABwAAAAAAAQAaAAkABwAAAAAAAQAdAAkABwAAAAAAAQA=")
+tile_set = ExtResource("1_iru77")
+
+[node name="rocks" type="TileMapLayer" parent="GameTileMap"]
+tile_map_data = PackedByteArray("AAAWABQACAAAAAAAAQAZABQACAAAAAAAAQAcABQACAAAAAAAAQAcABIACAAAAAAAAQAZABIACAAAAAAAAQAWABIACAAAAAAAAQA=")
 tile_set = ExtResource("1_iru77")
