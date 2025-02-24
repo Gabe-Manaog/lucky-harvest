@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://nwuq4t4tygad"]
+[gd_scene load_steps=9 format=3 uid="uid://nwuq4t4tygad"]
 
 [ext_resource type="PackedScene" uid="uid://i8tqpr2q1kd7" path="res://scenes/player.tscn" id="1_gndf2"]
 [ext_resource type="PackedScene" path="res://scenes/guide.tscn" id="1_ox2rj"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d0jkbxjehcft7" path="res://scenes/tool_panel.tscn" id="3_258yc"]
 [ext_resource type="PackedScene" uid="uid://ceiunirt4htmx" path="res://scenes/day_night_panel.tscn" id="4_c5vpc"]
 [ext_resource type="PackedScene" uid="uid://bi2jrymtf1lyb" path="res://scenes/corn.tscn" id="5_8fpbf"]
+[ext_resource type="PackedScene" uid="uid://cgdvbroy6c7s7" path="res://scenes/Ui/inventory_panel.tscn" id="5_vgxmn"]
 [ext_resource type="PackedScene" uid="uid://duhcjiowp78cb" path="res://scenes/day_and_night_cycle_component.tscn" id="5_wiegy"]
 
 [node name="game" type="Node2D"]
@@ -46,6 +47,14 @@ offset_right = 64.0
 offset_bottom = 173.0
 grow_vertical = 2
 size_flags_horizontal = 8
+
+[node name="InventoryPanel" parent="GameRoot/Player" instance=ExtResource("5_vgxmn")]
+offset_left = -266.0
+offset_top = -67.0
+offset_right = -218.0
+offset_bottom = 95.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
 
 [node name="Guide" parent="." instance=ExtResource("1_ox2rj")]
 z_index = 1

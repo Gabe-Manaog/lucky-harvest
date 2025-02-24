@@ -1,7 +1,8 @@
-[gd_resource type="Theme" load_steps=34 format=3 uid="uid://bak616j14hm58"]
+[gd_resource type="Theme" load_steps=37 format=3 uid="uid://bak616j14hm58"]
 
 [ext_resource type="Texture2D" uid="uid://bw7hfvqmww45y" path="res://assets/art/basic_ui_sprites.png" id="1_2ol7o"]
 [ext_resource type="FontFile" uid="uid://d0oqjc5qjfs63" path="res://assets/art/pixelFont-7-8x14-sproutLands.ttf" id="2_0qdeq"]
+[ext_resource type="FontVariation" uid="uid://ch23v7h6srytv" path="res://assets/art/new_font_variation.tres" id="3_tia5e"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jhjks"]
 atlas = ExtResource("1_2ol7o")
@@ -91,6 +92,18 @@ texture_margin_right = 2.0
 texture_margin_bottom = 3.0
 region_rect = Rect2(0, 0, 35, 18)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_hf5jk"]
+atlas = ExtResource("1_2ol7o")
+region = Rect2(59, 59, 26, 26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_88ucp"]
+texture = SubResource("AtlasTexture_hf5jk")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+region_rect = Rect2(0, 0, 25.8186, 26)
+
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qiob7"]
 load_path = "res://.godot/imported/basic_ui_sprites.png-fd89325207447a16351cf2813d4daee4.ctex"
 
@@ -175,6 +188,11 @@ DayAndNightCounterPanel/styles/panel = SubResource("StyleBoxTexture_mhesb")
 DayAndNightLabel/base_type = &"Label"
 DayAndNightLabel/font_sizes/font_size = 18
 DayAndNightLabel/fonts/font = ExtResource("2_0qdeq")
+Inventory_Item_Panel/base_type = &"PanelContainer"
+Inventory_Item_Panel/styles/panel = SubResource("StyleBoxTexture_88ucp")
+Inventory_Label/base_type = &"Label"
+Inventory_Label/font_sizes/font_size = 8
+Inventory_Label/fonts/font = ExtResource("3_tia5e")
 MarginContainer/constants/margin_bottom = 10
 MarginContainer/constants/margin_left = 10
 MarginContainer/constants/margin_right = 10

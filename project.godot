@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 ToolManager="*res://scripts/tool_manager.gd"
 DayAndNightManager="*res://scripts/day_and_night_manager.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+InventoryManager="*res://scripts/globals/Inventory_Manager.gd"
 
 [display]
 
