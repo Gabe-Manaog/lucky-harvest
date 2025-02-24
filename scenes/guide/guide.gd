@@ -12,7 +12,8 @@ func on_interactable_activated()-> void:
 func on_interactable_deactivated()->void:
 	interactable_label_component.hide()
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("show_dialogue"):
-		var balloon: BaseGameDialoagueBalloon = balloon_scene.instantiate()
-		get_tree().current_scence.add_child(balloon)
-		balloon.start(load("res://dialogue/conversations/guide.dialogue","start"))
+#	if event.is_action_pressed("show_dialogue"):
+#		var balloon: BaseGameDialoagueBalloon = balloon_scene.instantiate()
+#		get_tree().current_scence.add_child(balloon)
+#		balloon.start(load("res://dialogue/conversations/guide.dialogue","start"))
+	pass
