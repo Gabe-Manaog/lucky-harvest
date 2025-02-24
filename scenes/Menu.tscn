@@ -1,0 +1,66 @@
+[gd_scene load_steps=5 format=3 uid="uid://do8vbovgs13iu"]
+
+[ext_resource type="Theme" uid="uid://c1x5gwaorkwnx" path="res://dialogue/dialogue_balloon_theme.tres" id="1_32dgw"]
+[ext_resource type="Script" path="res://scenes/menu.gd" id="2_l583e"]
+[ext_resource type="Texture2D" uid="uid://cs0bkkughv3sc" path="res://assets/background.jpg" id="3_n7mlj"]
+[ext_resource type="FontFile" uid="uid://d0oqjc5qjfs63" path="res://assets/art/pixelFont-7-8x14-sproutLands.ttf" id="4_qouw7"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_32dgw")
+script = ExtResource("2_l583e")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(576.75, 319.5)
+scale = Vector2(0.3795, 0.3245)
+texture = ExtResource("3_n7mlj")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -208.0
+offset_top = -38.0
+offset_right = -58.0
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.5, 2.5)
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "START"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "QUIT
+"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -346.5
+offset_top = -277.5
+offset_right = 346.5
+offset_bottom = -174.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("4_qouw7")
+theme_override_font_sizes/normal_font_size = 100
+text = "Lucky Harvest"
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
