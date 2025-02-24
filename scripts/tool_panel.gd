@@ -21,7 +21,6 @@ func _on_tool_corn_pressed() -> void:
 	ToolManager.select_tool(DataTypes.Tools.PlantCorn)
 	
 
-
 func _on_tool_tomato_pressed() -> void:
 	ToolManager.select_tool(DataTypes.Tools.PlantTomato)
 
