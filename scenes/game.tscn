@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://nwuq4t4tygad"]
+[gd_scene load_steps=8 format=3 uid="uid://nwuq4t4tygad"]
 
 [ext_resource type="PackedScene" uid="uid://i8tqpr2q1kd7" path="res://scenes/player.tscn" id="1_gndf2"]
+[ext_resource type="PackedScene" uid="uid://cxcohuy37d7ul" path="res://scenes/guide.tscn" id="1_ox2rj"]
 [ext_resource type="PackedScene" uid="uid://dfj2suni6lsfx" path="res://scenes/world.tscn" id="2_g8mmo"]
 [ext_resource type="PackedScene" uid="uid://d0jkbxjehcft7" path="res://scenes/tool_panel.tscn" id="3_258yc"]
 [ext_resource type="PackedScene" uid="uid://ceiunirt4htmx" path="res://scenes/day_night_panel.tscn" id="4_c5vpc"]
@@ -9,18 +10,26 @@
 
 [node name="game" type="Node2D"]
 
+[node name="Guide" parent="." instance=ExtResource("1_ox2rj")]
+z_index = 1
+position = Vector2(516, 247)
+
 [node name="DayAndNightCycleComponent" parent="." instance=ExtResource("5_wiegy")]
+metadata/_edit_lock_ = true
 
 [node name="world" parent="." instance=ExtResource("2_g8mmo")]
 position = Vector2(1, 0)
+metadata/_edit_lock_ = true
 
 [node name="Corn" parent="." instance=ExtResource("5_8fpbf")]
 top_level = true
 position = Vector2(249, 167)
+metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("1_gndf2")]
 z_index = 5
 position = Vector2(402, 235)
+metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(1, 24)
