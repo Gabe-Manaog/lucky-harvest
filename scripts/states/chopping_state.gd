@@ -6,7 +6,7 @@ extends NodeState
 
 func _ready() -> void:
 	hit_component_collision_shape.disabled = true
-	hit_component_collision_shape.position = Vector2(0,0)
+	hit_component_collision_shape.position = Vector2(3,22)
 	
 func _on_process(_delta : float) -> void:
 	pass
@@ -36,7 +36,7 @@ func _on_enter() -> void:
 		hit_component_collision_shape.position = Vector2(15,27)
 	else:
 		animated_sprite_2d.play("chopping_front")
-		hit_component_collision_shape.position = Vector2(0,6)
+		hit_component_collision_shape.position = Vector2(3,22)
 		
 	hit_component_collision_shape.disabled = false
 	

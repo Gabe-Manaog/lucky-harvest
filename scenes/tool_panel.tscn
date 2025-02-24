@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://d0jkbxjehcft7"]
+[gd_scene load_steps=10 format=3 uid="uid://d0jkbxjehcft7"]
 
 [ext_resource type="Theme" uid="uid://bak616j14hm58" path="res://tilesets/game_ui_theme.tres" id="1_iiikm"]
 [ext_resource type="Texture2D" uid="uid://0cffdk2c8ajq" path="res://assets/art/Basic_tools_and_meterials.png" id="2_gl68q"]
@@ -20,6 +20,10 @@ region = Rect2(0, 0, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_1vmtv"]
 atlas = ExtResource("3_fo1jx")
 region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvcb0"]
+atlas = ExtResource("3_fo1jx")
+region = Rect2(0, 16, 16, 16)
 
 [node name="tool_panel" type="PanelContainer"]
 offset_right = 40.0
@@ -59,14 +63,22 @@ theme_type_variation = &"Tool_Button"
 icon = SubResource("AtlasTexture_e7u70")
 icon_alignment = 1
 
-[node name="Tool_Plant" type="Button" parent="MarginContainer/HBoxContainer"]
+[node name="Tool_Corn" type="Button" parent="MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(26, 26)
 layout_mode = 2
 theme_type_variation = &"Tool_Button"
 icon = SubResource("AtlasTexture_1vmtv")
 icon_alignment = 1
 
+[node name="Tool_Tomato" type="Button" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(26, 26)
+layout_mode = 2
+theme_type_variation = &"Tool_Button"
+icon = SubResource("AtlasTexture_bvcb0")
+icon_alignment = 1
+
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Tool_Axe" to="." method="_on_tool_axe_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Tool_Tilling" to="." method="_on_tool_tilling_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Tool_Water" to="." method="_on_tool_water_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/Tool_Plant" to="." method="_on_tool_plant_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Tool_Corn" to="." method="_on_tool_corn_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Tool_Tomato" to="." method="_on_tool_tomato_pressed"]

@@ -26,8 +26,3 @@ func on_inventory_changed() -> void:
 	if inventory.has("tomato"):
 		tomato_label.text = str(inventory["tomato"])
 	
-	if inventory.has("egg"):
-		egg_label.text = str(inventory["egg"])
-	
-	if inventory.has("milk"):
-		milk_label.text = str(inventory["milk"])

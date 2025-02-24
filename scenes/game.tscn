@@ -1,13 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://nwuq4t4tygad"]
+[gd_scene load_steps=10 format=3 uid="uid://nwuq4t4tygad"]
 
 [ext_resource type="PackedScene" uid="uid://i8tqpr2q1kd7" path="res://scenes/player.tscn" id="1_gndf2"]
-[ext_resource type="PackedScene" path="res://scenes/guide.tscn" id="1_ox2rj"]
+[ext_resource type="PackedScene" uid="uid://cxcohuy37d7ul" path="res://scenes/guide.tscn" id="1_ox2rj"]
 [ext_resource type="PackedScene" uid="uid://dfj2suni6lsfx" path="res://scenes/world.tscn" id="2_g8mmo"]
 [ext_resource type="PackedScene" uid="uid://d0jkbxjehcft7" path="res://scenes/tool_panel.tscn" id="3_258yc"]
 [ext_resource type="PackedScene" uid="uid://ceiunirt4htmx" path="res://scenes/day_night_panel.tscn" id="4_c5vpc"]
-[ext_resource type="PackedScene" uid="uid://bi2jrymtf1lyb" path="res://scenes/corn.tscn" id="5_8fpbf"]
+[ext_resource type="PackedScene" uid="uid://bi2jrymtf1lyb" path="res://scenes/crops/corn.tscn" id="5_8fpbf"]
 [ext_resource type="PackedScene" uid="uid://cgdvbroy6c7s7" path="res://scenes/Ui/inventory_panel.tscn" id="5_vgxmn"]
 [ext_resource type="PackedScene" uid="uid://duhcjiowp78cb" path="res://scenes/day_and_night_cycle_component.tscn" id="5_wiegy"]
+[ext_resource type="PackedScene" uid="uid://dclxsqaf8v12g" path="res://scenes/crops/tomato.tscn" id="9_ftnmt"]
 
 [node name="game" type="Node2D"]
 
@@ -67,3 +68,7 @@ metadata/_edit_lock_ = true
 top_level = true
 position = Vector2(249, 167)
 metadata/_edit_lock_ = true
+
+[node name="Tomato" parent="." instance=ExtResource("9_ftnmt")]
+position = Vector2(247, 232)
+scale = Vector2(2, 2)
