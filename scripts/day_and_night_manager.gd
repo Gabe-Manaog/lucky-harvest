@@ -26,6 +26,7 @@ func _process(delta: float) -> void:
 	game_time.emit(time)
 	
 	recalculate_time()
+	print(time)
 
 func set_initial_time() -> void:
 	var initial_total_minutes = initial_day * MINUTES_PER_DAY + (initial_hour * MINUTES_PER_HOUR) + initial_minute
@@ -46,3 +47,10 @@ func recalculate_time() -> void:
 		current_day = day
 		time_tick_day.emit(day)
 	
+func sleep() -> void:
+	current_day += 1  # Move to the next day
+	var new_total_minutes = (current_day * MINUTES_PER_DAY) + (7 * MINUTES_PER_HOUR) # Always 7:00 AM
+	time = new_total_minutes * GAME_MINUTES_DURATION
+	
+	time_tick.emit(current_day, 7, 0)  
+	time_tick_day.emit(current_day)  

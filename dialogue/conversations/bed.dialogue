@@ -1,0 +1,10 @@
+~ start
+Do you want to go to bed?
+- Yes?
+	do DayAndNightManager.sleep()
+	Nathan: Good Morning!
+- No?
+	Nathan: You picked the second one.
+- End the conversation => END
+Nathan: For more information see the online documentation.
+=> END

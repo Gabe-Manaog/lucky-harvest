@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://c1cuvmwv6u0ba"]
+
+[ext_resource type="Script" path="res://scenes/bed.gd" id="1_voi58"]
+[ext_resource type="Texture2D" uid="uid://biighbvlw2a04" path="res://assets/art/Basic_Furniture.png" id="2_i5y3u"]
+[ext_resource type="PackedScene" uid="uid://cs8rarfno635j" path="res://scenes/components/interactable_component.tscn" id="3_yb8cd"]
+[ext_resource type="PackedScene" uid="uid://clipr62bh5xwq" path="res://scenes/components/interactable_label_component.tscn" id="4_6na5q"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w31gy"]
+radius = 16.0
+
+[node name="bed" type="Node2D"]
+script = ExtResource("1_voi58")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_i5y3u")
+region_enabled = true
+region_rect = Rect2(0, 23.2531, 15.8557, 28.0402)
+
+[node name="InteractableComponent" parent="." instance=ExtResource("3_yb8cd")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent"]
+position = Vector2(0, -3)
+shape = SubResource("CircleShape2D_w31gy")
+
+[node name="InteractableLabelComponent" parent="." instance=ExtResource("4_6na5q")]
+offset_left = -27.0
+offset_top = -28.0
+offset_right = -9.0
+offset_bottom = -10.0
