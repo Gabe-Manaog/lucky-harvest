@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://dclxsqaf8v12g"]
 
-[ext_resource type="Script" path="res://scenes/crops/tomato.gd" id="1_1n56k"]
+[ext_resource type="Script" path="res://scripts/crops/tomato.gd" id="1_1n56k"]
 [ext_resource type="Texture2D" uid="uid://bru7qbddfgcn5" path="res://assets/art/Basic_Plants.png" id="1_43w78"]
-[ext_resource type="PackedScene" uid="uid://80fagpuasf0m" path="res://scenes/water_particles.tscn" id="2_6m4hk"]
-[ext_resource type="PackedScene" uid="uid://p25yu4aw8ut8" path="res://scenes/flowering_particles.tscn" id="3_cxde7"]
-[ext_resource type="PackedScene" uid="uid://cxq4w1wrys02i" path="res://scenes/growth_cycle_component.tscn" id="4_3tbrg"]
+[ext_resource type="PackedScene" uid="uid://80fagpuasf0m" path="res://scenes/crops/water_particles.tscn" id="2_6m4hk"]
+[ext_resource type="PackedScene" uid="uid://p25yu4aw8ut8" path="res://scenes/crops/flowering_particles.tscn" id="3_cxde7"]
+[ext_resource type="PackedScene" uid="uid://cxq4w1wrys02i" path="res://scenes/components/growth_cycle_component.tscn" id="4_3tbrg"]
 [ext_resource type="PackedScene" uid="uid://cftj0vohaxmt5" path="res://scenes/components/hurt_component.tscn" id="5_em0ee"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t202p"]

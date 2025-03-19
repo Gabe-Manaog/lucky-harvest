@@ -1,7 +1,7 @@
 [gd_scene load_steps=23 format=3 uid="uid://cxido55ea8l6n"]
 
 [ext_resource type="Theme" uid="uid://bak616j14hm58" path="res://tilesets/game_ui_theme.tres" id="1_3x4ce"]
-[ext_resource type="Script" path="res://scenes/Ui/emotes_panel.gd" id="2_nsux3"]
+[ext_resource type="Script" path="res://scripts/Ui/emotes_panel.gd" id="2_nsux3"]
 [ext_resource type="Texture2D" uid="uid://b0ix11oc3ejka" path="res://assets/art/emotes.png" id="3_01wuf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_irg6d"]

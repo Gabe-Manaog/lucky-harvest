@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://bi2jrymtf1lyb"]
 
 [ext_resource type="Texture2D" uid="uid://bru7qbddfgcn5" path="res://assets/art/Basic_Plants.png" id="1_8kfsp"]
-[ext_resource type="Script" path="res://scripts/corn.gd" id="1_flx05"]
-[ext_resource type="PackedScene" uid="uid://80fagpuasf0m" path="res://scenes/water_particles.tscn" id="3_gdcd7"]
-[ext_resource type="PackedScene" uid="uid://p25yu4aw8ut8" path="res://scenes/flowering_particles.tscn" id="4_f1mti"]
-[ext_resource type="PackedScene" uid="uid://cxq4w1wrys02i" path="res://scenes/growth_cycle_component.tscn" id="5_v2w0u"]
+[ext_resource type="Script" path="res://scripts/crops/corn.gd" id="1_flx05"]
+[ext_resource type="PackedScene" uid="uid://80fagpuasf0m" path="res://scenes/crops/water_particles.tscn" id="3_gdcd7"]
+[ext_resource type="PackedScene" uid="uid://p25yu4aw8ut8" path="res://scenes/crops/flowering_particles.tscn" id="4_f1mti"]
+[ext_resource type="PackedScene" uid="uid://cxq4w1wrys02i" path="res://scenes/components/growth_cycle_component.tscn" id="5_v2w0u"]
 [ext_resource type="PackedScene" uid="uid://cftj0vohaxmt5" path="res://scenes/components/hurt_component.tscn" id="6_nra7k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ctno"]

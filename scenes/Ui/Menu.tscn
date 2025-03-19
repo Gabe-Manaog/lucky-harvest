@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://do8vbovgs13iu"]
 
-[ext_resource type="Theme" uid="uid://c1x5gwaorkwnx" path="res://dialogue/dialogue_balloon_theme.tres" id="1_32dgw"]
-[ext_resource type="Script" path="res://scenes/menu.gd" id="2_l583e"]
-[ext_resource type="Texture2D" uid="uid://cs0bkkughv3sc" path="res://assets/background.jpg" id="3_n7mlj"]
-[ext_resource type="FontFile" uid="uid://d0oqjc5qjfs63" path="res://assets/art/pixelFont-7-8x14-sproutLands.ttf" id="4_qouw7"]
+[ext_resource type="Theme" uid="uid://c1x5gwaorkwnx" path="res://dialogue/dialogue_balloon_theme.tres" id="1_h5u5n"]
+[ext_resource type="Script" path="res://scripts/Ui/menu.gd" id="2_d6sum"]
+[ext_resource type="Texture2D" uid="uid://cs0bkkughv3sc" path="res://assets/background.jpg" id="3_hqy2e"]
+[ext_resource type="FontFile" uid="uid://d0oqjc5qjfs63" path="res://assets/art/pixelFont-7-8x14-sproutLands.ttf" id="4_ipq64"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -12,13 +12,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_32dgw")
-script = ExtResource("2_l583e")
+theme = ExtResource("1_h5u5n")
+script = ExtResource("2_d6sum")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(576.75, 319.5)
 scale = Vector2(0.3795, 0.3245)
-texture = ExtResource("3_n7mlj")
+texture = ExtResource("3_hqy2e")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 z_index = 1
@@ -58,7 +58,7 @@ offset_right = 346.5
 offset_bottom = -174.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/normal_font = ExtResource("4_qouw7")
+theme_override_fonts/normal_font = ExtResource("4_ipq64")
 theme_override_font_sizes/normal_font_size = 100
 text = "Lucky Harvest"
 

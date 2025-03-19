@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cftj0vohaxmt5"]
 
-[ext_resource type="Script" path="res://scripts/hurt_component.gd" id="1_oyfy4"]
+[ext_resource type="Script" path="res://scripts/components/hurt_component.gd" id="1_oyfy4"]
 
 [node name="HurtComponent" type="Area2D"]
 collision_layer = 16

@@ -1,6 +1,6 @@
 [gd_scene load_steps=54 format=3 uid="uid://i8tqpr2q1kd7"]
 
-[ext_resource type="Script" path="res://scripts/player.gd" id="1_2had2"]
+[ext_resource type="Script" path="res://scripts/characters/player.gd" id="1_2had2"]
 [ext_resource type="Texture2D" uid="uid://bqqcli27888xe" path="res://assets/animations/Basic Charakter Actions.png" id="2_eckuu"]
 [ext_resource type="Texture2D" uid="uid://b7ilnep6nax6l" path="res://assets/animations/Basic Charakter Spritesheet.png" id="3_478s6"]
 [ext_resource type="Script" path="res://scripts/states/node_state_machine.gd" id="4_4vl3r"]
@@ -398,8 +398,8 @@ animations = [{
 radius = 6.0
 height = 14.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_scfoi"]
-radius = 2.4631
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bgc0h"]
+size = Vector2(9.8524, 22.8282)
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 y_sort_enabled = true
@@ -450,9 +450,10 @@ animated_sprite_2d = NodePath("../../AnimatedSprite2D")
 hit_component_collision_shape = NodePath("../../HitComponent/HitComponentCollisionShape2D")
 
 [node name="HitComponent" parent="." instance=ExtResource("10_k4mmy")]
+position = Vector2(1, 0)
 
 [node name="HitComponentCollisionShape2D" type="CollisionShape2D" parent="HitComponent"]
-position = Vector2(3, 22)
+position = Vector2(2, 20)
 scale = Vector2(1.62397, 1.05133)
-shape = SubResource("CircleShape2D_scfoi")
+shape = SubResource("RectangleShape2D_bgc0h")
 debug_color = Color(0.928454, 3.25364e-05, 0.664601, 0.42)

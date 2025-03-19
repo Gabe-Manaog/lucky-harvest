@@ -2,7 +2,7 @@
 
 [ext_resource type="Shader" path="res://scenes/trees/tree_shake.gdshader" id="1_6tw71"]
 [ext_resource type="Texture2D" uid="uid://bqjwr1sxwqera" path="res://assets/art/Basic_Grass_Biom_things.png" id="1_gcwps"]
-[ext_resource type="Script" path="res://scenes/trees/small_tree.gd" id="2_nbpdh"]
+[ext_resource type="Script" path="res://scripts/trees/small_tree.gd" id="2_nbpdh"]
 [ext_resource type="PackedScene" uid="uid://cftj0vohaxmt5" path="res://scenes/components/hurt_component.tscn" id="3_jr0k7"]
 [ext_resource type="PackedScene" uid="uid://05rnh38fue62" path="res://scenes/components/damage_conponent.tscn" id="4_gf4dm"]
 
@@ -35,6 +35,7 @@ position = Vector2(0, 11)
 shape = SubResource("CircleShape2D_n1s1k")
 
 [node name="HurtComponent" parent="." instance=ExtResource("3_jr0k7")]
+tool = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtComponent"]
 position = Vector2(0, 3)
@@ -42,5 +43,4 @@ shape = SubResource("RectangleShape2D_sm5ic")
 debug_color = Color(0.616775, 0.356762, 1, 0.42)
 
 [node name="DamageConponent" parent="." instance=ExtResource("4_gf4dm")]
-visible = false
-max_damage = 6
+max_damage = 5

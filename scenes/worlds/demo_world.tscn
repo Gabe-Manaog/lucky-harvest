@@ -3,9 +3,9 @@
 [ext_resource type="TileSet" uid="uid://bj102qrwwagck" path="res://tilesets/game_tileset.tres" id="1_1eo3r"]
 [ext_resource type="Texture2D" uid="uid://c0utodicv8b5x" path="res://assets/art/Water.png" id="2_4kfmj"]
 [ext_resource type="PackedScene" uid="uid://nl13jnch5tm3" path="res://scenes/components/field_cursor_component.tscn" id="3_s37r7"]
-[ext_resource type="Script" path="res://scenes/components/field_cursor_component.gd" id="4_4g00q"]
+[ext_resource type="Script" path="res://scripts/components/field_cursor_component.gd" id="4_4g00q"]
 [ext_resource type="PackedScene" uid="uid://byl6mqjmid2xt" path="res://scenes/components/crops_cursor_component.tscn" id="5_g173t"]
-[ext_resource type="Script" path="res://scenes/components/crops_cursor_component.gd" id="6_lu2lm"]
+[ext_resource type="Script" path="res://scripts/components/crops_cursor_component.gd" id="6_lu2lm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_06ltf"]
 texture = ExtResource("2_4kfmj")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://cxcohuy37d7ul"]
 
-[ext_resource type="Script" path="res://scenes/guide/guide.gd" id="1_351rc"]
-[ext_resource type="Shader" path="res://scenes/replace_color.gdshader" id="1_rg45m"]
+[ext_resource type="Script" path="res://scripts/characters/guide.gd" id="1_351rc"]
+[ext_resource type="Shader" path="res://scenes/shaders/replace_color.gdshader" id="1_rg45m"]
 [ext_resource type="Texture2D" uid="uid://b7ilnep6nax6l" path="res://assets/animations/Basic Charakter Spritesheet.png" id="2_1nf64"]
 [ext_resource type="PackedScene" uid="uid://cs8rarfno635j" path="res://scenes/components/interactable_component.tscn" id="3_ksqvr"]
 [ext_resource type="PackedScene" uid="uid://clipr62bh5xwq" path="res://scenes/components/interactable_label_component.tscn" id="5_x7no8"]

@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://bak616j14hm58" path="res://tilesets/game_ui_theme.tres" id="1_x3drg"]
 [ext_resource type="Texture2D" uid="uid://0cffdk2c8ajq" path="res://assets/art/Basic_tools_and_meterials.png" id="2_5rm0k"]
-[ext_resource type="Script" path="res://scenes/Ui/inventory_panel.gd" id="2_7qwhb"]
+[ext_resource type="Script" path="res://scripts/Ui/inventory_panel.gd" id="2_7qwhb"]
 [ext_resource type="Texture2D" uid="uid://bru7qbddfgcn5" path="res://assets/art/Basic_Plants.png" id="3_meey4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kh7pb"]
