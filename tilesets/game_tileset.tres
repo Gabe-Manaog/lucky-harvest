@@ -238,16 +238,12 @@ texture = ExtResource("2_x4cmn")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_52wfq"]
 texture = ExtResource("5_1nsre")
-0:0/animation_columns = 4
-0:0/animation_frame_0/duration = 1.0
-0:0/animation_frame_1/duration = 1.0
-0:0/animation_frame_2/duration = 1.0
-0:0/animation_frame_3/duration = 1.0
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_esrrc"]
 texture = ExtResource("3_kakx1")
+0:0/animation_columns = 4
 0:0/0 = 0
 0:0/0/terrain_set = 0
 0:0/0/terrain = 1

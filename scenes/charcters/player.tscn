@@ -403,7 +403,7 @@ size = Vector2(9.8524, 22.8282)
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 y_sort_enabled = true
-position = Vector2(-3, -24)
+position = Vector2(0, -40)
 collision_layer = 2
 script = ExtResource("1_2had2")
 

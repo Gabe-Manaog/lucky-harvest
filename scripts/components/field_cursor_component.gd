@@ -4,7 +4,7 @@ extends Node
 @export var grass_tilemap_layer: TileMapLayer
 @export var tilled_soil_tilemap_layer: TileMapLayer
 @export var terrain_set: int = 0
-@export var terrain: int = 2
+@export var terrain: int = 1
 
 var player: Player
 var mouse_position: Vector2
@@ -34,12 +34,13 @@ func get_cell_under_mouse() -> void:
 	cell_source_id = grass_tilemap_layer.get_cell_source_id(cell_position)
 	local_cell_position = grass_tilemap_layer.map_to_local(cell_position)
 	distance = player.global_position.distance_to(local_cell_position)
+	print(cell_position, cell_source_id)
 
 
 func add_tilled_soil_cell() -> void:
-	if distance < 30.0 && cell_source_id != -1:
+	if distance < 50.0 && cell_source_id != -1:
 		tilled_soil_tilemap_layer.set_cells_terrain_connect([cell_position], terrain_set, terrain, true)
 
 func remove_tilled_soil_cell() -> void:
-	if distance < 30.0:
+	if distance < 50.0:
 		tilled_soil_tilemap_layer.set_cells_terrain_connect([cell_position], 0, -1, true)
