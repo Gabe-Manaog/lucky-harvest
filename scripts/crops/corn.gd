@@ -18,6 +18,7 @@ func _ready() -> void:
 	hurt_component.hurt.connect(on_hurt)
 	growth_cycle_component.crop_maturity.connect(on_crop_maturity)
 	growth_cycle_component.crop_harvesting.connect(on_crop_harvesting)
+	growth_cycle_component.days_until_harvest = 5
 
 
 func _process(delta: float) -> void:

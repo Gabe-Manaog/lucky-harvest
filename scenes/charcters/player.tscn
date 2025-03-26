@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://i8tqpr2q1kd7"]
+[gd_scene load_steps=56 format=3 uid="uid://i8tqpr2q1kd7"]
 
 [ext_resource type="Script" path="res://scripts/characters/player.gd" id="1_2had2"]
 [ext_resource type="Texture2D" uid="uid://bqqcli27888xe" path="res://assets/animations/Basic Charakter Actions.png" id="2_eckuu"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://scripts/states/tilling_state.gd" id="8_ju2vb"]
 [ext_resource type="Script" path="res://scripts/states/watering_state.gd" id="9_nmho8"]
 [ext_resource type="PackedScene" uid="uid://2xpqnivarkg6" path="res://scenes/components/hit_component.tscn" id="10_k4mmy"]
+[ext_resource type="Texture2D" uid="uid://bw7hfvqmww45y" path="res://assets/art/basic_ui_sprites.png" id="11_hf5n6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_np34i"]
 atlas = ExtResource("2_eckuu")
@@ -401,6 +402,10 @@ height = 14.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bgc0h"]
 size = Vector2(9.8524, 22.8282)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_vehu7"]
+atlas = ExtResource("11_hf5n6")
+region = Rect2(148, 148, 24, 25)
+
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 y_sort_enabled = true
 position = Vector2(0, -40)
@@ -457,3 +462,9 @@ position = Vector2(2, 20)
 scale = Vector2(1.62397, 1.05133)
 shape = SubResource("RectangleShape2D_bgc0h")
 debug_color = Color(0.928454, 3.25364e-05, 0.664601, 0.42)
+
+[node name="Sprite2D" type="Sprite2D" parent="HitComponent/HitComponentCollisionShape2D"]
+z_index = -1
+position = Vector2(-0.307887, 0.41614)
+scale = Vector2(0.384859, 0.651556)
+texture = SubResource("AtlasTexture_vehu7")
