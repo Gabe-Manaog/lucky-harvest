@@ -14,12 +14,17 @@ func _on_physics_process(_delta : float) -> void:
 	if can_move==true:
 		if direction == Vector2.LEFT:
 			animated_sprite_2d.play("walk_left")
+			hit_component_collision_shape_2d.position = Vector2(-9,26)
 		elif direction == Vector2.RIGHT:
 			animated_sprite_2d.play("walk_right")
+			hit_component_collision_shape_2d.position = Vector2(15,27)
 		elif direction == Vector2.UP:
 			animated_sprite_2d.play("walk_back")
+			hit_component_collision_shape_2d.position = Vector2(0,1)
 		elif direction == Vector2.DOWN:
 			animated_sprite_2d.play("walk_front")
+			hit_component_collision_shape_2d.position = Vector2(3,28)
+
 			
 		if direction != Vector2.ZERO:
 			player.player_direction = direction
