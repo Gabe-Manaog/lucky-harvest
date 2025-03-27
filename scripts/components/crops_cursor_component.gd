@@ -3,7 +3,8 @@ extends Node
 
 @export var tilled_soil_tilemap_layer: TileMapLayer
 
-var player: Player
+@onready var player: Player = $"../Player"
+
 
 var corn_plant_scene = preload("res://scenes/crops/corn.tscn")
 var tomato_plant_scene = preload("res://scenes/crops/tomato.tscn")
@@ -47,6 +48,13 @@ func get_cell_under_mouse() -> void:
 
 func add_crop() -> void:
 	if distance < 50.0 && cell_source_id != -1:
+		var crop_fields = get_parent().find_child("CropFields")
+		
+		# Check if there's already a crop at the same position
+		for child in crop_fields.get_children():
+			if child.global_position == local_cell_position:
+				return # Prevent planting if a crop already exists
+				
 		if ToolManager.selected_tool == DataTypes.Tools.PlantCorn:
 			var corn_instance = corn_plant_scene.instantiate() as Node2D
 			corn_instance.global_position = local_cell_position

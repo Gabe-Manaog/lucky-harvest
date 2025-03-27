@@ -6,7 +6,8 @@ extends Node
 @export var terrain_set: int = 0
 @export var terrain: int = 1
 
-var player: Player
+@onready var player: Player = $"../Player"
+
 var mouse_position: Vector2
 var cell_position: Vector2i
 var cell_source_id: int
