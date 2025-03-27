@@ -1,16 +1,12 @@
-[gd_scene load_steps=12 format=4 uid="uid://coi1sl1wj5cwu"]
+[gd_scene load_steps=8 format=4 uid="uid://coi1sl1wj5cwu"]
 
 [ext_resource type="TileSet" uid="uid://bj102qrwwagck" path="res://tilesets/game_tileset.tres" id="1_3yw17"]
 [ext_resource type="PackedScene" uid="uid://i8tqpr2q1kd7" path="res://scenes/charcters/player.tscn" id="2_3ef1y"]
 [ext_resource type="PackedScene" uid="uid://nl13jnch5tm3" path="res://scenes/components/field_cursor_component.tscn" id="2_mdroy"]
-[ext_resource type="PackedScene" uid="uid://d0jkbxjehcft7" path="res://scenes/Ui/tool_panel.tscn" id="3_55hp0"]
 [ext_resource type="Script" path="res://scripts/components/field_cursor_component.gd" id="3_58wg8"]
-[ext_resource type="PackedScene" uid="uid://ceiunirt4htmx" path="res://scenes/Ui/day_night_panel.tscn" id="4_3ip52"]
 [ext_resource type="PackedScene" uid="uid://byl6mqjmid2xt" path="res://scenes/components/crops_cursor_component.tscn" id="4_asjck"]
 [ext_resource type="Script" path="res://scripts/components/crops_cursor_component.gd" id="5_g2x8c"]
-[ext_resource type="PackedScene" uid="uid://cgdvbroy6c7s7" path="res://scenes/Ui/inventory_panel.tscn" id="5_jjylu"]
 [ext_resource type="PackedScene" uid="uid://duhcjiowp78cb" path="res://scenes/components/day_and_night_cycle_component.tscn" id="8_bqx8e"]
-[ext_resource type="PackedScene" uid="uid://cgw2y27gyf2bp" path="res://scenes/crops/onion.tscn" id="11_ybv6f"]
 
 [node name="game" type="Node2D"]
 
@@ -40,6 +36,7 @@ tile_map_data = PackedByteArray("AAAeAAsABAAAAAAAAQA=")
 tile_set = ExtResource("1_3yw17")
 
 [node name="CropFields" type="Node2D" parent="."]
+position = Vector2(104, 64)
 
 [node name="FieldCursorComponent" parent="." node_paths=PackedStringArray("grass_tilemap_layer", "tilled_soil_tilemap_layer") instance=ExtResource("2_mdroy")]
 script = ExtResource("3_58wg8")
@@ -52,43 +49,7 @@ script = ExtResource("5_g2x8c")
 tilled_soil_tilemap_layer = NodePath("../world/TilledSoil")
 
 [node name="Player" parent="." instance=ExtResource("2_3ef1y")]
-z_index = 5
-position = Vector2(280, 144)
-
-[node name="tool_panel" parent="Player" instance=ExtResource("3_55hp0")]
-z_index = 5
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -168.0
-offset_top = 120.0
-offset_right = 180.0
-offset_bottom = 168.0
-grow_horizontal = 2
-grow_vertical = 0
-size_flags_horizontal = 8
-
-[node name="day_night_panel" parent="Player" instance=ExtResource("4_3ip52")]
-offset_left = 201.0
-offset_top = -127.0
-offset_right = 201.0
-offset_bottom = -127.0
-
-[node name="InventoryPanel" parent="Player" instance=ExtResource("5_jjylu")]
-visible = false
-z_index = 1
-offset_left = -152.0
-offset_top = 8.0
-offset_right = 166.0
-offset_bottom = 62.0
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(8, 24)
-zoom = Vector2(2, 2)
+position = Vector2(320, 176)
 
 [node name="DayAndNightCycleComponent" parent="." instance=ExtResource("8_bqx8e")]
-
-[node name="Onion" parent="." instance=ExtResource("11_ybv6f")]
-position = Vector2(192, 120)
+position = Vector2(152, 64)

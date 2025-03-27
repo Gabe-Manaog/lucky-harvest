@@ -25,6 +25,8 @@ GameDialogueManager="*res://scripts/globals/game_dialogue_manager.gd"
 
 [display]
 
+window/size/viewport_width=1600
+window/size/viewport_height=900
 window/size/resizable=false
 
 [editor_plugins]

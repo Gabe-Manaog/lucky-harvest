@@ -56,8 +56,8 @@ atlas = ExtResource("10_s1pvb")
 region = Rect2(2, 16, 13, 16)
 
 [node name="tool_panel" type="PanelContainer"]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 348.0
+offset_bottom = 48.0
 theme = ExtResource("1_iiikm")
 theme_type_variation = &"Dark_Wood_Panel"
 script = ExtResource("2_n2bwh")

@@ -1,10 +1,7 @@
-[gd_scene load_steps=7 format=4 uid="uid://dbo02iir82j12"]
+[gd_scene load_steps=4 format=4 uid="uid://dbo02iir82j12"]
 
 [ext_resource type="TileSet" uid="uid://bj102qrwwagck" path="res://tilesets/game_tileset.tres" id="1_isl5d"]
 [ext_resource type="PackedScene" uid="uid://i8tqpr2q1kd7" path="res://scenes/charcters/player.tscn" id="2_y8k88"]
-[ext_resource type="PackedScene" uid="uid://d0jkbxjehcft7" path="res://scenes/Ui/tool_panel.tscn" id="3_mcrkf"]
-[ext_resource type="PackedScene" uid="uid://ceiunirt4htmx" path="res://scenes/Ui/day_night_panel.tscn" id="4_ufu3k"]
-[ext_resource type="PackedScene" uid="uid://cgdvbroy6c7s7" path="res://scenes/Ui/inventory_panel.tscn" id="5_jvdt2"]
 [ext_resource type="PackedScene" uid="uid://duhcjiowp78cb" path="res://scenes/components/day_and_night_cycle_component.tscn" id="8_sd4k5"]
 
 [node name="game" type="Node2D"]
@@ -40,34 +37,6 @@ tile_map_data = PackedByteArray("AAAdAAgACAAAAAAAAQAdAAoACAAAAAAAAQAdAAwACAAAAAA
 tile_set = ExtResource("1_isl5d")
 
 [node name="Player" parent="." instance=ExtResource("2_y8k88")]
-z_index = 5
-position = Vector2(288, 152)
-
-[node name="tool_panel" parent="Player" instance=ExtResource("3_mcrkf")]
-z_index = 5
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_left = -80.0
-offset_top = 104.0
-offset_right = 88.0
-offset_bottom = 152.0
-grow_vertical = 2
-size_flags_horizontal = 8
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(0, 10)
-zoom = Vector2(2, 2)
-
-[node name="day_night_panel" parent="Player" instance=ExtResource("4_ufu3k")]
-offset_left = 184.0
-offset_top = -136.0
-offset_right = 184.0
-offset_bottom = -136.0
-
-[node name="InventoryPanel" parent="Player" instance=ExtResource("5_jvdt2")]
-offset_left = -272.0
-offset_top = -80.0
-offset_right = -224.0
-offset_bottom = 82.0
+position = Vector2(320, 176)
 
 [node name="DayAndNightCycleComponent" parent="." instance=ExtResource("8_sd4k5")]
