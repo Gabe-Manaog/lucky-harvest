@@ -1,9 +1,15 @@
-[gd_scene load_steps=10 format=3 uid="uid://ck5ruyf1pp3hg"]
+[gd_scene load_steps=25 format=3 uid="uid://ck5ruyf1pp3hg"]
 
 [ext_resource type="Script" path="res://scenes/shop.gd" id="1_2wumc"]
 [ext_resource type="Theme" uid="uid://c1x5gwaorkwnx" path="res://dialogue/dialogue_balloon_theme.tres" id="1_keyd2"]
 [ext_resource type="Theme" uid="uid://bak616j14hm58" path="res://tilesets/game_ui_theme.tres" id="3_xwukg"]
-[ext_resource type="Texture2D" uid="uid://bru7qbddfgcn5" path="res://assets/art/Basic_Plants.png" id="4_lw3ou"]
+[ext_resource type="Texture2D" uid="uid://msjl6h6rl4gr" path="res://assets/art/crops/carrot.png" id="4_bqbpi"]
+[ext_resource type="Texture2D" uid="uid://bru7qbddfgcn5" path="res://assets/art/crops/Basic_Plants.png" id="4_lw3ou"]
+[ext_resource type="Texture2D" uid="uid://dakxms220jj7p" path="res://assets/art/crops/onion.png" id="6_757gn"]
+[ext_resource type="Texture2D" uid="uid://del0436ykn7tf" path="res://assets/art/crops/potato.png" id="7_jymxt"]
+[ext_resource type="Texture2D" uid="uid://c6ombyqcnwqsv" path="res://assets/art/crops/radish.png" id="8_t8m67"]
+[ext_resource type="Texture2D" uid="uid://dcm7hs7w4wohf" path="res://assets/art/crops/spinach.png" id="9_dyfe2"]
+[ext_resource type="Texture2D" uid="uid://c4fxmrhn2o4b" path="res://assets/art/crops/turnip.png" id="10_i2miq"]
 
 [sub_resource type="Animation" id="Animation_02n32"]
 length = 0.001
@@ -59,6 +65,105 @@ _data = {
 
 [sub_resource type="LabelSettings" id="LabelSettings_mj6lv"]
 font_size = 24
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_du5ji"]
+atlas = ExtResource("4_bqbpi")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ts56h"]
+atlas = ExtResource("4_lw3ou")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mu3uf"]
+atlas = ExtResource("6_757gn")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0hxjb"]
+atlas = ExtResource("7_jymxt")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_whxn7"]
+atlas = ExtResource("8_t8m67")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4tu6h"]
+atlas = ExtResource("9_dyfe2")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgwru"]
+atlas = ExtResource("4_lw3ou")
+region = Rect2(80, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2c41r"]
+atlas = ExtResource("10_i2miq")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bidgq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_du5ji")
+}],
+"loop": true,
+"name": &"Carrot",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ts56h")
+}],
+"loop": true,
+"name": &"Corn",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mu3uf")
+}],
+"loop": true,
+"name": &"Onion",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0hxjb")
+}],
+"loop": true,
+"name": &"Potato",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_whxn7")
+}],
+"loop": true,
+"name": &"Radish",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4tu6h")
+}],
+"loop": true,
+"name": &"Spinach",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sgwru")
+}],
+"loop": true,
+"name": &"Tomato",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2c41r")
+}],
+"loop": true,
+"name": &"Turnip",
+"speed": 5.0
+}]
 
 [node name="Shop" type="CanvasLayer"]
 process_mode = 3
@@ -127,7 +232,7 @@ offset_right = 351.0
 offset_bottom = 71.0
 text = "Lorem Ipsum"
 
-[node name="Panel" type="Panel" parent="Panel/Control"]
+[node name="Icon" type="Panel" parent="Panel/Control"]
 layout_mode = 0
 offset_left = 264.0
 offset_top = -48.0
@@ -136,12 +241,12 @@ offset_bottom = 16.0
 theme = ExtResource("3_xwukg")
 theme_type_variation = &"Dark_Wood_Panel"
 
-[node name="Sprite2D" type="Sprite2D" parent="Panel/Control/Panel"]
-position = Vector2(35, 32)
-scale = Vector2(2.875, 2.75)
-texture = ExtResource("4_lw3ou")
-region_enabled = true
-region_rect = Rect2(0, 0, 16, 16)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Panel/Control/Icon"]
+position = Vector2(36.5, 31.5)
+scale = Vector2(3.3125, 2.8125)
+sprite_frames = SubResource("SpriteFrames_bidgq")
+animation = &"Corn"
+autoplay = "Corn"
 
 [node name="Next" type="Button" parent="Panel/Control"]
 layout_mode = 0
@@ -168,6 +273,7 @@ offset_bottom = 135.0
 text = "Purchase"
 
 [node name="Sell" type="Button" parent="Panel/Control"]
+layout_mode = 0
 offset_left = 425.0
 offset_top = 104.0
 offset_right = 545.0
@@ -176,6 +282,7 @@ text = "Sell
 "
 
 [node name="CurrencyPanel" type="PanelContainer" parent="Panel/Control"]
+layout_mode = 0
 offset_left = 537.0
 offset_top = -175.0
 offset_right = 617.0
