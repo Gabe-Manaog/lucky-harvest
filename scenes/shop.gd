@@ -1,7 +1,7 @@
 extends CanvasLayer
 
-var currItem='corn'
-var select ="corn"
+@onready var currency_label: Label = $Panel/Control/CurrencyPanel/MarginContainer/CurrencyLabel
+var currency = 0
 var inventory = InventoryManager.inventory
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -28,3 +28,9 @@ func _on_previous_pressed() -> void:
 
 func _on_purchase_pressed() -> void:
 	InventoryManager.add_collectable("corn")
+
+
+func _on_sell_pressed() -> void:
+	InventoryManager.remove_collectable("corn")
+	currency+=500
+	currency_label.text = "Currency " + str(currency)

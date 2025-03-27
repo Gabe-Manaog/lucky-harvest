@@ -1,5 +1,6 @@
 extends Node
 
+@onready var currency_label: Label = $DayPanel/MarginContainer/DayLabel
 var inventory: Dictionary = Dictionary()
 
 signal inventory_changed

@@ -5,6 +5,21 @@
 [ext_resource type="Theme" uid="uid://bak616j14hm58" path="res://tilesets/game_ui_theme.tres" id="3_xwukg"]
 [ext_resource type="Texture2D" uid="uid://bru7qbddfgcn5" path="res://assets/art/Basic_Plants.png" id="4_lw3ou"]
 
+[sub_resource type="Animation" id="Animation_02n32"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -300)]
+}
+
 [sub_resource type="Animation" id="Animation_ltmow"]
 resource_name = "TransIn"
 tracks/0/type = "value"
@@ -33,21 +48,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(0, 150), Vector2(0, 800)]
-}
-
-[sub_resource type="Animation" id="Animation_02n32"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:offset")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, -300)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xkcsf"]
@@ -81,6 +81,7 @@ libraries = {
 }
 
 [node name="Panel" type="Panel" parent="Panel"]
+layout_mode = 0
 offset_left = 228.0
 offset_top = -87.0
 offset_right = 964.0
@@ -143,6 +144,7 @@ region_enabled = true
 region_rect = Rect2(0, 0, 16, 16)
 
 [node name="Next" type="Button" parent="Panel/Control"]
+layout_mode = 0
 offset_left = 394.0
 offset_top = -37.0
 offset_right = 426.0
@@ -159,13 +161,42 @@ text = "<"
 
 [node name="Purchase" type="Button" parent="Panel/Control"]
 layout_mode = 0
-offset_left = 240.0
+offset_left = 64.0
 offset_top = 104.0
-offset_right = 360.0
+offset_right = 184.0
 offset_bottom = 135.0
 text = "Purchase"
+
+[node name="Sell" type="Button" parent="Panel/Control"]
+offset_left = 425.0
+offset_top = 104.0
+offset_right = 545.0
+offset_bottom = 135.0
+text = "Sell
+"
+
+[node name="CurrencyPanel" type="PanelContainer" parent="Panel/Control"]
+offset_left = 537.0
+offset_top = -175.0
+offset_right = 617.0
+offset_bottom = -146.0
+theme_type_variation = &"DayAndNightCounterPanel"
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/Control/CurrencyPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="CurrencyLabel" type="Label" parent="Panel/Control/CurrencyPanel/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"DayAndNightLabel"
+text = "Currency: 0"
 
 [connection signal="pressed" from="Panel/Close" to="." method="_on_close_pressed"]
 [connection signal="pressed" from="Panel/Control/Next" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="Panel/Control/Previous" to="." method="_on_previous_pressed"]
 [connection signal="pressed" from="Panel/Control/Purchase" to="." method="_on_purchase_pressed"]
+[connection signal="pressed" from="Panel/Control/Sell" to="." method="_on_sell_pressed"]
