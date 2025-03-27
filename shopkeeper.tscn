@@ -1,0 +1,67 @@
+[gd_scene load_steps=12 format=3 uid="uid://bu0melmuadcs1"]
+
+[ext_resource type="Script" path="res://shopkeeper.gd" id="1_2b5jj"]
+[ext_resource type="Texture2D" uid="uid://bblhjgew1fvwf" path="res://assets/Wizzard/Idle/Idle-Sheet.png" id="2_07r6t"]
+[ext_resource type="PackedScene" uid="uid://cs8rarfno635j" path="res://scenes/components/interactable_component.tscn" id="2_yoh7j"]
+[ext_resource type="PackedScene" uid="uid://clipr62bh5xwq" path="res://scenes/components/interactable_label_component.tscn" id="4_xp5eq"]
+[ext_resource type="PackedScene" uid="uid://ck5ruyf1pp3hg" path="res://scenes/shop.tscn" id="5_lf818"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4ocob"]
+radius = 17.0
+height = 44.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8hid1"]
+atlas = ExtResource("2_07r6t")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7o0ni"]
+atlas = ExtResource("2_07r6t")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n5vrx"]
+atlas = ExtResource("2_07r6t")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_veoc4"]
+atlas = ExtResource("2_07r6t")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_emqel"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8hid1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7o0ni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n5vrx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_veoc4")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Shopkeeper" type="Node2D"]
+script = ExtResource("1_2b5jj")
+
+[node name="InteractableComponent" parent="." instance=ExtResource("2_yoh7j")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent"]
+shape = SubResource("CapsuleShape2D_4ocob")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_emqel")
+animation = &"idle"
+
+[node name="InteractableLabelComponent" parent="." instance=ExtResource("4_xp5eq")]
+offset_left = -22.0
+offset_top = -35.0
+offset_right = -4.0
+offset_bottom = -17.0
+
+[node name="Shop" parent="." instance=ExtResource("5_lf818")]

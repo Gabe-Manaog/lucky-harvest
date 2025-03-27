@@ -1,0 +1,171 @@
+[gd_scene load_steps=10 format=3 uid="uid://ck5ruyf1pp3hg"]
+
+[ext_resource type="Script" path="res://scenes/shop.gd" id="1_2wumc"]
+[ext_resource type="Theme" uid="uid://c1x5gwaorkwnx" path="res://dialogue/dialogue_balloon_theme.tres" id="1_keyd2"]
+[ext_resource type="Theme" uid="uid://bak616j14hm58" path="res://tilesets/game_ui_theme.tres" id="3_xwukg"]
+[ext_resource type="Texture2D" uid="uid://bru7qbddfgcn5" path="res://assets/art/Basic_Plants.png" id="4_lw3ou"]
+
+[sub_resource type="Animation" id="Animation_ltmow"]
+resource_name = "TransIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -400), Vector2(0, 150)]
+}
+
+[sub_resource type="Animation" id="Animation_bglu7"]
+resource_name = "TransOut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 150), Vector2(0, 800)]
+}
+
+[sub_resource type="Animation" id="Animation_02n32"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -300)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xkcsf"]
+_data = {
+"RESET": SubResource("Animation_02n32"),
+"TransIn": SubResource("Animation_ltmow"),
+"TransOut": SubResource("Animation_bglu7")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_mj6lv"]
+font_size = 24
+
+[node name="Shop" type="CanvasLayer"]
+process_mode = 3
+offset = Vector2(0, -300)
+transform = Transform2D(1, 0, 0, 1, 0, -300)
+script = ExtResource("1_2wumc")
+
+[node name="Panel" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("1_keyd2")
+
+[node name="Anim" type="AnimationPlayer" parent="Panel"]
+process_mode = 3
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_xkcsf")
+}
+
+[node name="Panel" type="Panel" parent="Panel"]
+offset_left = 228.0
+offset_top = -87.0
+offset_right = 964.0
+offset_bottom = 297.0
+metadata/_edit_lock_ = true
+
+[node name="Close" type="Button" parent="Panel"]
+process_mode = 3
+layout_mode = 0
+offset_left = 248.0
+offset_top = -70.0
+offset_right = 416.0
+offset_bottom = -28.0
+text = "Close"
+
+[node name="Control" type="Control" parent="Panel"]
+anchors_preset = 0
+offset_left = 296.0
+offset_top = 114.0
+offset_right = 384.0
+offset_bottom = 146.0
+
+[node name="Name" type="Label" parent="Panel/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -2.455
+anchor_top = 0.25
+anchor_right = -2.455
+anchor_bottom = 0.25
+offset_left = 448.04
+offset_top = -136.0
+offset_right = 584.04
+offset_bottom = -91.0
+text = "Name"
+label_settings = SubResource("LabelSettings_mj6lv")
+horizontal_alignment = 1
+
+[node name="Description" type="Label" parent="Panel/Control"]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 48.0
+offset_right = 351.0
+offset_bottom = 71.0
+text = "Lorem Ipsum"
+
+[node name="Panel" type="Panel" parent="Panel/Control"]
+layout_mode = 0
+offset_left = 264.0
+offset_top = -48.0
+offset_right = 336.0
+offset_bottom = 16.0
+theme = ExtResource("3_xwukg")
+theme_type_variation = &"Dark_Wood_Panel"
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/Control/Panel"]
+position = Vector2(35, 32)
+scale = Vector2(2.875, 2.75)
+texture = ExtResource("4_lw3ou")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="Next" type="Button" parent="Panel/Control"]
+offset_left = 394.0
+offset_top = -37.0
+offset_right = 426.0
+offset_bottom = 3.0
+text = ">"
+
+[node name="Previous" type="Button" parent="Panel/Control"]
+layout_mode = 0
+offset_left = 168.0
+offset_top = -37.0
+offset_right = 200.0
+offset_bottom = 3.0
+text = "<"
+
+[node name="Purchase" type="Button" parent="Panel/Control"]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 104.0
+offset_right = 360.0
+offset_bottom = 135.0
+text = "Purchase"
+
+[connection signal="pressed" from="Panel/Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Panel/Control/Next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="Panel/Control/Previous" to="." method="_on_previous_pressed"]
+[connection signal="pressed" from="Panel/Control/Purchase" to="." method="_on_purchase_pressed"]
