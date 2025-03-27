@@ -7,6 +7,10 @@ var player: Player
 
 var corn_plant_scene = preload("res://scenes/crops/corn.tscn")
 var tomato_plant_scene = preload("res://scenes/crops/tomato.tscn")
+var potato_plant_scene = preload("res://scenes/crops/potato.tscn")
+var carrot_plant_scene = preload("res://scenes/crops/carrot.tscn")
+var onion_plant_scene = preload("res://scenes/crops/onion.tscn")
+
 
 var mouse_position: Vector2
 var cell_position: Vector2i
@@ -24,7 +28,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			get_cell_under_mouse()
 			remove_crop()
 	elif event.is_action_pressed("hit"):
-		if ToolManager.selected_tool == DataTypes.Tools.PlantCorn or ToolManager.selected_tool == DataTypes.Tools.PlantTomato:
+		if ToolManager.selected_tool == DataTypes.Tools.PlantCorn or ToolManager.selected_tool == DataTypes.Tools.PlantTomato or ToolManager.selected_tool == DataTypes.Tools.PlantPotato or ToolManager.selected_tool == DataTypes.Tools.PlantCarrot or ToolManager.selected_tool == DataTypes.Tools.PlantOnion:
 			get_cell_under_mouse()
 			add_crop()
 
@@ -47,6 +51,21 @@ func add_crop() -> void:
 			var tomato_instance = tomato_plant_scene.instantiate() as Node2D
 			tomato_instance.global_position = local_cell_position
 			get_parent().find_child("CropFields").add_child(tomato_instance)
+
+		if ToolManager.selected_tool == DataTypes.Tools.PlantPotato:
+			var potato_instance = potato_plant_scene.instantiate() as Node2D
+			potato_instance.global_position = local_cell_position
+			get_parent().find_child("CropFields").add_child(potato_instance)
+			
+		if ToolManager.selected_tool == DataTypes.Tools.PlantCarrot:
+			var carrot_instance = carrot_plant_scene.instantiate() as Node2D
+			carrot_instance.global_position = local_cell_position
+			get_parent().find_child("CropFields").add_child(carrot_instance)
+
+		if ToolManager.selected_tool == DataTypes.Tools.PlantOnion:
+			var onion_instance = onion_plant_scene.instantiate() as Node2D
+			onion_instance.global_position = local_cell_position
+			get_parent().find_child("CropFields").add_child(onion_instance)
 
 
 func remove_crop() -> void:

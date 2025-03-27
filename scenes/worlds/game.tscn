@@ -39,18 +39,20 @@ offset_bottom = -125.0
 z_index = 5
 anchors_preset = 9
 anchor_bottom = 1.0
-offset_left = -74.0
+offset_left = -122.0
 offset_top = 125.0
-offset_right = 64.0
+offset_right = 136.0
 offset_bottom = 173.0
 grow_vertical = 2
 size_flags_horizontal = 8
 
 [node name="InventoryPanel" parent="GameRoot/Player" instance=ExtResource("5_hnmnn")]
-offset_left = -266.0
-offset_top = -67.0
-offset_right = -218.0
-offset_bottom = 95.0
+visible = false
+z_index = 1
+offset_left = -106.0
+offset_top = -11.0
+offset_right = 122.0
+offset_bottom = 43.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 

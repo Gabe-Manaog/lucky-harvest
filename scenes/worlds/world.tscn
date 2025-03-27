@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=4 uid="uid://dfj2suni6lsfx"]
 
 [ext_resource type="TileSet" uid="uid://bj102qrwwagck" path="res://tilesets/game_tileset.tres" id="1_iru77"]
-[ext_resource type="Texture2D" uid="uid://c0utodicv8b5x" path="res://assets/art/Water.png" id="2_4t717"]
+[ext_resource type="Texture2D" uid="uid://c0utodicv8b5x" path="res://assets/art/ground/Water.png" id="2_4t717"]
 [ext_resource type="PackedScene" uid="uid://nl13jnch5tm3" path="res://scenes/components/field_cursor_component.tscn" id="3_ckiql"]
 [ext_resource type="Script" path="res://scripts/components/field_cursor_component.gd" id="4_k7mpp"]
 [ext_resource type="PackedScene" uid="uid://byl6mqjmid2xt" path="res://scenes/components/crops_cursor_component.tscn" id="5_puh36"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bru7qbddfgcn5"
-path="res://.godot/imported/Basic_Plants.png-f21c5d9db56871b07347e5980e629b5b.ctex"
+uid="uid://c4fxmrhn2o4b"
+path="res://.godot/imported/turnip.png-0e17896f8b316591826fd5445b47361a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/Basic_Plants.png"
-dest_files=["res://.godot/imported/Basic_Plants.png-f21c5d9db56871b07347e5980e629b5b.ctex"]
+source_file="res://assets/art/crops/turnip.png"
+dest_files=["res://.godot/imported/turnip.png-0e17896f8b316591826fd5445b47361a.ctex"]
 
 [params]
 

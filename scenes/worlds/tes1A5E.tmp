@@ -3,6 +3,7 @@
 [ext_resource type="TileSet" uid="uid://bj102qrwwagck" path="res://tilesets/game_tileset.tres" id="1_3yw17"]
 [ext_resource type="PackedScene" uid="uid://i8tqpr2q1kd7" path="res://scenes/charcters/player.tscn" id="2_3ef1y"]
 [ext_resource type="PackedScene" uid="uid://nl13jnch5tm3" path="res://scenes/components/field_cursor_component.tscn" id="2_mdroy"]
+[ext_resource type="PackedScene" uid="uid://ckvhrf6ph0n2x" path="res://scenes/crops/carrot.tscn" id="2_vp000"]
 [ext_resource type="PackedScene" uid="uid://d0jkbxjehcft7" path="res://scenes/Ui/tool_panel.tscn" id="3_55hp0"]
 [ext_resource type="Script" path="res://scripts/components/field_cursor_component.gd" id="3_58wg8"]
 [ext_resource type="PackedScene" uid="uid://ceiunirt4htmx" path="res://scenes/Ui/day_night_panel.tscn" id="4_3ip52"]
@@ -10,7 +11,6 @@
 [ext_resource type="Script" path="res://scripts/components/crops_cursor_component.gd" id="5_g2x8c"]
 [ext_resource type="PackedScene" uid="uid://cgdvbroy6c7s7" path="res://scenes/Ui/inventory_panel.tscn" id="5_jjylu"]
 [ext_resource type="PackedScene" uid="uid://duhcjiowp78cb" path="res://scenes/components/day_and_night_cycle_component.tscn" id="8_bqx8e"]
-[ext_resource type="PackedScene" uid="uid://cgw2y27gyf2bp" path="res://scenes/crops/onion.tscn" id="11_ybv6f"]
 
 [node name="game" type="Node2D"]
 
@@ -59,10 +59,10 @@ position = Vector2(280, 144)
 z_index = 5
 anchors_preset = 9
 anchor_bottom = 1.0
-offset_left = -104.0
-offset_top = 112.0
-offset_right = 154.0
-offset_bottom = 160.0
+offset_left = -80.0
+offset_top = 120.0
+offset_right = 118.0
+offset_bottom = 168.0
 grow_vertical = 2
 size_flags_horizontal = 8
 
@@ -73,11 +73,10 @@ offset_right = 201.0
 offset_bottom = -127.0
 
 [node name="InventoryPanel" parent="Player" instance=ExtResource("5_jjylu")]
-visible = false
-z_index = 1
-offset_left = -90.0
-offset_right = 138.0
-offset_bottom = 54.0
+offset_left = -272.0
+offset_top = -88.0
+offset_right = -224.0
+offset_bottom = 110.0
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(8, 24)
@@ -85,5 +84,5 @@ zoom = Vector2(2, 2)
 
 [node name="DayAndNightCycleComponent" parent="." instance=ExtResource("8_bqx8e")]
 
-[node name="Onion" parent="." instance=ExtResource("11_ybv6f")]
+[node name="Carrot" parent="." instance=ExtResource("2_vp000")]
 position = Vector2(192, 120)

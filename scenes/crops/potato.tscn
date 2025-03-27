@@ -1,0 +1,39 @@
+[gd_scene load_steps=9 format=3 uid="uid://cqghb8vn0hkh2"]
+
+[ext_resource type="Script" path="res://scripts/crops/potato.gd" id="1_1v14g"]
+[ext_resource type="Texture2D" uid="uid://del0436ykn7tf" path="res://assets/art/crops/potato.png" id="2_7o1l1"]
+[ext_resource type="PackedScene" uid="uid://80fagpuasf0m" path="res://scenes/crops/water_particles.tscn" id="3_1y7k8"]
+[ext_resource type="PackedScene" uid="uid://p25yu4aw8ut8" path="res://scenes/crops/flowering_particles.tscn" id="4_xvib5"]
+[ext_resource type="PackedScene" uid="uid://cxq4w1wrys02i" path="res://scenes/components/growth_cycle_component.tscn" id="5_jbdb7"]
+[ext_resource type="PackedScene" uid="uid://cftj0vohaxmt5" path="res://scenes/components/hurt_component.tscn" id="6_56eig"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_skvb4"]
+atlas = ExtResource("2_7o1l1")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ctno"]
+size = Vector2(14, 8.5)
+
+[node name="Potato" type="Node2D"]
+script = ExtResource("1_1v14g")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -9)
+texture = SubResource("AtlasTexture_skvb4")
+hframes = 5
+frame = 2
+
+[node name="WaterParticles" parent="." instance=ExtResource("3_1y7k8")]
+
+[node name="FloweringParticles" parent="." instance=ExtResource("4_xvib5")]
+
+[node name="GrowthCycleComponent" parent="." instance=ExtResource("5_jbdb7")]
+days_until_harvest = 5
+
+[node name="HurtComponent" parent="." instance=ExtResource("6_56eig")]
+position = Vector2(0, -4)
+tool = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtComponent"]
+position = Vector2(-0.5, 2.75)
+shape = SubResource("RectangleShape2D_6ctno")

@@ -4,26 +4,7 @@ extends PanelContainer
 @onready var tool_tilling: Button = $MarginContainer/HBoxContainer/Tool_Tilling
 @onready var tool_water: Button = $MarginContainer/HBoxContainer/Tool_Water
 @onready var tool_plant: Button = $MarginContainer/HBoxContainer/Tool_Plant
-
-func _on_tool_axe_pressed() -> void:
-	ToolManager.select_tool(DataTypes.Tools.AxeWood)
-
-
-func _on_tool_tilling_pressed() -> void:
-	ToolManager.select_tool(DataTypes.Tools.TillGround)
-
-
-func _on_tool_water_pressed() -> void:
-	ToolManager.select_tool(DataTypes.Tools.WaterCrops)
-
-
-func _on_tool_corn_pressed() -> void:
-	ToolManager.select_tool(DataTypes.Tools.PlantCorn)
-	
-
-func _on_tool_tomato_pressed() -> void:
-	ToolManager.select_tool(DataTypes.Tools.PlantTomato)
-
+@onready var tool_potato: Button = $MarginContainer/HBoxContainer/Tool_Potato
 
 #func _unhandled_input(event: InputEvent) -> void:
 	#if event.is_action_pressed("release_tool"):
@@ -32,4 +13,27 @@ func _on_tool_tomato_pressed() -> void:
 		#tool_tilling.release_focus()
 		#tool_water.release_focus()
 		#tool_plant.release_focus()
-		
+
+func _on_tool_axe_pressed() -> void:
+	ToolManager.select_tool(DataTypes.Tools.AxeWood)
+
+func _on_tool_tilling_pressed() -> void:
+	ToolManager.select_tool(DataTypes.Tools.TillGround)
+
+func _on_tool_water_pressed() -> void:
+	ToolManager.select_tool(DataTypes.Tools.WaterCrops)
+
+func _on_tool_corn_pressed() -> void:
+	ToolManager.select_tool(DataTypes.Tools.PlantCorn)
+
+func _on_tool_tomato_pressed() -> void:
+	ToolManager.select_tool(DataTypes.Tools.PlantTomato)
+
+func _on_tool_potato_pressed() -> void:
+	ToolManager.select_tool(DataTypes.Tools.PlantPotato)
+
+func _on_tool_carrot_pressed() -> void:
+	ToolManager.select_tool(DataTypes.Tools.PlantCarrot)
+
+func _on_tool_onion_pressed() -> void:
+	ToolManager.select_tool(DataTypes.Tools.PlantOnion)

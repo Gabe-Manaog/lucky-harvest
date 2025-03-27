@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cy2s7wpt2ddul"
-path="res://.godot/imported/furniture free.png-ad9b02d79792a9f9a2eedec79b2beea4.ctex"
+uid="uid://ps6fghubpl05"
+path="res://.godot/imported/Wooden_House_Walls_Tilset.png-84cdc56447ec7f6541b05e8f759551a9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/furniture free.png"
-dest_files=["res://.godot/imported/furniture free.png-ad9b02d79792a9f9a2eedec79b2beea4.ctex"]
+source_file="res://assets/art/house/Wooden_House_Walls_Tilset.png"
+dest_files=["res://.godot/imported/Wooden_House_Walls_Tilset.png-84cdc56447ec7f6541b05e8f759551a9.ctex"]
 
 [params]
 

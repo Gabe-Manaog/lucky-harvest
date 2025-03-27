@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://c1cuvmwv6u0ba"]
 
 [ext_resource type="Script" path="res://scripts/characters/bed.gd" id="1_voi58"]
-[ext_resource type="Texture2D" uid="uid://biighbvlw2a04" path="res://assets/art/Basic_Furniture.png" id="2_i5y3u"]
+[ext_resource type="Texture2D" uid="uid://biighbvlw2a04" path="res://assets/art/house/Basic_Furniture.png" id="2_i5y3u"]
 [ext_resource type="PackedScene" uid="uid://cs8rarfno635j" path="res://scenes/components/interactable_component.tscn" id="3_yb8cd"]
 [ext_resource type="PackedScene" uid="uid://clipr62bh5xwq" path="res://scenes/components/interactable_label_component.tscn" id="4_6na5q"]
 

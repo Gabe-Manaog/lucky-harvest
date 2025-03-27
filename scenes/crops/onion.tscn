@@ -1,0 +1,39 @@
+[gd_scene load_steps=9 format=3 uid="uid://cgw2y27gyf2bp"]
+
+[ext_resource type="Script" path="res://scripts/crops/onion.gd" id="1_snre8"]
+[ext_resource type="Texture2D" uid="uid://dakxms220jj7p" path="res://assets/art/crops/onion.png" id="2_gxhpy"]
+[ext_resource type="PackedScene" uid="uid://80fagpuasf0m" path="res://scenes/crops/water_particles.tscn" id="3_fc6pl"]
+[ext_resource type="PackedScene" uid="uid://p25yu4aw8ut8" path="res://scenes/crops/flowering_particles.tscn" id="4_w7mn3"]
+[ext_resource type="PackedScene" uid="uid://cxq4w1wrys02i" path="res://scenes/components/growth_cycle_component.tscn" id="5_h8esc"]
+[ext_resource type="PackedScene" uid="uid://cftj0vohaxmt5" path="res://scenes/components/hurt_component.tscn" id="6_tjqo6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_skvb4"]
+atlas = ExtResource("2_gxhpy")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ctno"]
+size = Vector2(14, 8.5)
+
+[node name="Onion" type="Node2D"]
+script = ExtResource("1_snre8")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -9)
+texture = SubResource("AtlasTexture_skvb4")
+hframes = 5
+frame = 2
+
+[node name="WaterParticles" parent="." instance=ExtResource("3_fc6pl")]
+
+[node name="FloweringParticles" parent="." instance=ExtResource("4_w7mn3")]
+
+[node name="GrowthCycleComponent" parent="." instance=ExtResource("5_h8esc")]
+days_until_harvest = 5
+
+[node name="HurtComponent" parent="." instance=ExtResource("6_tjqo6")]
+position = Vector2(0, -4)
+tool = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtComponent"]
+position = Vector2(-0.5, 2.75)
+shape = SubResource("RectangleShape2D_6ctno")

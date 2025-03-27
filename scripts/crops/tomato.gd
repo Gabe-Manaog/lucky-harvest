@@ -30,11 +30,10 @@ func on_crop_harvesting() -> void:
 func on_hurt(hit_damage:int)-> void:
 	if !growth_cycle_component.is_watered:
 		watering_particles.emitting=true
-		await get_tree().create_timer(5.0).timeout
-		watering_particles.emitting=false
 		growth_cycle_component.is_watered=true
 		
 func on_crop_maturity() -> void:
+	watering_particles.emitting = false
 	flowering_particles.emitting=true
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.

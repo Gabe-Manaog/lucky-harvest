@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cbsqni3x4jig"]
 
-[ext_resource type="Texture2D" uid="uid://bqjwr1sxwqera" path="res://assets/art/Basic_Grass_Biom_things.png" id="1_jehfm"]
+[ext_resource type="Texture2D" uid="uid://bqjwr1sxwqera" path="res://assets/art/crops/Basic_Grass_Biom_things.png" id="1_jehfm"]
 [ext_resource type="PackedScene" uid="uid://bphgrsix8uqq7" path="res://scenes/components/collectable_component.tscn" id="2_b64rx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y3vf4"]

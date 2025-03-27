@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5r2w0rgp1d37"
-path="res://.godot/imported/Tilled_Dirt_Wide.png-a4de916841a4be77f155e7455a1cfd4a.ctex"
+uid="uid://dba6mvlnab587"
+path="res://.godot/imported/Interior.png-bf61f4d4ab8dc86b5a56efeb3d1a4802.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/Tilled_Dirt_Wide.png"
-dest_files=["res://.godot/imported/Tilled_Dirt_Wide.png-a4de916841a4be77f155e7455a1cfd4a.ctex"]
+source_file="res://assets/art/house/Interior.png"
+dest_files=["res://.godot/imported/Interior.png-bf61f4d4ab8dc86b5a56efeb3d1a4802.ctex"]
 
 [params]
 

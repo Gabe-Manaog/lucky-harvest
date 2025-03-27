@@ -2,6 +2,7 @@ class_name Player
 extends CharacterBody2D
 
 @onready var hit_component: HitComponent = $HitComponent
+@onready var inventory_panel: PanelContainer = $InventoryPanel
 
 @export var current_tool: DataTypes.Tools = DataTypes.Tools.None
 var player_direction: Vector2

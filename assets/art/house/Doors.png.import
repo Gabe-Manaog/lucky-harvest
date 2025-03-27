@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqjwr1sxwqera"
-path="res://.godot/imported/Basic_Grass_Biom_things.png-5d7fea4940f1c57d0134e51fbc271fd9.ctex"
+uid="uid://y7fos4wqikl5"
+path="res://.godot/imported/Doors.png-d5712dba5cd169fa28b12dc1629c6535.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/Basic_Grass_Biom_things.png"
-dest_files=["res://.godot/imported/Basic_Grass_Biom_things.png-5d7fea4940f1c57d0134e51fbc271fd9.ctex"]
+source_file="res://assets/art/house/Doors.png"
+dest_files=["res://.godot/imported/Doors.png-d5712dba5cd169fa28b12dc1629c6535.ctex"]
 
 [params]
 

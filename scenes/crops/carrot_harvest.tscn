@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmupty6v0nufj"]
+
+[ext_resource type="Texture2D" uid="uid://msjl6h6rl4gr" path="res://assets/art/crops/carrot.png" id="1_bt0ms"]
+[ext_resource type="PackedScene" uid="uid://bphgrsix8uqq7" path="res://scenes/components/collectable_component.tscn" id="2_wjqts"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_grd6f"]
+atlas = ExtResource("1_bt0ms")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6ppof"]
+radius = 7.07107
+
+[node name="CarrotHarvest" type="Sprite2D"]
+position = Vector2(0, -15)
+texture = SubResource("AtlasTexture_grd6f")
+hframes = 5
+frame = 1
+
+[node name="CollectableComponent" parent="." instance=ExtResource("2_wjqts")]
+collectable_name = "carrot"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectableComponent"]
+position = Vector2(0, 8)
+shape = SubResource("CircleShape2D_6ppof")

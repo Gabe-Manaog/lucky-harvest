@@ -1,19 +1,19 @@
 [gd_resource type="TileSet" load_steps=23 format=3 uid="uid://bj102qrwwagck"]
 
-[ext_resource type="Texture2D" uid="uid://c0utodicv8b5x" path="res://assets/art/Water.png" id="1_vnutr"]
-[ext_resource type="Texture2D" uid="uid://8fg6ht5kn478" path="res://assets/art/Grass.png" id="2_x4cmn"]
-[ext_resource type="Texture2D" uid="uid://c5r2w0rgp1d37" path="res://assets/art/Tilled_Dirt_Wide.png" id="3_kakx1"]
-[ext_resource type="Texture2D" uid="uid://bqjwr1sxwqera" path="res://assets/art/Basic_Grass_Biom_things.png" id="4_lirit"]
-[ext_resource type="Texture2D" uid="uid://k6qskn0oaxux" path="res://assets/art/WaterBorder.png" id="5_1nsre"]
+[ext_resource type="Texture2D" uid="uid://c0utodicv8b5x" path="res://assets/art/ground/Water.png" id="1_ny0mr"]
+[ext_resource type="Texture2D" uid="uid://8fg6ht5kn478" path="res://assets/art/ground/Grass.png" id="2_r6im8"]
+[ext_resource type="Texture2D" uid="uid://k6qskn0oaxux" path="res://assets/art/ground/WaterBorder.png" id="3_cqc7a"]
+[ext_resource type="Texture2D" uid="uid://c5r2w0rgp1d37" path="res://assets/art/ground/Tilled_Dirt_Wide.png" id="4_frr8o"]
 [ext_resource type="PackedScene" uid="uid://cawpykkpbghrr" path="res://scenes/houses/large_house.tscn" id="5_an1y0"]
+[ext_resource type="Texture2D" uid="uid://bqjwr1sxwqera" path="res://assets/art/crops/Basic_Grass_Biom_things.png" id="5_f0p6w"]
 [ext_resource type="PackedScene" uid="uid://d4eh331ltps3j" path="res://scenes/trees/small_tree.tscn" id="6_4ye42"]
 [ext_resource type="PackedScene" uid="uid://b5fjwyc3mw3yq" path="res://scenes/trees/large_tree.tscn" id="7_cqono"]
 [ext_resource type="PackedScene" uid="uid://cuxvwjl5fcmq2" path="res://scenes/trees/apple_tree.tscn" id="8_mha6v"]
 [ext_resource type="PackedScene" uid="uid://cygvlfit4i7mr" path="res://scenes/rocks/rock.tscn" id="9_rcovk"]
-[ext_resource type="Texture2D" uid="uid://t56djngyoxke" path="res://assets/art/Tilled_Dirt_Wide_v2.png" id="10_mqlns"]
+[ext_resource type="Texture2D" uid="uid://t56djngyoxke" path="res://assets/art/ground/Tilled_Dirt_Wide_v2.png" id="11_ygabg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5svib"]
-texture = ExtResource("1_vnutr")
+texture = ExtResource("1_ny0mr")
 0:0/animation_columns = 4
 0:0/animation_frame_0/duration = 0.2
 0:0/animation_frame_1/duration = 0.2
@@ -22,7 +22,7 @@ texture = ExtResource("1_vnutr")
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l6rb0"]
-texture = ExtResource("2_x4cmn")
+texture = ExtResource("2_r6im8")
 0:0/0 = 0
 0:0/0/terrain_set = 0
 0:0/0/terrain = 0
@@ -237,12 +237,12 @@ texture = ExtResource("2_x4cmn")
 0:3/0/terrains_peering_bit/right_side = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_52wfq"]
-texture = ExtResource("5_1nsre")
+texture = ExtResource("3_cqc7a")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_esrrc"]
-texture = ExtResource("3_kakx1")
+texture = ExtResource("4_frr8o")
 0:0/animation_columns = 4
 0:0/0 = 0
 0:0/0/terrain_set = 0
@@ -458,7 +458,7 @@ texture = ExtResource("3_kakx1")
 0:3/0/terrains_peering_bit/right_side = 1
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hy4f3"]
-texture = ExtResource("4_lirit")
+texture = ExtResource("5_f0p6w")
 5:0/0 = 0
 5:1/0 = 0
 5:2/0 = 0
@@ -511,7 +511,7 @@ scenes/1/scene = ExtResource("8_mha6v")
 scenes/1/scene = ExtResource("9_rcovk")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3o6t6"]
-texture = ExtResource("10_mqlns")
+texture = ExtResource("11_ygabg")
 0:0/0 = 0
 0:0/0/terrain_set = 0
 0:0/0/terrain = 2

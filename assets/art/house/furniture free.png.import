@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0utodicv8b5x"
-path="res://.godot/imported/Water.png-a19498d7bb3251ea0c1c2ea608071a88.ctex"
+uid="uid://cy2s7wpt2ddul"
+path="res://.godot/imported/furniture free.png-8d96724743695cc3d9363270dafb433f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/Water.png"
-dest_files=["res://.godot/imported/Water.png-a19498d7bb3251ea0c1c2ea608071a88.ctex"]
+source_file="res://assets/art/house/furniture free.png"
+dest_files=["res://.godot/imported/furniture free.png-8d96724743695cc3d9363270dafb433f.ctex"]
 
 [params]
 

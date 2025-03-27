@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4fxmrhn2o4b"
-path="res://.godot/imported/turnip.png-bb9f7cb0a5c91cf1f407aa85531b7616.ctex"
+uid="uid://dakxms220jj7p"
+path="res://.godot/imported/onion.png-e10c4d352325c2d73686251857408edd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/turnip.png"
-dest_files=["res://.godot/imported/turnip.png-bb9f7cb0a5c91cf1f407aa85531b7616.ctex"]
+source_file="res://assets/art/crops/onion.png"
+dest_files=["res://.godot/imported/onion.png-e10c4d352325c2d73686251857408edd.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://del0436ykn7tf"
-path="res://.godot/imported/potato.png-0b1b283e80197061f73017dd29d8f3c2.ctex"
+uid="uid://8fg6ht5kn478"
+path="res://.godot/imported/Grass.png-6614cae7fb2b8b09179728bbe64673e7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/potato.png"
-dest_files=["res://.godot/imported/potato.png-0b1b283e80197061f73017dd29d8f3c2.ctex"]
+source_file="res://assets/art/ground/Grass.png"
+dest_files=["res://.godot/imported/Grass.png-6614cae7fb2b8b09179728bbe64673e7.ctex"]
 
 [params]
 

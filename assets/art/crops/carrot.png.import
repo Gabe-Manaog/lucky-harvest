@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6ombyqcnwqsv"
-path="res://.godot/imported/radish.png-cf6d264ca7688835fc1c32c445582d98.ctex"
+uid="uid://msjl6h6rl4gr"
+path="res://.godot/imported/carrot.png-a943c4adb4ee63e2b85f50c7d683084a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/radish.png"
-dest_files=["res://.godot/imported/radish.png-cf6d264ca7688835fc1c32c445582d98.ctex"]
+source_file="res://assets/art/crops/carrot.png"
+dest_files=["res://.godot/imported/carrot.png-a943c4adb4ee63e2b85f50c7d683084a.ctex"]
 
 [params]
 
