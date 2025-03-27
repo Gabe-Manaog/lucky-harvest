@@ -9,6 +9,12 @@ extends PanelContainer
 @onready var potato_label: Label = $MarginContainer/HBoxContainer/Potato/PotatoLabel
 @onready var carrot_label: Label = $MarginContainer/HBoxContainer/Carrot/CarrotLabel
 @onready var onion_label: Label = $MarginContainer/HBoxContainer/Onion/OnionLabel
+@onready var radish_label: Label = $MarginContainer/HBoxContainer/Radish/RadishLabel
+@onready var spinach_label: Label = $MarginContainer/HBoxContainer/Spinach/SpinachLabel
+@onready var turnip_label: Label = $MarginContainer/HBoxContainer/Turnip/TurnipLabel
+
+
+
 @onready var inventory_panel: PanelContainer = $"."
 
 
@@ -42,3 +48,12 @@ func on_inventory_changed() -> void:
 	
 	if inventory.has("onion"):
 		onion_label.text = str(inventory["onion"])
+		
+	if inventory.has("radish"):
+		radish_label.text = str(inventory["radish"])
+		
+	if inventory.has("spinach"):
+		spinach_label.text = str(inventory["spinach"])
+		
+	if inventory.has("turnip"):
+		turnip_label.text = str(inventory["turnip"])

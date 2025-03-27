@@ -1,6 +1,6 @@
 extends Node2D
 
-var corn_harvest_scene = preload("res://scenes/crops/corn_harvest.tscn")
+var turnip_harvest_scene = preload("res://scenes/crops/turnip_harvest.tscn")
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var watering_particles: GPUParticles2D = $WaterParticles
@@ -8,8 +8,8 @@ var corn_harvest_scene = preload("res://scenes/crops/corn_harvest.tscn")
 @onready var growth_cycle_component: GrowthCycleComponent = $GrowthCycleComponent
 @onready var hurt_component: HurtComponent = $HurtComponent
 
-var growth_state: DataTypes.GrowthStates = DataTypes.GrowthStates.Seed
-
+var growth_state: DataTypes.GrowthStates = DataTypes.GrowthStates.Vegetative
+var start_turnip_frame_offset: int = 1
 
 func _ready() -> void:
 	watering_particles.emitting = false
@@ -18,12 +18,11 @@ func _ready() -> void:
 	hurt_component.hurt.connect(on_hurt)
 	growth_cycle_component.crop_maturity.connect(on_crop_maturity)
 	growth_cycle_component.crop_harvesting.connect(on_crop_harvesting)
-	growth_cycle_component.days_until_harvest = 5
 
 
 func _process(delta: float) -> void:
 	growth_state = growth_cycle_component.get_current_growth_state()
-	sprite_2d.frame = growth_state
+	sprite_2d.frame = growth_state + start_turnip_frame_offset
 	
 	if growth_state == DataTypes.GrowthStates.Maturity:
 		flowering_particles.emitting = true
@@ -36,12 +35,12 @@ func on_hurt(hit_damage: int) -> void:
 
 
 func on_crop_maturity() -> void:
-	flowering_particles.emitting = true
 	watering_particles.emitting = false
+	flowering_particles.emitting = true
 
 
 func on_crop_harvesting() -> void:
-	var corn_harvest_instance = corn_harvest_scene.instantiate() as Node2D
-	corn_harvest_instance.global_position = global_position
-	get_parent().add_child(corn_harvest_instance)
+	var turnip_harvest_instance = turnip_harvest_scene.instantiate() as Node2D
+	turnip_harvest_instance.global_position = global_position
+	get_parent().add_child(turnip_harvest_instance)
 	queue_free()

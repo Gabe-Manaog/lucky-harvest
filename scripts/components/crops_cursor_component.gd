@@ -10,7 +10,9 @@ var tomato_plant_scene = preload("res://scenes/crops/tomato.tscn")
 var potato_plant_scene = preload("res://scenes/crops/potato.tscn")
 var carrot_plant_scene = preload("res://scenes/crops/carrot.tscn")
 var onion_plant_scene = preload("res://scenes/crops/onion.tscn")
-
+var radish_plant_scene = preload("res://scenes/crops/radish.tscn")
+var spinach_plant_scene = preload("res://scenes/crops/spinach.tscn")
+var turnip_plant_scene = preload("res://scenes/crops/turnip.tscn")
 
 var mouse_position: Vector2
 var cell_position: Vector2i
@@ -28,7 +30,10 @@ func _unhandled_input(event: InputEvent) -> void:
 			get_cell_under_mouse()
 			remove_crop()
 	elif event.is_action_pressed("hit"):
-		if ToolManager.selected_tool == DataTypes.Tools.PlantCorn or ToolManager.selected_tool == DataTypes.Tools.PlantTomato or ToolManager.selected_tool == DataTypes.Tools.PlantPotato or ToolManager.selected_tool == DataTypes.Tools.PlantCarrot or ToolManager.selected_tool == DataTypes.Tools.PlantOnion:
+		if (ToolManager.selected_tool == DataTypes.Tools.PlantCorn or ToolManager.selected_tool == DataTypes.Tools.PlantTomato or 
+		ToolManager.selected_tool == DataTypes.Tools.PlantPotato or ToolManager.selected_tool == DataTypes.Tools.PlantCarrot or 
+		ToolManager.selected_tool == DataTypes.Tools.PlantOnion or ToolManager.selected_tool == DataTypes.Tools.PlantRadish or
+		ToolManager.selected_tool == DataTypes.Tools.PlantSpinach or ToolManager.selected_tool == DataTypes.Tools.PlantTurnip):
 			get_cell_under_mouse()
 			add_crop()
 
@@ -66,6 +71,22 @@ func add_crop() -> void:
 			var onion_instance = onion_plant_scene.instantiate() as Node2D
 			onion_instance.global_position = local_cell_position
 			get_parent().find_child("CropFields").add_child(onion_instance)
+			
+		if ToolManager.selected_tool == DataTypes.Tools.PlantRadish:
+			var radish_instance = radish_plant_scene.instantiate() as Node2D
+			radish_instance.global_position = local_cell_position
+			get_parent().find_child("CropFields").add_child(radish_instance)
+			
+		if ToolManager.selected_tool == DataTypes.Tools.PlantSpinach:
+			var spinach_instance = spinach_plant_scene.instantiate() as Node2D
+			spinach_instance.global_position = local_cell_position
+			get_parent().find_child("CropFields").add_child(spinach_instance)
+			
+		if ToolManager.selected_tool == DataTypes.Tools.PlantTurnip:
+			var turnip_instance = turnip_plant_scene.instantiate() as Node2D
+			turnip_instance.global_position = local_cell_position
+			get_parent().find_child("CropFields").add_child(turnip_instance)
+
 
 
 func remove_crop() -> void:

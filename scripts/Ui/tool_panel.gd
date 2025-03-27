@@ -37,3 +37,12 @@ func _on_tool_carrot_pressed() -> void:
 
 func _on_tool_onion_pressed() -> void:
 	ToolManager.select_tool(DataTypes.Tools.PlantOnion)
+	
+func _on_tool_radish_pressed() -> void:
+	ToolManager.select_tool(DataTypes.Tools.PlantRadish)
+
+func _on_tool_spinach_pressed() -> void:
+	ToolManager.select_tool(DataTypes.Tools.PlantSpinach)
+	
+func _on_tool_turnip_pressed() -> void:
+	ToolManager.select_tool(DataTypes.Tools.PlantTurnip)

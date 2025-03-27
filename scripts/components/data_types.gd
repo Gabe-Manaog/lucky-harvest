@@ -9,7 +9,10 @@ enum Tools {
 	PlantTomato,
 	PlantPotato,
 	PlantCarrot,
-	PlantOnion
+	PlantOnion,
+	PlantRadish,
+	PlantSpinach,
+	PlantTurnip
 }
 
 enum GrowthStates{

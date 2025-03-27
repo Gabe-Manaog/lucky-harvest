@@ -57,13 +57,17 @@ position = Vector2(280, 144)
 
 [node name="tool_panel" parent="Player" instance=ExtResource("3_55hp0")]
 z_index = 5
-anchors_preset = 9
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -104.0
-offset_top = 112.0
-offset_right = 154.0
-offset_bottom = 160.0
-grow_vertical = 2
+offset_left = -168.0
+offset_top = 120.0
+offset_right = 180.0
+offset_bottom = 168.0
+grow_horizontal = 2
+grow_vertical = 0
 size_flags_horizontal = 8
 
 [node name="day_night_panel" parent="Player" instance=ExtResource("4_3ip52")]
@@ -75,9 +79,10 @@ offset_bottom = -127.0
 [node name="InventoryPanel" parent="Player" instance=ExtResource("5_jjylu")]
 visible = false
 z_index = 1
-offset_left = -90.0
-offset_right = 138.0
-offset_bottom = 54.0
+offset_left = -152.0
+offset_top = 8.0
+offset_right = 166.0
+offset_bottom = 62.0
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(8, 24)

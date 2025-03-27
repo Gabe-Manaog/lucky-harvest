@@ -1,0 +1,39 @@
+[gd_scene load_steps=9 format=3 uid="uid://b7xfov6cnk7d5"]
+
+[ext_resource type="Script" path="res://scripts/crops/turnip.gd" id="1_r5mvy"]
+[ext_resource type="Texture2D" uid="uid://c4fxmrhn2o4b" path="res://assets/art/crops/turnip.png" id="1_r53i8"]
+[ext_resource type="PackedScene" uid="uid://80fagpuasf0m" path="res://scenes/crops/water_particles.tscn" id="3_c0oht"]
+[ext_resource type="PackedScene" uid="uid://p25yu4aw8ut8" path="res://scenes/crops/flowering_particles.tscn" id="4_kba5f"]
+[ext_resource type="PackedScene" uid="uid://cxq4w1wrys02i" path="res://scenes/components/growth_cycle_component.tscn" id="5_qqmxt"]
+[ext_resource type="PackedScene" uid="uid://cftj0vohaxmt5" path="res://scenes/components/hurt_component.tscn" id="6_wtjej"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_skvb4"]
+atlas = ExtResource("1_r53i8")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ctno"]
+size = Vector2(14, 8.5)
+
+[node name="Turnip" type="Node2D"]
+script = ExtResource("1_r5mvy")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -9)
+texture = SubResource("AtlasTexture_skvb4")
+hframes = 5
+frame = 2
+
+[node name="WaterParticles" parent="." instance=ExtResource("3_c0oht")]
+
+[node name="FloweringParticles" parent="." instance=ExtResource("4_kba5f")]
+
+[node name="GrowthCycleComponent" parent="." instance=ExtResource("5_qqmxt")]
+days_until_harvest = 5
+
+[node name="HurtComponent" parent="." instance=ExtResource("6_wtjej")]
+position = Vector2(0, -4)
+tool = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtComponent"]
+position = Vector2(-0.5, 2.75)
+shape = SubResource("RectangleShape2D_6ctno")

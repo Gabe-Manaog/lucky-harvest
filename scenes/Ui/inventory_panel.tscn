@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cgdvbroy6c7s7"]
+[gd_scene load_steps=21 format=3 uid="uid://cgdvbroy6c7s7"]
 
 [ext_resource type="Theme" uid="uid://bak616j14hm58" path="res://tilesets/game_ui_theme.tres" id="1_x3drg"]
 [ext_resource type="Texture2D" uid="uid://0cffdk2c8ajq" path="res://assets/art/Basic_tools_and_meterials.png" id="2_5rm0k"]
@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://del0436ykn7tf" path="res://assets/art/crops/potato.png" id="5_vivpc"]
 [ext_resource type="Texture2D" uid="uid://msjl6h6rl4gr" path="res://assets/art/crops/carrot.png" id="6_mtmsk"]
 [ext_resource type="Texture2D" uid="uid://dakxms220jj7p" path="res://assets/art/crops/onion.png" id="7_ibkex"]
+[ext_resource type="Texture2D" uid="uid://c6ombyqcnwqsv" path="res://assets/art/crops/radish.png" id="8_l3vb3"]
+[ext_resource type="Texture2D" uid="uid://dcm7hs7w4wohf" path="res://assets/art/crops/spinach.png" id="9_1noaj"]
+[ext_resource type="Texture2D" uid="uid://c4fxmrhn2o4b" path="res://assets/art/crops/turnip.png" id="10_4g8gl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kh7pb"]
 atlas = ExtResource("2_5rm0k")
@@ -35,6 +38,18 @@ region = Rect2(16, 16, 16, 15)
 [sub_resource type="AtlasTexture" id="AtlasTexture_05qqy"]
 atlas = ExtResource("7_ibkex")
 region = Rect2(16, 16, 15, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ng14b"]
+atlas = ExtResource("8_l3vb3")
+region = Rect2(16, 16, 15, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_20n5b"]
+atlas = ExtResource("9_1noaj")
+region = Rect2(16, 17, 15, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drnwm"]
+atlas = ExtResource("10_4g8gl")
+region = Rect2(16, 16, 16, 16)
 
 [node name="InventoryPanel" type="PanelContainer"]
 offset_right = 40.0
@@ -179,6 +194,63 @@ size_flags_vertical = 0
 texture = SubResource("AtlasTexture_05qqy")
 
 [node name="OnionLabel" type="Label" parent="MarginContainer/HBoxContainer/Onion"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_type_variation = &"Inventory_Label"
+text = "0
+"
+
+[node name="Radish" type="PanelContainer" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(26, 32)
+layout_mode = 2
+theme_type_variation = &"Inventory_Item_Panel"
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/Radish"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = SubResource("AtlasTexture_ng14b")
+
+[node name="RadishLabel" type="Label" parent="MarginContainer/HBoxContainer/Radish"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_type_variation = &"Inventory_Label"
+text = "0
+"
+
+[node name="Spinach" type="PanelContainer" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(26, 32)
+layout_mode = 2
+theme_type_variation = &"Inventory_Item_Panel"
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/Spinach"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = SubResource("AtlasTexture_20n5b")
+
+[node name="SpinachLabel" type="Label" parent="MarginContainer/HBoxContainer/Spinach"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_type_variation = &"Inventory_Label"
+text = "0
+"
+
+[node name="Turnip" type="PanelContainer" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(26, 32)
+layout_mode = 2
+theme_type_variation = &"Inventory_Item_Panel"
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/Turnip"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = SubResource("AtlasTexture_drnwm")
+
+[node name="TurnipLabel" type="Label" parent="MarginContainer/HBoxContainer/Turnip"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
