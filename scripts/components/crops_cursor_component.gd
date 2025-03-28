@@ -4,7 +4,7 @@ extends Node
 @export var tilled_soil_tilemap_layer: TileMapLayer
 
 @onready var player: Player = $"../Player"
-
+@onready var energy_bar: ProgressBar = null
 
 var corn_plant_scene = preload("res://scenes/crops/corn.tscn")
 var tomato_plant_scene = preload("res://scenes/crops/tomato.tscn")
@@ -24,6 +24,8 @@ var distance: float
 func _ready() -> void:
 	await get_tree().process_frame
 	player = get_tree().get_first_node_in_group("player")
+	if player:
+		energy_bar = player.energy_bar
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("remove_dirt"):
@@ -59,41 +61,49 @@ func add_crop() -> void:
 			var corn_instance = corn_plant_scene.instantiate() as Node2D
 			corn_instance.global_position = local_cell_position
 			get_parent().find_child("CropFields").add_child(corn_instance)
+			energy_bar._set_energy(energy_bar.energy - 1)
 	
 		if ToolManager.selected_tool == DataTypes.Tools.PlantTomato:
 			var tomato_instance = tomato_plant_scene.instantiate() as Node2D
 			tomato_instance.global_position = local_cell_position
 			get_parent().find_child("CropFields").add_child(tomato_instance)
+			energy_bar._set_energy(energy_bar.energy - 1)
 
 		if ToolManager.selected_tool == DataTypes.Tools.PlantPotato:
 			var potato_instance = potato_plant_scene.instantiate() as Node2D
 			potato_instance.global_position = local_cell_position
 			get_parent().find_child("CropFields").add_child(potato_instance)
+			energy_bar._set_energy(energy_bar.energy - 1)
 			
 		if ToolManager.selected_tool == DataTypes.Tools.PlantCarrot:
 			var carrot_instance = carrot_plant_scene.instantiate() as Node2D
 			carrot_instance.global_position = local_cell_position
 			get_parent().find_child("CropFields").add_child(carrot_instance)
+			energy_bar._set_energy(energy_bar.energy - 1)
 
 		if ToolManager.selected_tool == DataTypes.Tools.PlantOnion:
 			var onion_instance = onion_plant_scene.instantiate() as Node2D
 			onion_instance.global_position = local_cell_position
 			get_parent().find_child("CropFields").add_child(onion_instance)
+			energy_bar._set_energy(energy_bar.energy - 1)
 			
 		if ToolManager.selected_tool == DataTypes.Tools.PlantRadish:
 			var radish_instance = radish_plant_scene.instantiate() as Node2D
 			radish_instance.global_position = local_cell_position
 			get_parent().find_child("CropFields").add_child(radish_instance)
+			energy_bar._set_energy(energy_bar.energy - 1)
 			
 		if ToolManager.selected_tool == DataTypes.Tools.PlantSpinach:
 			var spinach_instance = spinach_plant_scene.instantiate() as Node2D
 			spinach_instance.global_position = local_cell_position
 			get_parent().find_child("CropFields").add_child(spinach_instance)
+			energy_bar._set_energy(energy_bar.energy - 1)
 			
 		if ToolManager.selected_tool == DataTypes.Tools.PlantTurnip:
 			var turnip_instance = turnip_plant_scene.instantiate() as Node2D
 			turnip_instance.global_position = local_cell_position
 			get_parent().find_child("CropFields").add_child(turnip_instance)
+			energy_bar._set_energy(energy_bar.energy - 1)
 
 
 
@@ -104,3 +114,4 @@ func remove_crop() -> void:
 		for node: Node2D in crop_nodes:
 			if node.global_position == local_cell_position:
 				node.queue_free()
+				energy_bar._set_energy(energy_bar.energy - 1)

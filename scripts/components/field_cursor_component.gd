@@ -7,6 +7,7 @@ extends Node
 @export var terrain: int = 1
 
 @onready var player: Player = $"../Player"
+@onready var energy_bar: ProgressBar = null
 
 var mouse_position: Vector2
 var cell_position: Vector2i
@@ -14,9 +15,12 @@ var cell_source_id: int
 var local_cell_position: Vector2
 var distance: float
 
+
 func _ready() -> void:
 	await get_tree().process_frame
 	player = get_tree().get_first_node_in_group("player")
+	if player:
+		energy_bar = player.energy_bar
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -41,7 +45,10 @@ func get_cell_under_mouse() -> void:
 func add_tilled_soil_cell() -> void:
 	if distance < 50.0 && cell_source_id != -1:
 		tilled_soil_tilemap_layer.set_cells_terrain_connect([cell_position], terrain_set, terrain, true)
+		energy_bar._set_energy(energy_bar.energy - 1)
+
 
 func remove_tilled_soil_cell() -> void:
 	if distance < 50.0:
 		tilled_soil_tilemap_layer.set_cells_terrain_connect([cell_position], 0, -1, true)
+		energy_bar._set_energy(energy_bar.energy - 1)

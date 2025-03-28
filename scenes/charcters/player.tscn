@@ -506,7 +506,9 @@ offset_right = 157.0
 offset_bottom = 38.0
 
 [node name="EnergyBar" parent="." instance=ExtResource("15_d5i88")]
-offset_left = -304.0
+offset_left = -297.0
 offset_top = -168.0
-offset_right = -104.0
+offset_right = -97.0
 offset_bottom = -152.0
+max_value = 10.0
+value = 10.0

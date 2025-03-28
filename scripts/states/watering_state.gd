@@ -3,11 +3,15 @@ extends NodeState
 @export var player: Player
 @export var animated_sprite_2d: AnimatedSprite2D
 @export var hit_component_collision_shape: CollisionShape2D
+@onready var energy_bar: ProgressBar = $"../../EnergyBar"
+
+
 
 func _ready()->void:
 	hit_component_collision_shape.disabled=true
 	hit_component_collision_shape.position=Vector2(3,22);
-	
+
+
 func _on_process(_delta : float) -> void:
 	pass
 
@@ -25,15 +29,19 @@ func _on_enter() -> void:
 	if player.player_direction == Vector2.UP:
 		animated_sprite_2d.play("watering_back")
 		hit_component_collision_shape.position= Vector2(10,-3)
+		energy_bar._set_energy(energy_bar.energy - 1)
 	elif player.player_direction == Vector2.DOWN:
 		animated_sprite_2d.play("watering_front")
 		hit_component_collision_shape.position= Vector2(-4,28)
+		energy_bar._set_energy(energy_bar.energy - 1)
 	elif player.player_direction == Vector2.LEFT:
 		animated_sprite_2d.play("watering_left")
 		hit_component_collision_shape.position= Vector2(-28,19)
+		energy_bar._set_energy(energy_bar.energy - 1)
 	elif player.player_direction == Vector2.RIGHT:
 		animated_sprite_2d.play("watering_right")
 		hit_component_collision_shape.position= Vector2(32,21)
+		energy_bar._set_energy(energy_bar.energy - 1)
 	else:
 		animated_sprite_2d.play("watering_front")
 		hit_component_collision_shape.position= Vector2(3,22)
