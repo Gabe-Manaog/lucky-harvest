@@ -16,8 +16,8 @@ theme = ExtResource("1_h5u5n")
 script = ExtResource("2_d6sum")
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(576.75, 319.5)
-scale = Vector2(0.3795, 0.3245)
+position = Vector2(795.75, 454.5)
+scale = Vector2(0.5275, 0.4545)
 texture = ExtResource("3_hqy2e")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -28,10 +28,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -208.0
-offset_top = -38.0
-offset_right = -58.0
-offset_bottom = 28.0
+offset_left = -188.0
+offset_top = 25.0
+offset_right = -38.0
+offset_bottom = 91.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2.5, 2.5)
@@ -52,10 +52,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -346.5
-offset_top = -277.5
-offset_right = 346.5
-offset_bottom = -174.5
+offset_left = -332.5
+offset_top = -278.5
+offset_right = 360.5
+offset_bottom = -175.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/normal_font = ExtResource("4_ipq64")

@@ -13,18 +13,6 @@
 
 [sub_resource type="Animation" id="Animation_02n32"]
 length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:offset")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, -300)]
-}
 
 [sub_resource type="Animation" id="Animation_ltmow"]
 resource_name = "TransIn"
@@ -38,7 +26,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, -400), Vector2(0, 150)]
+"values": [Vector2(0, -800), Vector2(20, 268)]
 }
 
 [sub_resource type="Animation" id="Animation_bglu7"]
@@ -53,7 +41,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, 150), Vector2(0, 800)]
+"values": [Vector2(20, 268), Vector2(0, 1200)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xkcsf"]
@@ -167,15 +155,20 @@ animations = [{
 
 [node name="Shop" type="CanvasLayer"]
 process_mode = 3
-offset = Vector2(0, -300)
-transform = Transform2D(1, 0, 0, 1, 0, -300)
+offset = Vector2(0, 150)
+transform = Transform2D(1, 0, 0, 1, 0, 150)
 script = ExtResource("1_2wumc")
 
 [node name="Panel" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchor_left = 0.22
+anchor_top = 0.111
+anchor_right = 0.22
+anchor_bottom = 0.111
+offset_left = -168.0
+offset_top = -71.9
+offset_right = -128.0
+offset_bottom = 35.1
 theme = ExtResource("1_keyd2")
 
 [node name="Anim" type="AnimationPlayer" parent="Panel"]
@@ -186,12 +179,17 @@ libraries = {
 }
 
 [node name="Panel" type="Panel" parent="Panel"]
-layout_mode = 0
-offset_left = 228.0
-offset_top = -87.0
-offset_right = 964.0
-offset_bottom = 297.0
-metadata/_edit_lock_ = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 3.725
+anchor_top = -1.498
+anchor_right = 26.125
+anchor_bottom = 2.464
+offset_top = 70.286
+offset_right = -5.00012
+offset_bottom = 38.352
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Close" type="Button" parent="Panel"]
 process_mode = 3
@@ -287,6 +285,7 @@ offset_left = 537.0
 offset_top = -175.0
 offset_right = 617.0
 offset_bottom = -146.0
+theme = ExtResource("3_xwukg")
 theme_type_variation = &"DayAndNightCounterPanel"
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel/Control/CurrencyPanel"]

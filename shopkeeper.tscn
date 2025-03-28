@@ -65,3 +65,5 @@ offset_right = -4.0
 offset_bottom = -17.0
 
 [node name="Shop" parent="." instance=ExtResource("5_lf818")]
+offset = Vector2(0, -900)
+transform = Transform2D(1, 0, 0, 1, 0, -900)
