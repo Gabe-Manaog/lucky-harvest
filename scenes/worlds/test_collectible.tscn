@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://scripts/components/field_cursor_component.gd" id="3_5tp4l"]
 [ext_resource type="PackedScene" uid="uid://byl6mqjmid2xt" path="res://scenes/components/crops_cursor_component.tscn" id="4_v0fkl"]
 [ext_resource type="Script" path="res://scripts/components/crops_cursor_component.gd" id="5_l6stw"]
-[ext_resource type="PackedScene" uid="uid://i8tqpr2q1kd7" path="res://scenes/charcters/player.tscn" id="6_s36gb"]
+[ext_resource type="PackedScene" uid="uid://i8tqpr2q1kd7" path="res://scenes/characters/player.tscn" id="6_s36gb"]
 [ext_resource type="PackedScene" uid="uid://duhcjiowp78cb" path="res://scenes/components/day_and_night_cycle_component.tscn" id="10_fpvc2"]
 [ext_resource type="PackedScene" uid="uid://b7pt5g74wey7n" path="res://scenes/rocks/stone.tscn" id="11_kx2qb"]
 [ext_resource type="PackedScene" uid="uid://ckalcb65vcpg5" path="res://scenes/crops/corn_harvest.tscn" id="12_2v1ko"]

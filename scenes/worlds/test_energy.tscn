@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://scripts/components/field_cursor_component.gd" id="3_6hg4h"]
 [ext_resource type="PackedScene" uid="uid://byl6mqjmid2xt" path="res://scenes/components/crops_cursor_component.tscn" id="4_1a2j5"]
 [ext_resource type="Script" path="res://scripts/components/crops_cursor_component.gd" id="5_kbo7b"]
-[ext_resource type="PackedScene" uid="uid://i8tqpr2q1kd7" path="res://scenes/charcters/player.tscn" id="6_jhx6b"]
+[ext_resource type="PackedScene" uid="uid://i8tqpr2q1kd7" path="res://scenes/characters/player.tscn" id="6_jhx6b"]
 [ext_resource type="PackedScene" uid="uid://duhcjiowp78cb" path="res://scenes/components/day_and_night_cycle_component.tscn" id="10_pa1l6"]
 
 [node name="game" type="Node2D"]
