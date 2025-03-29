@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://ceiunirt4htmx" path="res://scenes/Ui/day_night_panel.tscn" id="12_jeoma"]
 [ext_resource type="PackedScene" uid="uid://d0jkbxjehcft7" path="res://scenes/Ui/tool_panel.tscn" id="13_o63qw"]
 [ext_resource type="PackedScene" uid="uid://cgdvbroy6c7s7" path="res://scenes/Ui/inventory_panel.tscn" id="14_006m4"]
-[ext_resource type="PackedScene" uid="uid://3hiihdd0rh6v" path="res://scenes/Ui/energy_bar.tscn" id="15_m6eww"]
+[ext_resource type="PackedScene" uid="uid://3hiihdd0rh6v" path="res://scenes/Ui/energy_bar.tscn" id="15_d5i88"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_np34i"]
 atlas = ExtResource("2_eckuu")
@@ -487,7 +487,6 @@ size_flags_horizontal = 8
 size_flags_vertical = 0
 
 [node name="tool_panel" parent="." instance=ExtResource("13_o63qw")]
-z_index = 1
 offset_left = -178.0
 offset_top = 118.0
 offset_right = 170.0
@@ -506,8 +505,10 @@ offset_top = -16.0
 offset_right = 157.0
 offset_bottom = 38.0
 
-[node name="EnergyBar" parent="." instance=ExtResource("15_m6eww")]
-offset_left = -309.0
+[node name="EnergyBar" parent="." instance=ExtResource("15_d5i88")]
+offset_left = -297.0
 offset_top = -168.0
-offset_right = 25.0
-offset_bottom = -122.0
+offset_right = -97.0
+offset_bottom = -152.0
+max_value = 10.0
+value = 10.0
