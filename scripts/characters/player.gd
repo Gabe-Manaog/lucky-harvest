@@ -4,6 +4,7 @@ extends CharacterBody2D
 @onready var hit_component: HitComponent = $HitComponent
 @onready var inventory_panel: PanelContainer = $InventoryPanel
 @onready var energy_bar: ProgressBar = $EnergyBar
+@onready var tool_panel: PanelContainer = $tool_panel
 
 
 @export var current_tool: DataTypes.Tools = DataTypes.Tools.None

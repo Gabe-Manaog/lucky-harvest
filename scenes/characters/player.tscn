@@ -488,15 +488,6 @@ grow_vertical = 1
 size_flags_horizontal = 8
 size_flags_vertical = 0
 
-[node name="tool_panel" parent="." instance=ExtResource("13_o63qw")]
-z_index = 1
-offset_left = -178.0
-offset_top = 118.0
-offset_right = 170.0
-offset_bottom = 166.0
-size_flags_horizontal = 4
-size_flags_vertical = 8
-
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.5, 2.5)
 
@@ -523,3 +514,10 @@ offset_left = -310.0
 offset_top = -168.0
 offset_right = -310.0
 offset_bottom = -168.0
+
+[node name="tool_panel" parent="." instance=ExtResource("13_o63qw")]
+z_index = 1
+offset_left = -174.0
+offset_top = 108.0
+offset_right = 174.0
+offset_bottom = 156.0
