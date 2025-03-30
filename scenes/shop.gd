@@ -17,6 +17,14 @@ var crops_dict = {
 "description": "Potatoe potahto",
 "cost": 700
 },
+	3:{"name":"Stone",
+"description": "Stone Cold ",
+"cost": 1000
+},
+	4:{"name":"Wood",
+"description": "Chuck Chuck Wood",
+"cost": 1000
+}
 }
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -34,7 +42,6 @@ func _on_close_pressed() -> void:
 func switchItem(select):
 	for i in range(crops_dict.size()):
 		if i == current_page:
-			print(current_page)
 			current_page=select
 			get_node("Panel/Control/Icon/AnimatedSprite2D").play(crops_dict[current_page]["name"])
 			get_node("Panel/Control/Name").text=(crops_dict[current_page]["name"])
@@ -55,10 +62,16 @@ func _on_previous_pressed() -> void:
 
 
 func _on_purchase_pressed() -> void:
-	InventoryManager.add_collectable("corn")
+	for i in range(crops_dict.size()):
+		if i == current_page:
+			if currency >= crops_dict[current_page]["cost"]:
+				currency -= crops_dict[current_page]["cost"]
+				currency_label.text = "Currency " + str(currency)
 
 
 func _on_sell_pressed() -> void:
-	InventoryManager.remove_collectable("corn")
-	currency+=500
-	currency_label.text = "Currency " + str(currency)
+	for i in range(crops_dict.size()):
+		if i == current_page:
+			if currency >= crops_dict[current_page]["cost"]:
+				currency += crops_dict[current_page]["cost"]
+				currency_label.text = "Currency " + str(currency)

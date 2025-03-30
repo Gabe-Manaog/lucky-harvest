@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://ck5ruyf1pp3hg"]
+[gd_scene load_steps=28 format=3 uid="uid://ck5ruyf1pp3hg"]
 
 [ext_resource type="Script" path="res://scenes/shop.gd" id="1_2wumc"]
 [ext_resource type="Theme" uid="uid://c1x5gwaorkwnx" path="res://dialogue/dialogue_balloon_theme.tres" id="1_keyd2"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://del0436ykn7tf" path="res://assets/art/crops/potato.png" id="7_jymxt"]
 [ext_resource type="Texture2D" uid="uid://c6ombyqcnwqsv" path="res://assets/art/crops/radish.png" id="8_t8m67"]
 [ext_resource type="Texture2D" uid="uid://dcm7hs7w4wohf" path="res://assets/art/crops/spinach.png" id="9_dyfe2"]
+[ext_resource type="Texture2D" uid="uid://bqjwr1sxwqera" path="res://assets/art/crops/Basic_Grass_Biom_things.png" id="10_0w4kn"]
 [ext_resource type="Texture2D" uid="uid://c4fxmrhn2o4b" path="res://assets/art/crops/turnip.png" id="10_i2miq"]
 
 [sub_resource type="Animation" id="Animation_02n32"]
@@ -78,6 +79,10 @@ region = Rect2(16, 16, 16, 16)
 atlas = ExtResource("9_dyfe2")
 region = Rect2(16, 16, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_abuxx"]
+atlas = ExtResource("10_0w4kn")
+region = Rect2(128, 16, 16, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_sgwru"]
 atlas = ExtResource("4_lw3ou")
 region = Rect2(80, 16, 16, 16)
@@ -85,6 +90,10 @@ region = Rect2(80, 16, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_2c41r"]
 atlas = ExtResource("10_i2miq")
 region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_byiic"]
+atlas = ExtResource("10_0w4kn")
+region = Rect2(64, 32, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bidgq"]
 animations = [{
@@ -138,6 +147,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_abuxx")
+}],
+"loop": true,
+"name": &"Stone",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_sgwru")
 }],
 "loop": true,
@@ -150,6 +167,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"Turnip",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_byiic")
+}],
+"loop": true,
+"name": &"Wood",
 "speed": 5.0
 }]
 
@@ -243,7 +268,7 @@ theme_type_variation = &"Dark_Wood_Panel"
 position = Vector2(36.5, 31.5)
 scale = Vector2(3.3125, 2.8125)
 sprite_frames = SubResource("SpriteFrames_bidgq")
-animation = &"Corn"
+animation = &"Stone"
 autoplay = "Corn"
 
 [node name="Next" type="Button" parent="Panel/Control"]
