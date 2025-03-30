@@ -475,6 +475,7 @@ scale = Vector2(0.384859, 0.651556)
 texture = SubResource("AtlasTexture_vehu7")
 
 [node name="day_night_panel" parent="." instance=ExtResource("12_jeoma")]
+z_index = 1
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -488,6 +489,7 @@ size_flags_horizontal = 8
 size_flags_vertical = 0
 
 [node name="tool_panel" parent="." instance=ExtResource("13_o63qw")]
+z_index = 1
 offset_left = -178.0
 offset_top = 118.0
 offset_right = 170.0
@@ -512,7 +514,7 @@ offset_left = -267.0
 offset_top = -153.0
 offset_right = 12.0
 offset_bottom = -137.0
-max_value = 10.0
+max_value = 30.0
 value = 10.0
 
 [node name="Control" parent="." instance=ExtResource("16_olscj")]
