@@ -1,0 +1,72 @@
+[gd_scene load_steps=10 format=3 uid="uid://ly6r6kyfktu0"]
+
+[ext_resource type="Script" path="res://scenes/worlds/main/world_one.gd" id="1_wsani"]
+[ext_resource type="TileSet" uid="uid://bj102qrwwagck" path="res://tilesets/game_tileset.tres" id="2_uo5rf"]
+[ext_resource type="PackedScene" uid="uid://nl13jnch5tm3" path="res://scenes/components/field_cursor_component.tscn" id="3_c2l07"]
+[ext_resource type="Script" path="res://scripts/components/field_cursor_component.gd" id="4_pem0k"]
+[ext_resource type="PackedScene" uid="uid://byl6mqjmid2xt" path="res://scenes/components/crops_cursor_component.tscn" id="5_30b4v"]
+[ext_resource type="Script" path="res://scripts/components/crops_cursor_component.gd" id="6_cajuk"]
+[ext_resource type="PackedScene" uid="uid://i8tqpr2q1kd7" path="res://scenes/characters/player.tscn" id="7_0ewhj"]
+[ext_resource type="PackedScene" uid="uid://duhcjiowp78cb" path="res://scenes/components/day_and_night_cycle_component.tscn" id="8_q0qky"]
+[ext_resource type="PackedScene" uid="uid://c1cuvmwv6u0ba" path="res://scenes/characters/bed.tscn" id="9_4g78a"]
+
+[node name="game" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_wsani")
+
+[node name="world" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="water" type="TileMapLayer" parent="world"]
+tile_set = ExtResource("2_uo5rf")
+
+[node name="waterBorder" type="TileMapLayer" parent="world"]
+tile_set = ExtResource("2_uo5rf")
+
+[node name="grass" type="TileMapLayer" parent="world"]
+tile_set = ExtResource("2_uo5rf")
+
+[node name="TilledSoil" type="TileMapLayer" parent="world"]
+tile_set = ExtResource("2_uo5rf")
+
+[node name="grassNoTill" type="TileMapLayer" parent="world"]
+tile_set = ExtResource("2_uo5rf")
+
+[node name="house" type="TileMapLayer" parent="world"]
+tile_set = ExtResource("2_uo5rf")
+
+[node name="trees" type="TileMapLayer" parent="world"]
+z_index = 1
+y_sort_enabled = true
+tile_set = ExtResource("2_uo5rf")
+
+[node name="rocks" type="TileMapLayer" parent="world"]
+tile_set = ExtResource("2_uo5rf")
+
+[node name="decor" type="TileMapLayer" parent="world"]
+z_index = 1
+y_sort_enabled = true
+tile_set = ExtResource("2_uo5rf")
+
+[node name="CropFields" type="Node2D" parent="."]
+
+[node name="FieldCursorComponent" parent="." node_paths=PackedStringArray("grass_tilemap_layer", "tilled_soil_tilemap_layer") instance=ExtResource("3_c2l07")]
+script = ExtResource("4_pem0k")
+grass_tilemap_layer = NodePath("../world/grass")
+tilled_soil_tilemap_layer = NodePath("../world/TilledSoil")
+terrain = 2
+
+[node name="CropsCursorComponent" parent="." node_paths=PackedStringArray("tilled_soil_tilemap_layer") instance=ExtResource("5_30b4v")]
+script = ExtResource("6_cajuk")
+tilled_soil_tilemap_layer = NodePath("../world/TilledSoil")
+
+[node name="Player" parent="." instance=ExtResource("7_0ewhj")]
+z_index = 1
+position = Vector2(320, 176)
+
+[node name="DayAndNightCycleComponent" parent="." instance=ExtResource("8_q0qky")]
+initial_hour = 8
+initial_minute = 0
+
+[node name="bed" parent="." instance=ExtResource("9_4g78a")]
+position = Vector2(495, 64)

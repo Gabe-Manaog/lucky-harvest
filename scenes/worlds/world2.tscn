@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://bbv3pw1rfi75e"]
+[gd_scene load_steps=9 format=4 uid="uid://bjymhct1umxvs"]
 
 [ext_resource type="TileSet" uid="uid://bj102qrwwagck" path="res://tilesets/game_tileset.tres" id="1_mq6t5"]
 [ext_resource type="Texture2D" uid="uid://c0utodicv8b5x" path="res://assets/art/ground/Water.png" id="2_6ydfo"]
