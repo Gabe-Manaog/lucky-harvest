@@ -1,10 +1,11 @@
 ~ start
-Nathan: [[Hi|Hello|Ola]], Welcome to our Gacha Shop
-Nathan: How many Compainons would you like to summon
+Wanderer: [[Hi|Hello|Ola]], Welcome to your new home EEZY Islands!
+Wanderer: Here are a few to tips to help you make a living on this island
+Wanderer: Use W,A,S,D to move around all over the island
 - 1 Summon
-	Nathan: WIP
+	Wanderer: WIP
 - 10 Summon
-	Nathan: WIP
+	Wanderer: WIP
 - End the conversation => END
-Nathan: Have a wondeful day!
+Wanderer: Have a wondeful day!
 => END
