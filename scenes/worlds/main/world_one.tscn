@@ -80,7 +80,7 @@ initial_minute = 0
 [node name="bed" parent="." instance=ExtResource("2_b1ubu")]
 position = Vector2(495, 64)
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("10_5d01e")
 volume_db = -15.0
 autoplay = true
