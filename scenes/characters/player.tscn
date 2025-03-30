@@ -412,6 +412,7 @@ atlas = ExtResource("11_hf5n6")
 region = Rect2(148, 148, 24, 25)
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
+z_index = 1
 y_sort_enabled = true
 position = Vector2(1, -40)
 collision_layer = 2
@@ -469,7 +470,6 @@ shape = SubResource("RectangleShape2D_bgc0h")
 debug_color = Color(0.928454, 3.25364e-05, 0.664601, 0.42)
 
 [node name="Sprite2D" type="Sprite2D" parent="HitComponent/HitComponentCollisionShape2D"]
-z_index = -1
 position = Vector2(-0.307887, 0.41614)
 scale = Vector2(0.384859, 0.651556)
 texture = SubResource("AtlasTexture_vehu7")
