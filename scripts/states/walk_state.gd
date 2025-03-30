@@ -2,7 +2,7 @@ extends NodeState
 
 @export var player: Player
 @export var animated_sprite_2d: AnimatedSprite2D
-@export var speed: int = 200 #change back to 200
+@export var speed: int = 700 #change back to 200
 @onready var hit_component_collision_shape_2d: CollisionShape2D = $"../../HitComponent/HitComponentCollisionShape2D"
 var can_move = true
 func _on_process(_delta : float) -> void:
