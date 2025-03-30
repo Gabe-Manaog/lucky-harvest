@@ -2,10 +2,19 @@
 Wanderer: [[Hi|Hello|Ola]], Welcome to your new home EEZY Islands!
 Wanderer: Here are a few to tips to help you make a living on this island
 Wanderer: Use W,A,S,D to move around all over the island
-- 1 Summon
-	Wanderer: WIP
-- 10 Summon
-	Wanderer: WIP
+Wanderer: To help you make a living around here, you should've received some seeds
+Wanderer: To plant them click on your hoe in the bottom panel and once you start holding it
+Wanderer: Click on the ground to till it
+Wanderer: Once it's tilled you can plant whichever seed you want on the tilled soil
+Wanderer: For it to continuously grow, you need to water it once with your watering can
+Wanderer: On the top left you see your energy bar!
+Wanderer: Don't let it get to zero or you'll die from unnatural causes!
+Wanderer: There's a bed in your home to sleep
+Wanderer: To explore more of EEZY island's there are 4 sailors to take you on the other islands we have
+Wanderer: That should be all you need to know! Good luck on your journey
+Wanderer: Would you like me to explain the tutorial again?
+- Yes
+	Wanderer: Sure no problem
 - End the conversation => END
 Wanderer: Have a wondeful day!
 => END

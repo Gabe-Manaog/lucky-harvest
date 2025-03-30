@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://su5tbybb6upi"]
+[gd_scene load_steps=12 format=4 uid="uid://su5tbybb6upi"]
 
 [ext_resource type="TileSet" uid="uid://bj102qrwwagck" path="res://tilesets/game_tileset.tres" id="1_mvy6c"]
 [ext_resource type="Script" path="res://scenes/worlds/main/world_one.gd" id="1_uncw0"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://i8tqpr2q1kd7" path="res://scenes/characters/player.tscn" id="6_rr6lq"]
 [ext_resource type="PackedScene" uid="uid://duhcjiowp78cb" path="res://scenes/components/day_and_night_cycle_component.tscn" id="7_nrejp"]
 [ext_resource type="AudioStream" uid="uid://cpx88gus6ylx7" path="res://assets/music/tutorial.ogg" id="10_5d01e"]
+[ext_resource type="PackedScene" uid="uid://cxcohuy37d7ul" path="res://scenes/characters/guide.tscn" id="10_w181m"]
 
 [node name="game" type="Node2D"]
 y_sort_enabled = true
@@ -79,6 +80,9 @@ initial_minute = 0
 
 [node name="bed" parent="." instance=ExtResource("2_b1ubu")]
 position = Vector2(495, 64)
+
+[node name="Guide" parent="." instance=ExtResource("10_w181m")]
+position = Vector2(438, 81)
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("10_5d01e")
