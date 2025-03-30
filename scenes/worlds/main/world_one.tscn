@@ -12,7 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://cpx88gus6ylx7" path="res://assets/music/tutorial.ogg" id="10_5d01e"]
 [ext_resource type="PackedScene" uid="uid://cxcohuy37d7ul" path="res://scenes/characters/guide.tscn" id="10_w181m"]
 
-[node name="game" type="Node2D"]
+[node name="game2" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_uncw0")
 
