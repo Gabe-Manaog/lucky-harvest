@@ -33,12 +33,16 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since thce previous frame.
 func _process(delta: float) -> void:
-	if SceneSwitcher.world_access==2:
+	if SceneSwitcher.world_access>=2:
 		crops_dict[4]={"name":"Potato","description": "Potatoe potahto","cost": 800}
 		crops_dict[5]={"name":"Carrot","description": "Orangelicious","cost": 800}
-	if SceneSwitcher.world_access==3:
-		crops_dict[4]={"name":"Onion","description": "Don't Cry","cost": 1000}
-		crops_dict[5]={"name":"Radish","description": "This is Rad","cost": 1000}
+	if SceneSwitcher.world_access>=3:
+		crops_dict[6]={"name":"Onion","description": "Don't Cry","cost": 1000}
+		crops_dict[7]={"name":"Radish","description": "This is Rad","cost": 1000}
+	if SceneSwitcher.world_access>=4:
+		print('lol')
+		crops_dict[8]={"name":"Spinach","description": "To get the Big Arms","cost": 1500}
+		crops_dict[9]={"name":"Turnip","description": "Tastiest Ever!","cost": 1500}
 
 func _on_close_pressed() -> void:
 	get_node('Panel/Anim').play('TransOut')
