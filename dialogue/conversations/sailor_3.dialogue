@@ -4,10 +4,10 @@ Sailor: Did you want to go to the next island?
 Sailor: Its going to cost ya 5 Onion, 5 Radis, 15 Logs, and 15 stones
 Sailor: Do you have that for me?
 - Yes
-	if InventoryManager.inventory!= null and InventoryManager.inventory["potato"] >= 5 and InventoryManager.inventory["carrot"] >= 5 and InventoryManager.inventory["log"] >= 10 and InventoryManager.inventory["stone"] >= 10
+	if InventoryManager.inventory!= null and InventoryManager.inventory["onion"] >= 5 and InventoryManager.inventory["radish"] >= 5 and InventoryManager.inventory["log"] >= 15 and InventoryManager.inventory["stone"] >= 15
 		Sailor: Alrightie, i'll take you
-		set SceneSwitcher.world_access = 3
-		do SceneSwitcher.switch_scene("res://scenes/worlds/main/world_three.tscn")
+		set SceneSwitcher.world_access = 4
+		do SceneSwitcher.switch_scene("res://scenes/worlds/main/world_four.tscn")
 	else
 		Sailor: You thought you could fool me?
 		Sailor: Come back when you actually have enough

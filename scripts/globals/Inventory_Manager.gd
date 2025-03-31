@@ -1,7 +1,7 @@
 extends Node
 
 @onready var currency_label: Label = $DayPanel/MarginContainer/DayLabel
-var inventory: Dictionary = Dictionary()
+var inventory = { "corn": 0, "tomato": 0, "stone": 0, "log": 0 ,"potato": 0, "onion": 0, "turnip": 0, "radish":0,"spinach":0}
 var world_access =0
 signal inventory_changed
 

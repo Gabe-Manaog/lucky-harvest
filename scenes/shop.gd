@@ -21,18 +21,24 @@ var crops_dict = {
 	3:{"name":"Log",
 "description": "Chuck Chuck Wood",
 "cost": 1000
-},
-4:{"name":"Potato","description": "Potatoe potahto","cost": 800},
-5:{"name":"Carrot","description": "Orangelicious","cost": 800}
+}
 }
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	currency_label.text = "Currency " + str(currency)
+	get_node("Panel/Control/Icon/AnimatedSprite2D").play(crops_dict[current_page]["name"])
+	get_node("Panel/Control/Name").text=(crops_dict[current_page]["name"])
+	get_node("Panel/Control/Description").text=(crops_dict[current_page]["description"])
+	get_node("Panel/Control/Description").text+=("\n Cost: "+ str(crops_dict[current_page]["cost"]))
 
 # Called every frame. 'delta' is the elapsed time since thce previous frame.
 func _process(delta: float) -> void:
-	pass
-
+	if SceneSwitcher.world_access==2:
+		crops_dict[4]={"name":"Potato","description": "Potatoe potahto","cost": 800}
+		crops_dict[5]={"name":"Carrot","description": "Orangelicious","cost": 800}
+	if SceneSwitcher.world_access==3:
+		crops_dict[4]={"name":"Onion","description": "Don't Cry","cost": 1000}
+		crops_dict[5]={"name":"Radish","description": "This is Rad","cost": 1000}
 
 func _on_close_pressed() -> void:
 	get_node('Panel/Anim').play('TransOut')
@@ -40,12 +46,8 @@ func _on_close_pressed() -> void:
 
 func switchItem(select):
 	print(crops_dict)
-	if SceneSwitcher.world_access==2:
-		size=6
 	for i in range(crops_dict.size()):
-		if i == size:
-			break
-		elif i == current_page:
+		if i == current_page:
 			current_page=select
 			get_node("Panel/Control/Icon/AnimatedSprite2D").play(crops_dict[current_page]["name"])
 			get_node("Panel/Control/Name").text=(crops_dict[current_page]["name"])
@@ -76,9 +78,9 @@ func _on_purchase_pressed() -> void:
 
 
 func _on_sell_pressed() -> void:
-	for i in range(crops_dict.size()):
-		if i == current_page:
-			if currency >= crops_dict[current_page]["cost"]:
-				currency += crops_dict[current_page]["cost"]
-				InventoryManager.remove_collectable(crops_dict[current_page]["name"].to_lower())
-				currency_label.text = "Currency " + str(currency)
+	if inventory[crops_dict[current_page]["name"].to_lower()] != null:
+		if inventory.get(crops_dict[current_page]["name"].to_lower())>0 :  # Use get() to prevent errors if "cost" is missing
+			currency += crops_dict[current_page]["cost"]
+			InventoryManager.remove_collectable(crops_dict[current_page]["name"].to_lower())  # Use get() to avoid key errors
+			currency_label.text = "Currency " + str(currency)
+		

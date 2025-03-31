@@ -19,6 +19,38 @@ extends PanelContainer
 
 
 func _ready() -> void:
+	var inventory: Dictionary = InventoryManager.inventory
+	
+	if inventory.has("log"):
+		log_label.text = str(inventory["log"])
+	
+	if inventory.has("stone"):
+		stone_label.text = str(inventory["stone"])
+	
+	if inventory.has("corn"):
+		corn_label.text = str(inventory["corn"])
+	
+	if inventory.has("tomato"):
+		tomato_label.text = str(inventory["tomato"])
+	
+	if inventory.has("potato"):
+		potato_label.text = str(inventory["potato"])
+	
+	if inventory.has("carrot"):
+		carrot_label.text = str(inventory["carrot"])
+	
+	if inventory.has("onion"):
+		onion_label.text = str(inventory["onion"])
+		
+	if inventory.has("radish"):
+		radish_label.text = str(inventory["radish"])
+		
+	if inventory.has("spinach"):
+		spinach_label.text = str(inventory["spinach"])
+		
+	if inventory.has("turnip"):
+		turnip_label.text = str(inventory["turnip"])
+
 	InventoryManager.inventory_changed.connect(on_inventory_changed)
 
 func _input(event):
