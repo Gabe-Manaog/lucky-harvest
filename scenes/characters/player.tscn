@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://d0jkbxjehcft7" path="res://scenes/Ui/tool_panel.tscn" id="13_o63qw"]
 [ext_resource type="PackedScene" uid="uid://cgdvbroy6c7s7" path="res://scenes/Ui/inventory_panel.tscn" id="14_006m4"]
 [ext_resource type="PackedScene" uid="uid://3hiihdd0rh6v" path="res://scenes/Ui/energy_bar.tscn" id="15_d5i88"]
-[ext_resource type="PackedScene" uid="uid://ca4vgrv0jh80" path="res://scenes/Ui/energy_bar_ui.tscn" id="16_olscj"]
+[ext_resource type="PackedScene" path="res://scenes/Ui/energy_bar_ui.tscn" id="16_olscj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_np34i"]
 atlas = ExtResource("2_eckuu")

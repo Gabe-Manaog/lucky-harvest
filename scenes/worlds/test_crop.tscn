@@ -50,7 +50,6 @@ script = ExtResource("5_q7ex6")
 tilled_soil_tilemap_layer = NodePath("../world/TilledSoil")
 
 [node name="Player" parent="." instance=ExtResource("6_21moq")]
-z_index = 1
 position = Vector2(320, 176)
 
 [node name="DayAndNightCycleComponent" parent="." instance=ExtResource("7_2y41m")]

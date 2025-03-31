@@ -14,12 +14,19 @@ var time: float = 0.0
 var current_minute: int = -1
 var current_day: int = 0
 
+@onready var player: Player = $Player
+@onready var energy_bar: ProgressBar = null
+
 signal game_time(time: float)
 signal time_tick(day: int, hour: int, minute: int)
 signal time_tick_day(day: int)
 
 func _ready() -> void:
 	set_initial_time()
+	await get_tree().process_frame
+	player = get_tree().get_first_node_in_group("player")
+	if player:
+		energy_bar = player.energy_bar
 	
 func _process(delta: float) -> void:
 	time += delta * game_speed * GAME_MINUTES_DURATION
@@ -51,6 +58,8 @@ func sleep() -> void:
 	current_day += 1  # Move to the next day
 	var new_total_minutes = (current_day * MINUTES_PER_DAY) + (7 * MINUTES_PER_HOUR) # Always 7:00 AM
 	time = new_total_minutes * GAME_MINUTES_DURATION
-	
+	energy_bar._set_energy(energy_bar.max_value)
+	print("you've slept")
+
 	time_tick.emit(current_day, 7, 0)  
 	time_tick_day.emit(current_day)  
