@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=4 uid="uid://y56e4pp7xwgk"]
 
 [ext_resource type="TileSet" uid="uid://bj102qrwwagck" path="res://tilesets/game_tileset.tres" id="1_i8is7"]
-[ext_resource type="PackedScene" path="res://shopkeeper.tscn" id="1_o21s2"]
+[ext_resource type="PackedScene" uid="uid://bu0melmuadcs1" path="res://shopkeeper.tscn" id="1_o21s2"]
 [ext_resource type="PackedScene" uid="uid://i8tqpr2q1kd7" path="res://scenes/characters/player.tscn" id="3_d2r00"]
 [ext_resource type="PackedScene" uid="uid://cxcohuy37d7ul" path="res://scenes/characters/guide.tscn" id="5_xiiwy"]
 [ext_resource type="PackedScene" uid="uid://c1cuvmwv6u0ba" path="res://scenes/characters/bed.tscn" id="6_w2xrt"]
-[ext_resource type="PackedScene" path="res://scenes/characters/sailor.tscn" id="7_aq5bl"]
+[ext_resource type="PackedScene" uid="uid://fri6vp5k81pn" path="res://scenes/characters/sailor.tscn" id="7_aq5bl"]
 [ext_resource type="PackedScene" uid="uid://duhcjiowp78cb" path="res://scenes/components/day_and_night_cycle_component.tscn" id="9_tkbim"]
 
 [node name="game" type="Node2D"]

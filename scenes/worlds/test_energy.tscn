@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c1cuvmwv6u0ba" path="res://scenes/characters/bed.tscn" id="8_0indu"]
 [ext_resource type="PackedScene" uid="uid://duhcjiowp78cb" path="res://scenes/components/day_and_night_cycle_component.tscn" id="10_pa1l6"]
 
-[node name="game" type="Node2D"]
+[node name="game2" type="Node2D"]
 y_sort_enabled = true
 
 [node name="world" type="Node2D" parent="."]
