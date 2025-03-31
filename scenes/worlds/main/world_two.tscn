@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://ly6r6kyfktu0"]
+[gd_scene load_steps=13 format=4 uid="uid://ly6r6kyfktu0"]
 
 [ext_resource type="Script" path="res://scenes/worlds/main/world_one.gd" id="1_wsani"]
 [ext_resource type="TileSet" uid="uid://bj102qrwwagck" path="res://tilesets/game_tileset.tres" id="2_uo5rf"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://duhcjiowp78cb" path="res://scenes/components/day_and_night_cycle_component.tscn" id="8_q0qky"]
 [ext_resource type="PackedScene" uid="uid://c1cuvmwv6u0ba" path="res://scenes/characters/bed.tscn" id="9_4g78a"]
 [ext_resource type="AudioStream" uid="uid://b1vv64j6d33b4" path="res://assets/music/world_two.ogg" id="10_ec1mg"]
+[ext_resource type="PackedScene" uid="uid://bu0melmuadcs1" path="res://shopkeeper.tscn" id="10_viyl4"]
+[ext_resource type="PackedScene" uid="uid://c4p4r8wevgagf" path="res://scenes/characters/sailor_2.tscn" id="11_tp5y2"]
 
 [node name="game" type="Node2D"]
 y_sort_enabled = true
@@ -76,10 +78,16 @@ position = Vector2(320, 176)
 initial_hour = 8
 initial_minute = 0
 
-[node name="bed" parent="." instance=ExtResource("9_4g78a")]
-position = Vector2(384, 67)
-
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("10_ec1mg")
 volume_db = -15.0
 autoplay = true
+
+[node name="Shopkeeper" parent="." instance=ExtResource("10_viyl4")]
+position = Vector2(217, 104)
+
+[node name="Sailor" parent="." instance=ExtResource("11_tp5y2")]
+position = Vector2(280, 110)
+
+[node name="bed" parent="." instance=ExtResource("9_4g78a")]
+position = Vector2(384, 67)

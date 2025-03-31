@@ -20,4 +20,4 @@ func _unhandled_input(event: InputEvent) -> void:
 		if event.is_action_pressed("show_dialogue"):
 			var balloon: BaseGameDialogueBalloon = balloon_scene.instantiate()
 			get_tree().current_scene.add_child(balloon)
-			balloon.start(load("res://dialogue/conversations/sailor_1.dialogue"),"start" )
+			balloon.start(load("res://dialogue/conversations/sailor_2.dialogue"),"start" )

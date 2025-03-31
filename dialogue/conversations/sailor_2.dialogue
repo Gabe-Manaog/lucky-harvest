@@ -1,0 +1,18 @@
+~ start
+Sailor: [[Hi|Hello|Howdy]], im the local sailor around here
+Sailor: Did you want to go to the next island?
+Sailor: Its going to cost ya 5 Tomatos, 5 Corn, 5 Logs, and 5 stones
+Sailor: Do you have that for me?
+- Yes
+	if InventoryManager.inventory!= null and InventoryManager.inventory["potato"] >= 5 and InventoryManager.inventory["carrot"] >= 5 and InventoryManager.inventory["log"] >= 10 and InventoryManager.inventory["stone"] >= 10
+		Sailor: Alrightie, i'll take you
+		do SceneSwitcher.switch_scene("res://scenes/worlds/main/world_three.tscn")
+	else
+		Sailor: You thought you could fool me?
+		Sailor: Come back when you actually have enough
+		=> END
+- No
+	Sailor: You better get working then!
+
+Nathan: For more information see the online documentation.
+=> END

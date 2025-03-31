@@ -2,7 +2,7 @@ extends Node
 
 @onready var currency_label: Label = $DayPanel/MarginContainer/DayLabel
 var inventory: Dictionary = Dictionary()
-
+var world_access =0
 signal inventory_changed
 
 func add_collectable(collectable_name: String) -> void:

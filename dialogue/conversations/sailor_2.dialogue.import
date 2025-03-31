@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://dir57lu7sun88"
+path="res://.godot/imported/sailor_2.dialogue-7a688e2e5a434952662184bf93673052.tres"
+
+[deps]
+
+source_file="res://dialogue/conversations/sailor_2.dialogue"
+dest_files=["res://.godot/imported/sailor_2.dialogue-7a688e2e5a434952662184bf93673052.tres"]
+
+[params]
+
+defaults=true

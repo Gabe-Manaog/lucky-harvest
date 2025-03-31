@@ -1,9 +1,10 @@
 extends CanvasLayer
 
 @onready var currency_label: Label = $Panel/Control/CurrencyPanel/MarginContainer/CurrencyLabel
-var currency = 0
+var currency = 1000000
 var current_page = 0
 var inventory = InventoryManager.inventory
+var size =4
 var crops_dict = {
 	0:{"name":"Corn",
 "description": "Long Yellow Snack",
@@ -13,18 +14,16 @@ var crops_dict = {
 "description": "Delectable Red Treat",
 "cost": 500
 },
-	2:{"name":"Potato",
-"description": "Potatoe potahto",
-"cost": 700
-},
-	3:{"name":"Stone",
+	2:{"name":"Stone",
 "description": "Stone Cold ",
 "cost": 1000
 },
-	4:{"name":"Wood",
+	3:{"name":"Log",
 "description": "Chuck Chuck Wood",
 "cost": 1000
-}
+},
+4:{"name":"Potato","description": "Potatoe potahto","cost": 800},
+5:{"name":"Carrot","description": "Orangelicious","cost": 800}
 }
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -40,8 +39,13 @@ func _on_close_pressed() -> void:
 	get_tree().paused = false
 
 func switchItem(select):
+	print(crops_dict)
+	if SceneSwitcher.world_access==2:
+		size=6
 	for i in range(crops_dict.size()):
-		if i == current_page:
+		if i == size:
+			break
+		elif i == current_page:
 			current_page=select
 			get_node("Panel/Control/Icon/AnimatedSprite2D").play(crops_dict[current_page]["name"])
 			get_node("Panel/Control/Name").text=(crops_dict[current_page]["name"])
@@ -66,7 +70,9 @@ func _on_purchase_pressed() -> void:
 		if i == current_page:
 			if currency >= crops_dict[current_page]["cost"]:
 				currency -= crops_dict[current_page]["cost"]
+				InventoryManager.add_collectable(crops_dict[current_page]["name"].to_lower())
 				currency_label.text = "Currency " + str(currency)
+				print(inventory)
 
 
 func _on_sell_pressed() -> void:
@@ -74,4 +80,5 @@ func _on_sell_pressed() -> void:
 		if i == current_page:
 			if currency >= crops_dict[current_page]["cost"]:
 				currency += crops_dict[current_page]["cost"]
+				InventoryManager.remove_collectable(crops_dict[current_page]["name"].to_lower())
 				currency_label.text = "Currency " + str(currency)
