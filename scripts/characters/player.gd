@@ -10,12 +10,11 @@ extends CharacterBody2D
 @export var current_tool: DataTypes.Tools = DataTypes.Tools.None
 
 var player_direction: Vector2
-var energy
+
 
 func _ready() -> void:
 	ToolManager.tool_selected.connect(on_tool_selected)
-	energy = 100
-	energy_bar.init_energy(energy)
+
 	
 func on_tool_selected(tool: DataTypes.Tools) -> void:
 	current_tool = tool

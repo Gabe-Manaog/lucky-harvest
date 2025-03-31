@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://ca4vgrv0jh80"]
+[gd_scene load_steps=4 format=3 uid="uid://pfdld6db76vv"]
 
 [ext_resource type="Theme" uid="uid://bak616j14hm58" path="res://tilesets/game_ui_theme.tres" id="1_uk32k"]
 [ext_resource type="Texture2D" uid="uid://b0ix11oc3ejka" path="res://assets/art/emotes.png" id="2_sx5jg"]

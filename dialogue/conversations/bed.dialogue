@@ -4,7 +4,7 @@ Do you want to go to bed?
 	do DayAndNightManager.sleep()
 	Nathan: Good Morning!
 - No?
-	Nathan: You picked the second one.
+	Nathan: You picked the second one.ss
 - End the conversation => END
 Nathan: For more information see the online documentation.
 => END

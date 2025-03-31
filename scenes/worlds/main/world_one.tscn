@@ -11,8 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://duhcjiowp78cb" path="res://scenes/components/day_and_night_cycle_component.tscn" id="7_nrejp"]
 [ext_resource type="AudioStream" uid="uid://cpx88gus6ylx7" path="res://assets/music/tutorial.ogg" id="10_5d01e"]
 [ext_resource type="PackedScene" uid="uid://cxcohuy37d7ul" path="res://scenes/characters/guide.tscn" id="10_w181m"]
-[ext_resource type="PackedScene" uid="uid://bu0melmuadcs1" path="res://shopkeeper.tscn" id="11_cfjko"]
-[ext_resource type="PackedScene" uid="uid://fri6vp5k81pn" path="res://scenes/characters/sailor.tscn" id="13_ay5qa"]
+[ext_resource type="PackedScene" path="res://shopkeeper.tscn" id="11_cfjko"]
+[ext_resource type="PackedScene" path="res://scenes/characters/sailor.tscn" id="13_ay5qa"]
 
 [node name="game4" type="Node2D"]
 y_sort_enabled = true
