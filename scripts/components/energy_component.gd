@@ -1,6 +1,8 @@
 extends ProgressBar
 
 @onready var energy_bar: Node2D = $EnergyBar
+@onready var timer: Timer = $"../Timer"
+@onready var label: Label = $"../Label"
 
 var energy = 0 : set = _set_energy
 
@@ -11,7 +13,6 @@ func _set_energy(new_energy):
 	
 	if energy <= 0:
 		on_energy_depleted()
-		queue_free()
 
 func init_energy(_energy):
 	energy = _energy
@@ -19,5 +20,8 @@ func init_energy(_energy):
 	value = energy
 
 func on_energy_depleted() -> void:
-	print("Energy depleted! Player dies.")
+	label.visible = true  # Make the label visible
+	get_tree().paused = true
+	await get_tree().create_timer(3).timeout
+	get_tree().paused = false
 	get_tree().reload_current_scene()
