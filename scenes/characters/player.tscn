@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://d0jkbxjehcft7" path="res://scenes/Ui/tool_panel.tscn" id="13_o63qw"]
 [ext_resource type="PackedScene" uid="uid://cgdvbroy6c7s7" path="res://scenes/Ui/inventory_panel.tscn" id="14_006m4"]
 [ext_resource type="PackedScene" uid="uid://3hiihdd0rh6v" path="res://scenes/Ui/energy_bar.tscn" id="15_d5i88"]
-[ext_resource type="PackedScene" uid="uid://pfdld6db76vv" path="res://scenes/Ui/energy_bar_ui.tscn" id="16_olscj"]
+[ext_resource type="PackedScene" uid="uid://ca4vgrv0jh80" path="res://scenes/Ui/energy_bar_ui.tscn" id="16_olscj"]
 [ext_resource type="FontFile" uid="uid://d0oqjc5qjfs63" path="res://assets/art/pixelFont-7-8x14-sproutLands.ttf" id="17_kklbm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_np34i"]

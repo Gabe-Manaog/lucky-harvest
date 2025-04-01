@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://duhcjiowp78cb" path="res://scenes/components/day_and_night_cycle_component.tscn" id="8_u5f1n"]
 [ext_resource type="PackedScene" uid="uid://c1cuvmwv6u0ba" path="res://scenes/characters/bed.tscn" id="9_eiso4"]
 [ext_resource type="AudioStream" uid="uid://bwaqpuyq4dnyg" path="res://assets/music/world_three.ogg" id="10_jc3o7"]
-[ext_resource type="PackedScene" uid="uid://trr7a06lk5nt" path="res://scenes/characters/sailor_3.tscn" id="10_mmb5p"]
+[ext_resource type="PackedScene" path="res://scenes/characters/sailor_3.tscn" id="10_mmb5p"]
 [ext_resource type="PackedScene" uid="uid://bu0melmuadcs1" path="res://shopkeeper.tscn" id="12_nck7q"]
 
 [node name="game4" type="Node2D"]
