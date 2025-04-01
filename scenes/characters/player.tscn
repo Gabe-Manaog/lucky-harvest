@@ -503,18 +503,18 @@ offset_bottom = 38.0
 [node name="EnergyBar" parent="." instance=ExtResource("15_d5i88")]
 process_mode = 3
 z_index = 1
-offset_left = -267.0
+offset_left = -255.0
 offset_top = -153.0
-offset_right = 12.0
+offset_right = 24.0
 offset_bottom = -137.0
 max_value = 10.0
 value = 10.0
 
 [node name="Control" parent="." instance=ExtResource("16_olscj")]
 z_index = 1
-offset_left = -310.0
+offset_left = -298.0
 offset_top = -168.0
-offset_right = -310.0
+offset_right = -298.0
 offset_bottom = -168.0
 
 [node name="tool_panel" parent="." instance=ExtResource("13_o63qw")]

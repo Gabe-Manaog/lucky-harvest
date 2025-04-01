@@ -1,11 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://pfdld6db76vv"]
+[gd_scene load_steps=3 format=3 uid="uid://ca4vgrv0jh80"]
 
 [ext_resource type="Theme" uid="uid://bak616j14hm58" path="res://tilesets/game_ui_theme.tres" id="1_uk32k"]
-[ext_resource type="Texture2D" uid="uid://b0ix11oc3ejka" path="res://assets/art/emotes.png" id="2_sx5jg"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xv6pf"]
-atlas = ExtResource("2_sx5jg")
-region = Rect2(3, 1, 26, 31)
+[ext_resource type="PackedScene" uid="uid://cxido55ea8l6n" path="res://scenes/Ui/emotes_panel.tscn" id="2_af31m"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -24,16 +20,8 @@ offset_bottom = 37.0
 theme = ExtResource("1_uk32k")
 theme_type_variation = &"Dark_Wood_Panel"
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 46.0
-theme = ExtResource("1_uk32k")
-theme_type_variation = &"Dark_Wood_Panel"
-
-[node name="PanelContainer3" type="PanelContainer" parent="PanelContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/PanelContainer3"]
-layout_mode = 2
-texture = SubResource("AtlasTexture_xv6pf")
+[node name="EmotesPanel" parent="." instance=ExtResource("2_af31m")]
+offset_left = -9.0
+offset_top = -3.0
+offset_right = 41.0
+offset_bottom = 47.0
