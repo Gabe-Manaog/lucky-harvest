@@ -1,7 +1,6 @@
 extends CanvasLayer
 
 @onready var currency_label: Label = $Panel/Control/CurrencyPanel/MarginContainer/CurrencyLabel
-var currency = 1000000
 var current_page = 0
 var inventory = InventoryManager.inventory
 var size =4
@@ -25,7 +24,7 @@ var crops_dict = {
 }
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	currency_label.text = "Currency " + str(currency)
+	currency_label.text = "Currency " + str(InventoryManager.currency)
 	get_node("Panel/Control/Icon/AnimatedSprite2D").play(crops_dict[current_page]["name"])
 	get_node("Panel/Control/Name").text=(crops_dict[current_page]["name"])
 	get_node("Panel/Control/Description").text=(crops_dict[current_page]["description"])
@@ -44,7 +43,7 @@ func _process(delta: float) -> void:
 		print('lol')
 		crops_dict[9]={"name":"Spinach","description": "To get the Big Arms","cost": 1500}
 		crops_dict[10]={"name":"Turnip","description": "Tastiest Ever!","cost": 1500}
-		crops_dict[8]={"name":"Egg","description": "Which came first?","cost": 1500}
+		crops_dict[11]={"name":"Egg","description": "Which came first?","cost": 1500}
 
 
 func _on_close_pressed() -> void:
@@ -77,17 +76,17 @@ func _on_previous_pressed() -> void:
 func _on_purchase_pressed() -> void:
 	for i in range(crops_dict.size()):
 		if i == current_page:
-			if currency >= crops_dict[current_page]["cost"]:
-				currency -= crops_dict[current_page]["cost"]
+			if InventoryManager.currency >= crops_dict[current_page]["cost"]:
+				InventoryManager.currency -= crops_dict[current_page]["cost"]
 				InventoryManager.add_collectable(crops_dict[current_page]["name"].to_lower())
-				currency_label.text = "Currency " + str(currency)
+				currency_label.text = "Currency " + str(InventoryManager.currency)
 				print(inventory)
 
 
 func _on_sell_pressed() -> void:
 	if inventory[crops_dict[current_page]["name"].to_lower()] != null:
 		if inventory.get(crops_dict[current_page]["name"].to_lower())>0 :  # Use get() to prevent errors if "cost" is missing
-			currency += crops_dict[current_page]["cost"]
+			InventoryManager.currency += crops_dict[current_page]["cost"]
 			InventoryManager.remove_collectable(crops_dict[current_page]["name"].to_lower())  # Use get() to avoid key errors
-			currency_label.text = "Currency " + str(currency)
+			currency_label.text = "Currency " + str(InventoryManager.currency)
 		
