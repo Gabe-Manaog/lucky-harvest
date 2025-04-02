@@ -294,7 +294,7 @@ theme_type_variation = &"Dark_Wood_Panel"
 position = Vector2(36.5, 31.5)
 scale = Vector2(3.3125, 2.8125)
 sprite_frames = SubResource("SpriteFrames_bidgq")
-animation = &"Milk"
+animation = &"Turnip"
 autoplay = "Corn"
 
 [node name="Next" type="Button" parent="Panel/Control"]

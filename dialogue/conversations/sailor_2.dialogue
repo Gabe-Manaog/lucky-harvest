@@ -4,7 +4,7 @@ Sailor: Did you want to go to the next island?
 Sailor: Its going to cost ya 5 Potato, 5 Carrots, 10 Logs, and 10 stones
 Sailor: Do you have that for me?
 - Yes
-	if InventoryManager.inventory!= null and InventoryManager.inventory["potato"] >= 5 and InventoryManager.inventory["carrot"] >= 5 and InventoryManager.inventory["log"] >= 10 and InventoryManager.inventory["stone"] >= 10
+	if InventoryManager.inventory["potato"] >= 5 and InventoryManager.inventory["carrot"] >= 5 and InventoryManager.inventory["log"] >= 10 and InventoryManager.inventory["stone"] >= 10
 		set InventoryManager.inventory["potato"]-= 5
 		set InventoryManager.inventory["carrot"]-= 5
 		set InventoryManager.inventory["log"]-= 10

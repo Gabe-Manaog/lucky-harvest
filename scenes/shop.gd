@@ -29,9 +29,6 @@ func _ready() -> void:
 	get_node("Panel/Control/Name").text=(crops_dict[current_page]["name"])
 	get_node("Panel/Control/Description").text=(crops_dict[current_page]["description"])
 	get_node("Panel/Control/Description").text+=("\n Cost: "+ str(crops_dict[current_page]["cost"]))
-
-# Called every frame. 'delta' is the elapsed time since thce previous frame.
-func _process(delta: float) -> void:
 	if SceneSwitcher.world_access>=2:
 		crops_dict[4]={"name":"Potato","description": "Potatoe potahto","cost": 800}
 		crops_dict[5]={"name":"Carrot","description": "Orangelicious","cost": 800}
@@ -44,6 +41,10 @@ func _process(delta: float) -> void:
 		crops_dict[9]={"name":"Spinach","description": "To get the Big Arms","cost": 1500}
 		crops_dict[10]={"name":"Turnip","description": "Tastiest Ever!","cost": 1500}
 		crops_dict[11]={"name":"Egg","description": "Which came first?","cost": 1500}
+
+
+# Called every frame. 'delta' is the elapsed time since thce previous frame.
+#func _process(delta: float) -> void:
 
 
 func _on_close_pressed() -> void:

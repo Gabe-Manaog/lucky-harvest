@@ -1,6 +1,5 @@
 extends Node2D
 var balloon_scene = preload("res://dialogue/game_dialogue_balloon.tscn")
-var inventory = InventoryManager.inventory
 @onready var interactable_component: InteractableConponent = $InteractableComponent
 @onready var interactable_label_component: Control = $InteractableLabelComponent
 var in_range: bool

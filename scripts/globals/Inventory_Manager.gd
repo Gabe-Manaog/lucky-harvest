@@ -1,7 +1,7 @@
 extends Node
 
 @onready var currency_label: Label = $DayPanel/MarginContainer/DayLabel
-var inventory = { "corn": 0, "tomato": 0, "stone": 0, "log": 0 ,"potato": 0, "onion": 0, "turnip": 0, "radish":0,"spinach":0,"egg":0,"milk":0}
+var inventory = { "corn": 0, "tomato": 0, "stone": 0, "log": 0, "carrot":0 ,"potato": 0, "onion": 0, "turnip": 0, "radish":0,"spinach":0,"egg":0,"milk":0}
 var currency = 1000000
 var world_access =0
 signal inventory_changed
