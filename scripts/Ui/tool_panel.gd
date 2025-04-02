@@ -5,10 +5,14 @@ extends PanelContainer
 @onready var tool_water: Button = $MarginContainer/HBoxContainer/Tool_Water
 @onready var tool_corn: Button = $MarginContainer/HBoxContainer/Tool_Corn
 @onready var tool_tomato: Button = $MarginContainer/HBoxContainer/Tool_Tomato
-
 @onready var tool_potato: Button = $MarginContainer/HBoxContainer/Tool_Potato
+@onready var tool_carrot: Button = $MarginContainer/HBoxContainer/Tool_Carrot
+@onready var tool_onion: Button = $MarginContainer/HBoxContainer/Tool_Onion
+@onready var tool_radish: Button = $MarginContainer/HBoxContainer/Tool_Radish
+@onready var tool_spinach: Button = $MarginContainer/HBoxContainer/Tool_Spinach
+@onready var tool_turnip: Button = $MarginContainer/HBoxContainer/Tool_Turnip
+
 @onready var player: Player = $".."
-@onready var input_blocker: ColorRect = $InputBlocker
 
 
 
@@ -19,6 +23,14 @@ func _unhandled_input(event: InputEvent) -> void:
 		tool_axe.release_focus()
 		tool_tilling.release_focus()
 		tool_water.release_focus()
+		tool_corn.release_focus()
+		tool_tomato.release_focus()
+		tool_potato.release_focus()
+		tool_carrot.release_focus()
+		tool_onion.release_focus()
+		tool_radish.release_focus()
+		tool_spinach.release_focus()
+		tool_turnip.release_focus()
 		
 func _on_tool_axe_pressed() -> void:
 	player.current_tool = DataTypes.Tools.None
