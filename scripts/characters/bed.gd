@@ -17,6 +17,5 @@ func on_interactable_deactivated()->void:
 func _unhandled_input(event: InputEvent) -> void:
 	if in_range:	
 		if event.is_action_pressed("show_dialogue"):
-			var balloon: BaseGameDialogueBalloon = balloon_scene.instantiate()
-			get_tree().current_scene.add_child(balloon)
-			balloon.start(load("res://dialogue/conversations/bed.dialogue"),"start")
+			EnergyManager.energy=30
+			

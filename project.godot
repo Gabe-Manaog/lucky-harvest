@@ -23,7 +23,8 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 InventoryManager="*res://scripts/globals/Inventory_Manager.gd"
 GameDialogueManager="*res://scripts/globals/game_dialogue_manager.gd"
 SceneSwitcher="*res://scene_switcher.gd"
-EnergyComponent="*res://scripts/components/energy_component.gd"
+EnergyComponent="res://scripts/components/energy_component.gd"
+EnergyManager="*res://energy_manager.gd"
 
 [display]
 

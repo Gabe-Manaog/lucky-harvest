@@ -5,7 +5,6 @@ var world_access=1
 func _ready() -> void:
 	var root = get_tree().root
 	current_scene = root.get_child(root.get_child_count()- 1)
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func switch_scene(res_path):
 	call_deferred("_deferred_switch_scene",res_path)
