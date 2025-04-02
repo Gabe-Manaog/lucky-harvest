@@ -21,6 +21,7 @@ theme = ExtResource("1_uk32k")
 theme_type_variation = &"Dark_Wood_Panel"
 
 [node name="EmotesPanel" parent="." instance=ExtResource("2_af31m")]
+layout_mode = 0
 offset_left = -9.0
 offset_top = -3.0
 offset_right = 41.0

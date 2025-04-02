@@ -21,6 +21,8 @@ func on_energy_depleted() -> void:
 	get_tree().paused = true
 	await get_tree().create_timer(3).timeout
 	get_tree().paused = false
+	self.value = 30
+	EnergyManager.energy = self.value
 	get_tree().reload_current_scene()
 	
 func sleep_energy() -> void:
