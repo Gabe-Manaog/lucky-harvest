@@ -5,7 +5,7 @@ extends NodeState
 @export var navigation_agent_2d: NavigationAgent2D
 @export var min_speed: float = 5.0
 @export var max_speed: float = 10.0
-@export var egg_lay_interval: float = 60.0 
+@export var egg_lay_interval: float = 30.0 
 const egg_scene = preload("res://scenes/crops/egg.tscn")
 
 var speed: float

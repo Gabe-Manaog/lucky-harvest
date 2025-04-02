@@ -11,8 +11,8 @@ region = Rect2(34, 0, 12, 16)
 radius = 7.07107
 
 [node name="Milk" type="Sprite2D"]
-position = Vector2(0.4375, -4.5)
-scale = Vector2(0.59375, 0.5625)
+position = Vector2(-0.0624999, -6.5)
+scale = Vector2(0.84375, 0.8125)
 texture = SubResource("AtlasTexture_ceww4")
 
 [node name="CollectableComponent" parent="." instance=ExtResource("2_jfhod")]
