@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://d1byju2xkwx6u"]
+[gd_scene load_steps=12 format=4 uid="uid://bgjqwjnuipp2v"]
 
 [ext_resource type="Script" path="res://scenes/worlds/main/world_four.gd" id="1_a1vkt"]
 [ext_resource type="TileSet" uid="uid://bj102qrwwagck" path="res://tilesets/game_tileset.tres" id="2_3yjos"]
