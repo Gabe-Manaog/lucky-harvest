@@ -4,9 +4,9 @@ extends ProgressBar
 @onready var label: Label = $"../Label"
 
 func _ready() -> void:
-	self.value = EnergyManager.energy  # ✅ Syncs ProgressBar with energy
+	self.value = EnergyManager.energy  #  Syncs ProgressBar with energy
 func _process(delta:float)-> void:
-	self.value = EnergyManager.energy  # ✅ Syncs ProgressBar with energy
+	self.value = EnergyManager.energy  # Syncs ProgressBar with energy
 
 func _set_energy(new_energy: int) -> void:
 	EnergyManager.energy = min(self.max_value, new_energy)
@@ -22,6 +22,7 @@ func on_energy_depleted() -> void:
 	await get_tree().create_timer(3).timeout
 	get_tree().paused = false
 	get_tree().reload_current_scene()
+	
 func sleep_energy() -> void:
 	self.value = 30
 	EnergyManager.energy_changed.connect(sleep_energy)

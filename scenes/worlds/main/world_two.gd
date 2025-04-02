@@ -12,17 +12,17 @@ extends Node2D
 
 
 
-
+var energy
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	await get_tree().process_frame
-	tool_potato.disabled = false
-	tool_carrot.disabled = false
-	tool_onion.disabled = false
-	tool_radish.disabled = false
-	tool_spinach.disabled = false
-	tool_turnip.disabled = false
+	tool_potato.disabled = true
+	tool_carrot.disabled = true
+	tool_onion.disabled = true
+	tool_radish.disabled = true
+	tool_spinach.disabled = true
+	tool_turnip.disabled = true
 	energy_bar._set_energy(EnergyManager.energy)
 
 

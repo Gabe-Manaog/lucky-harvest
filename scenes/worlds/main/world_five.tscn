@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=4 uid="uid://bgjqwjnuipp2v"]
 
-[ext_resource type="Script" path="res://scenes/worlds/main/world_one.gd" id="1_1tcej"]
+[ext_resource type="Script" path="res://scenes/worlds/main/world_four.gd" id="1_a1vkt"]
 [ext_resource type="TileSet" uid="uid://bj102qrwwagck" path="res://tilesets/game_tileset.tres" id="2_3yjos"]
 [ext_resource type="PackedScene" uid="uid://nl13jnch5tm3" path="res://scenes/components/field_cursor_component.tscn" id="3_gro87"]
 [ext_resource type="Script" path="res://scripts/components/field_cursor_component.gd" id="4_406jf"]
@@ -13,7 +13,7 @@
 
 [node name="game" type="Node2D"]
 y_sort_enabled = true
-script = ExtResource("1_1tcej")
+script = ExtResource("1_a1vkt")
 
 [node name="world" type="Node2D" parent="."]
 y_sort_enabled = true
