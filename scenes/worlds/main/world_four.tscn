@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://bqjqg3q54xqqx"]
+[gd_scene load_steps=13 format=4 uid="uid://b8yy3fhvlbt1s"]
 
 [ext_resource type="Script" path="res://scenes/worlds/main/world_four.gd" id="1_bov0o"]
 [ext_resource type="TileSet" uid="uid://bj102qrwwagck" path="res://tilesets/game_tileset.tres" id="2_uw6a1"]
@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://c1cuvmwv6u0ba" path="res://scenes/characters/bed.tscn" id="9_b6pno"]
 [ext_resource type="AudioStream" uid="uid://8p3ju7yvis33" path="res://assets/music/world_four.ogg" id="10_kixt5"]
 [ext_resource type="PackedScene" uid="uid://bu0melmuadcs1" path="res://shopkeeper.tscn" id="11_mijcj"]
-[ext_resource type="PackedScene" path="res://scenes/characters/sailor_4.tscn" id="12_h8u1g"]
+[ext_resource type="PackedScene" uid="uid://dslqwsr37f7eb" path="res://scenes/characters/sailor_4.tscn" id="12_h8u1g"]
 
 [node name="game2" type="Node2D"]
 y_sort_enabled = true
@@ -82,6 +82,7 @@ initial_minute = 0
 position = Vector2(688, 17)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
 stream = ExtResource("10_kixt5")
 volume_db = -15.0
 autoplay = true

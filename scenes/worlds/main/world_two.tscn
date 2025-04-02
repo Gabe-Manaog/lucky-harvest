@@ -79,6 +79,7 @@ initial_hour = 8
 initial_minute = 0
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
 stream = ExtResource("10_ec1mg")
 volume_db = -15.0
 autoplay = true

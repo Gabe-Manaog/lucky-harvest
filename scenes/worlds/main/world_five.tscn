@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://bgjqwjnuipp2v"]
+[gd_scene load_steps=12 format=4 uid="uid://d1byju2xkwx6u"]
 
 [ext_resource type="Script" path="res://scenes/worlds/main/world_four.gd" id="1_a1vkt"]
 [ext_resource type="TileSet" uid="uid://bj102qrwwagck" path="res://tilesets/game_tileset.tres" id="2_3yjos"]
@@ -9,7 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://i8tqpr2q1kd7" path="res://scenes/characters/player.tscn" id="7_o30wl"]
 [ext_resource type="PackedScene" uid="uid://duhcjiowp78cb" path="res://scenes/components/day_and_night_cycle_component.tscn" id="8_2hcs3"]
 [ext_resource type="PackedScene" uid="uid://c1cuvmwv6u0ba" path="res://scenes/characters/bed.tscn" id="9_cfqak"]
-[ext_resource type="AudioStream" uid="uid://bkithge63b7a8" path="res://assets/music/world_five.ogg" id="10_cm3bd"]
+[ext_resource type="PackedScene" path="res://scenes/characters/samurai.tscn" id="10_qx50t"]
+[ext_resource type="AudioStream" uid="uid://dd1fyeastkpir" path="res://SDR2 OST_ -1-05- Beautiful Ruin [Summer Salt].mp3" id="11_jw88i"]
 
 [node name="game" type="Node2D"]
 y_sort_enabled = true
@@ -84,7 +85,11 @@ position = Vector2(2272, -80)
 [node name="bed3" parent="." instance=ExtResource("9_cfqak")]
 position = Vector2(-1040, 308)
 
+[node name="Samurai" parent="." instance=ExtResource("10_qx50t")]
+position = Vector2(488, 152)
+
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("10_cm3bd")
+process_mode = 3
+stream = ExtResource("11_jw88i")
 volume_db = -15.0
 autoplay = true

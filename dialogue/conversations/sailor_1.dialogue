@@ -5,7 +5,12 @@ Sailor: Its going to cost ya 5 Tomatos, 5 Corn, 5 Logs, and 5 stones
 Sailor: Do you have that for me?
 - Yes
 	if InventoryManager.inventory["corn"] >= 5 and InventoryManager.inventory["tomato"] >= 5 and InventoryManager.inventory["log"] >= 5 and InventoryManager.inventory["stone"] >= 5
-		Sailor: Alrightie, i'll take you
+		set InventoryManager.inventory["corn"]-= 5
+		set InventoryManager.inventory["tomato"]-= 5
+		set InventoryManager.inventory["log"]-= 5
+		set InventoryManager.inventory["stone"]-= 5
+		
+		Sailor: Thanks pal, Alrightie i'll take you
 		set SceneSwitcher.world_access =2
 		do SceneSwitcher.switch_scene("res://scenes/worlds/main/world_two.tscn")
 	else
@@ -15,4 +20,5 @@ Sailor: Do you have that for me?
 - No
 	Sailor: You better get working then!
 
+Nathan: For more information see the online documentation.
 => END
