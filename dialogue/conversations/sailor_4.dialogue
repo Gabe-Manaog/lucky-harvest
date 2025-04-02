@@ -1,10 +1,15 @@
 ~ start
 Sailor: [[Hi|Hello|Howdy]], im the local sailor around here
 Sailor: Did you want to go to the next island?
-Sailor: Its going to cost ya 5 Onion, 5 Radis, 15 Logs, and 15 stones
+Sailor: Its going to cost ya 5 Spinach, 5 Turnip, 15 Logs, and 15 stones
 Sailor: Do you have that for me?
 - Yes
-	if InventoryManager.inventory!= null and InventoryManager.inventory["spinach"] >= 5 and InventoryManager.inventory["turnip"] >= 5 and InventoryManager.inventory["log"] >= 20 and InventoryManager.inventory["stone"] >= 20
+	if InventoryManager.inventory!= null and InventoryManager.inventory["spinach"] >= 5 and InventoryManager.inventory["turnip"] >= 5 and InventoryManager.inventory["egg"] >= 5 and InventoryManager.inventory["log"] >= 20 and InventoryManager.inventory["stone"] >= 20
+		set InventoryManager.inventory["spinach"]-= 5
+		set InventoryManager.inventory["turnip"]-= 5
+		set InventoryManager.inventory["egg"]-=5
+		set InventoryManager.inventory["log"]-= 15
+		set InventoryManager.inventory["stone"]-= 15
 		Sailor: Alrightie, i'll take you
 		set SceneSwitcher.world_access = 5
 		do SceneSwitcher.switch_scene("res://scenes/worlds/main/world_five.tscn")
@@ -14,5 +19,4 @@ Sailor: Do you have that for me?
 		=> END
 - No
 	Sailor: You better get working then!
-
 => END

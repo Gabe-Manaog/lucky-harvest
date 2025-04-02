@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://bqjqg3q54xqqx"]
+[gd_scene load_steps=15 format=4 uid="uid://b8yy3fhvlbt1s"]
 
 [ext_resource type="Script" path="res://scenes/worlds/main/world_four.gd" id="1_bov0o"]
 [ext_resource type="TileSet" uid="uid://bj102qrwwagck" path="res://tilesets/game_tileset.tres" id="2_uw6a1"]
@@ -11,8 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://c1cuvmwv6u0ba" path="res://scenes/characters/bed.tscn" id="9_b6pno"]
 [ext_resource type="AudioStream" uid="uid://8p3ju7yvis33" path="res://assets/music/world_four.ogg" id="10_kixt5"]
 [ext_resource type="PackedScene" uid="uid://bu0melmuadcs1" path="res://shopkeeper.tscn" id="11_mijcj"]
-[ext_resource type="PackedScene" path="res://scenes/characters/sailor_4.tscn" id="12_h8u1g"]
-[ext_resource type="PackedScene" uid="uid://cp0faup1aymck" path="res://scenes/characters/chicken.tscn" id="13_8xh1g"]
+[ext_resource type="PackedScene" uid="uid://dslqwsr37f7eb" path="res://scenes/characters/sailor_4.tscn" id="12_h8u1g"]
+[ext_resource type="PackedScene" path="res://scenes/characters/chicken.tscn" id="13_8xh1g"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_g1dnh"]
 vertices = PackedVector2Array(550.328, -33.4609, 552.523, -113.703, 641.188, -165.438, 673.172, -77.5234, 642.508, -19.9375, 544.383, -158, 467.273, -113.797, 818.211, -26, 838, -86, 838, -14.3828, 816.344, 65.2734, 846.039, 9.75, 637.313, 206, 646.141, 338.477, 635.328, 334, 864.297, 22.7891, 912.172, 111.688, 846.469, 119, 462, 47.2188, 462, 160.469, 411.156, 140.133, 392.023, 54, 449.656, -12.0781, 800.367, -86, 783.789, -26, 55.7734, 429.953, -40.2891, 422.563, -50.6875, 386.141, 72.5391, 387.469, 71.6016, 427.969, 624.828, 418, 714.633, 418.078, 654.781, 430.039, 594.633, 432.188, 595.789, 438, 431.82, 438, 224.656, 418, 360.602, -158, 807.344, 147.922, 840.898, 222.07, -50, 6, -117.008, 6, -102, -151.523, -50, -3.71094, -97.3984, -198.844, -57.2031, -204.578, -56.9688, -201.219, 834.461, 340.992, 830.523, 414, 778, 340.469, 778, 206, 767.617, 414, 712.703, 343.43, 838.117, 338.547, 727.563, 154.063, 590.781, 131.258, 574.781, 179.273, 576.828, 334, 568.828, 270, 449.188, -66.2422, 242, -73.6406, 242, -111.18, 229.672, -141.633, 140.781, -198.18, 40.5313, -121.57, 32.2891, -171.109, 23.9219, -205.977, -50, -160.828, 97.9063, 189.867, -22.0703, 189.992, -30.4063, -6.50781, 81.1016, -46, 84.1406, -27.3281, 103.094, 95.8516, -102, -198.57, -50, -99.9375, 645.391, 23.2891, 476.172, -45.2031, 328.25, -6, 191.922, 54, 218.648, -6, 175.094, -17.5391, 185.969, -55, 152.094, -61.7734, 226.891, 270, 371.203, 170.102, 216.406, 445.688, 214.828, 436.242, 188.828, 423.227, 214, 405.211, -46.2734, -46, 157.773, 111.477, 156.602, 152.891, 105.617, 359.492, 176.078, 421.961, 80.6406, 429.898, 103.43, 375.891, 232.141, 166, 214, 344.727)

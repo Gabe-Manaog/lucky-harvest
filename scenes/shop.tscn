@@ -1,12 +1,14 @@
-[gd_scene load_steps=28 format=3 uid="uid://ck5ruyf1pp3hg"]
+[gd_scene load_steps=32 format=3 uid="uid://ck5ruyf1pp3hg"]
 
 [ext_resource type="Script" path="res://scenes/shop.gd" id="1_2wumc"]
 [ext_resource type="Theme" uid="uid://c1x5gwaorkwnx" path="res://dialogue/dialogue_balloon_theme.tres" id="1_keyd2"]
 [ext_resource type="Theme" uid="uid://bak616j14hm58" path="res://tilesets/game_ui_theme.tres" id="3_xwukg"]
 [ext_resource type="Texture2D" uid="uid://msjl6h6rl4gr" path="res://assets/art/crops/carrot.png" id="4_bqbpi"]
 [ext_resource type="Texture2D" uid="uid://bru7qbddfgcn5" path="res://assets/art/crops/Basic_Plants.png" id="4_lw3ou"]
+[ext_resource type="Texture2D" uid="uid://c3703gnrobgit" path="res://assets/art/crops/Egg_item.png" id="6_2rtin"]
 [ext_resource type="Texture2D" uid="uid://dakxms220jj7p" path="res://assets/art/crops/onion.png" id="6_757gn"]
 [ext_resource type="Texture2D" uid="uid://del0436ykn7tf" path="res://assets/art/crops/potato.png" id="7_jymxt"]
+[ext_resource type="Texture2D" uid="uid://bgcbtolt3roky" path="res://assets/art/crops/Simple_Milk_and_grass_item.png" id="8_ibxsg"]
 [ext_resource type="Texture2D" uid="uid://c6ombyqcnwqsv" path="res://assets/art/crops/radish.png" id="8_t8m67"]
 [ext_resource type="Texture2D" uid="uid://dcm7hs7w4wohf" path="res://assets/art/crops/spinach.png" id="9_dyfe2"]
 [ext_resource type="Texture2D" uid="uid://bqjwr1sxwqera" path="res://assets/art/crops/Basic_Grass_Biom_things.png" id="10_0w4kn"]
@@ -63,9 +65,17 @@ region = Rect2(16, 16, 16, 16)
 atlas = ExtResource("4_lw3ou")
 region = Rect2(80, 0, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_4y57j"]
+atlas = ExtResource("6_2rtin")
+region = Rect2(0, 0, 16, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_byiic"]
 atlas = ExtResource("10_0w4kn")
 region = Rect2(64, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vgt6"]
+atlas = ExtResource("8_ibxsg")
+region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mu3uf"]
 atlas = ExtResource("6_757gn")
@@ -115,10 +125,26 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_4y57j")
+}],
+"loop": true,
+"name": &"Egg",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_byiic")
 }],
 "loop": true,
 "name": &"Log",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7vgt6")
+}],
+"loop": true,
+"name": &"Milk",
 "speed": 5.0
 }, {
 "frames": [{
@@ -268,7 +294,7 @@ theme_type_variation = &"Dark_Wood_Panel"
 position = Vector2(36.5, 31.5)
 scale = Vector2(3.3125, 2.8125)
 sprite_frames = SubResource("SpriteFrames_bidgq")
-animation = &"Stone"
+animation = &"Milk"
 autoplay = "Corn"
 
 [node name="Next" type="Button" parent="Panel/Control"]
