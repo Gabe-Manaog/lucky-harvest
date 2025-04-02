@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://d28js405kslow"]
+[gd_scene load_steps=12 format=4 uid="uid://d28js405kslow"]
 
 [ext_resource type="TileSet" uid="uid://bj102qrwwagck" path="res://tilesets/game_tileset.tres" id="1_jhm6a"]
 [ext_resource type="PackedScene" uid="uid://nl13jnch5tm3" path="res://scenes/components/field_cursor_component.tscn" id="2_3pab5"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://duhcjiowp78cb" path="res://scenes/components/day_and_night_cycle_component.tscn" id="7_w5f6p"]
 [ext_resource type="PackedScene" uid="uid://c1cuvmwv6u0ba" path="res://scenes/characters/bed.tscn" id="8_ielv8"]
 [ext_resource type="PackedScene" uid="uid://cp0faup1aymck" path="res://scenes/characters/chicken.tscn" id="9_ucrwi"]
+[ext_resource type="PackedScene" uid="uid://de4veshjnc8qe" path="res://scenes/characters/cow.tscn" id="10_32gcx"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_fgsjf"]
 vertices = PackedVector2Array(320.172, 262.453, 77, 277.188, 105.117, 164.711, 148.289, 114.352, 247.281, 121.969, 355.242, 129.172)
@@ -87,3 +88,16 @@ position = Vector2(232, 64)
 
 [node name="Chicken4" parent="Chickens" instance=ExtResource("9_ucrwi")]
 position = Vector2(277, 80)
+
+[node name="Cows" type="Node2D" parent="."]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="Cows"]
+position = Vector2(336, 98)
+navigation_polygon = SubResource("NavigationPolygon_fgsjf")
+navigation_layers = 2
+
+[node name="Cow" parent="Cows" instance=ExtResource("10_32gcx")]
+position = Vector2(561, 282)
+
+[node name="Cow2" parent="Cows" instance=ExtResource("10_32gcx")]
+position = Vector2(603, 329)
