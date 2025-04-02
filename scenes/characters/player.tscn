@@ -495,9 +495,9 @@ zoom = Vector2(2.5, 2.5)
 [node name="InventoryPanel" parent="." instance=ExtResource("14_006m4")]
 visible = false
 z_index = 1
-offset_left = -161.0
+offset_left = -189.0
 offset_top = -16.0
-offset_right = 157.0
+offset_right = 189.0
 offset_bottom = 38.0
 
 [node name="EnergyBar" parent="." instance=ExtResource("15_d5i88")]

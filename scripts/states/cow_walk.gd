@@ -5,17 +5,17 @@ extends NodeState
 @export var navigation_agent_2d: NavigationAgent2D
 @export var min_speed: float = 5.0
 @export var max_speed: float = 10.0
-@export var egg_lay_interval: float = 5.0 
-const egg_scene = preload("res://scenes/crops/egg.tscn")
+@export var milk_lay_interval: float = 5.0
+const milk_scene = preload("res://scenes/crops/milk.tscn")
 
 var speed: float
-var lay_egg_timer: float
+var lay_milk_timer: float
 
 func _ready() -> void:
 	navigation_agent_2d.velocity_computed.connect(on_safe_velocity_computed)
 	
 	call_deferred("character_setup")
-	lay_egg_timer = randf_range(egg_lay_interval, egg_lay_interval * 2)
+	lay_milk_timer = randf_range(milk_lay_interval, milk_lay_interval * 2)
 
 func character_setup() -> void:
 	await get_tree().physics_frame
@@ -27,11 +27,11 @@ func set_movement_target() -> void:
 	navigation_agent_2d.target_position = target_position
 	speed = randf_range(min_speed, max_speed)
 
-func lay_egg() -> void:
-	if egg_scene:
-		var egg_instance = egg_scene.instantiate()
-		get_parent().add_child(egg_instance)
-		egg_instance.global_position = character.global_position 
+func lay_milk() -> void:
+	if milk_scene:
+		var milk_instance = milk_scene.instantiate()
+		get_parent().add_child(milk_instance)
+		milk_instance.global_position = character.global_position 
 
 func _on_process(_delta : float) -> void:
 	pass
@@ -55,10 +55,10 @@ func _on_physics_process(_delta : float) -> void:
 		character.velocity = velocity
 		character.move_and_slide()
 	# Handle egg laying logic
-	lay_egg_timer -= _delta
-	if lay_egg_timer <= 0:
-		lay_egg()
-		lay_egg_timer = randf_range(egg_lay_interval, egg_lay_interval * 2)
+	lay_milk_timer -= _delta
+	if lay_milk_timer <= 0:
+		lay_milk()
+		lay_milk_timer = randf_range(milk_lay_interval, milk_lay_interval * 2)
 
 func on_safe_velocity_computed(safe_velocity: Vector2) -> void:
 	animated_sprite_2d.flip_h = safe_velocity.x < 0
