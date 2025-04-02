@@ -15,8 +15,8 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	await get_tree().process_frame
-	tool_potato.disabled = false
-	tool_carrot.disabled = false
+	tool_potato.disabled = true
+	tool_carrot.disabled = true
 	tool_onion.disabled = true
 	tool_radish.disabled = true
 	tool_spinach.disabled = true
