@@ -12,7 +12,7 @@ scale = Vector2(0.625, 0.6875)
 texture = ExtResource("1_gmbsq")
 
 [node name="CollectableComponent" parent="." instance=ExtResource("2_84baa")]
-collectable_name = "carrot"
+collectable_name = "egg"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollectableComponent"]
 shape = SubResource("CircleShape2D_6ppof")
