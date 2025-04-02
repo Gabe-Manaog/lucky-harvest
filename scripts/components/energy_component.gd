@@ -5,6 +5,7 @@ extends ProgressBar
 
 func _ready() -> void:
 	self.value = EnergyManager.energy  #  Syncs ProgressBar with energy
+	self.max_value =30
 func _process(delta:float)-> void:
 	self.value = EnergyManager.energy  # Syncs ProgressBar with energy
 

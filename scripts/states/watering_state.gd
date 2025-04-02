@@ -30,21 +30,28 @@ func _on_enter() -> void:
 		animated_sprite_2d.play("watering_back")
 		hit_component_collision_shape.position= Vector2(10,-3)
 		energy_bar._set_energy(EnergyManager.energy - 1)
+		get_node('Watering').play()
 	elif player.player_direction == Vector2.DOWN:
 		animated_sprite_2d.play("watering_front")
 		hit_component_collision_shape.position= Vector2(-4,28)
 		energy_bar._set_energy(EnergyManager.energy - 1)
+		get_node('Watering').play()
+
 	elif player.player_direction == Vector2.LEFT:
 		animated_sprite_2d.play("watering_left")
 		hit_component_collision_shape.position= Vector2(-28,19)
 		energy_bar._set_energy(EnergyManager.energy - 1)
+		get_node('Watering').play()
 	elif player.player_direction == Vector2.RIGHT:
 		animated_sprite_2d.play("watering_right")
 		hit_component_collision_shape.position= Vector2(32,21)
 		energy_bar._set_energy(EnergyManager.energy - 1)
+		get_node('Watering').play()
 	else:
 		animated_sprite_2d.play("watering_front")
 		hit_component_collision_shape.position= Vector2(3,22)
+		energy_bar._set_energy(EnergyManager.energy - 1)
+
 	
 	hit_component_collision_shape.disabled=false
 		

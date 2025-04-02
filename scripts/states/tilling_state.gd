@@ -21,15 +21,20 @@ func _on_next_transitions() -> void:
 func _on_enter() -> void:
 	if player.player_direction == Vector2.UP:
 		animated_sprite_2d.play("tilling_back")
+		get_node('Hoe').play()
+
 
 	elif player.player_direction == Vector2.RIGHT:
 		animated_sprite_2d.play("tilling_right")
+		get_node('Hoe').play()
 
 	elif player.player_direction == Vector2.DOWN:
 		animated_sprite_2d.play("tilling_front")
+		get_node('Hoe').play()
 
 	elif player.player_direction == Vector2.LEFT:
 		animated_sprite_2d.play("tilling_left")
+		get_node('Hoe').play()
 
 	else:
 		animated_sprite_2d.play("tilling_front")

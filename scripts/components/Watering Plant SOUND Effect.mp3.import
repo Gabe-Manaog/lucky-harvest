@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dnrtqow8dr100"
+path="res://.godot/imported/Watering Plant SOUND Effect.mp3-a97b1b08a40e3c63ffe3575cfdf9db50.mp3str"
+
+[deps]
+
+source_file="res://scripts/components/Watering Plant SOUND Effect.mp3"
+dest_files=["res://.godot/imported/Watering Plant SOUND Effect.mp3-a97b1b08a40e3c63ffe3575cfdf9db50.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
