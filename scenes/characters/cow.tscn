@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dlupkqpjjceqg" path="res://assets/art/Free Cow Sprites.png" id="2_teris"]
 [ext_resource type="Script" path="res://scripts/states/node_state_machine.gd" id="3_xqi7f"]
 [ext_resource type="Script" path="res://scripts/states/chicken_idle.gd" id="4_hmybr"]
-[ext_resource type="Script" path="res://scripts/states/chicken_walk.gd" id="5_ys0sy"]
+[ext_resource type="Script" path="res://scripts/states/cow_walk.gd" id="5_dqe47"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j1n8y"]
 atlas = ExtResource("2_teris")
@@ -85,7 +85,7 @@ character = NodePath("../..")
 animated_sprite_2d = NodePath("../../AnimatedSprite2D")
 
 [node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("character", "animated_sprite_2d", "navigation_agent_2d")]
-script = ExtResource("5_ys0sy")
+script = ExtResource("5_dqe47")
 character = NodePath("../..")
 animated_sprite_2d = NodePath("../../AnimatedSprite2D")
 navigation_agent_2d = NodePath("../../NavigationAgent2D")
