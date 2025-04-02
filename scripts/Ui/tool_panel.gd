@@ -5,6 +5,11 @@ extends PanelContainer
 @onready var tool_water: Button = $MarginContainer/HBoxContainer/Tool_Water
 @onready var tool_plant: Button = $MarginContainer/HBoxContainer/Tool_Plant
 @onready var tool_potato: Button = $MarginContainer/HBoxContainer/Tool_Potato
+@onready var player: Player = $".."
+@onready var input_blocker: ColorRect = $InputBlocker
+
+
+
 
 #func _unhandled_input(event: InputEvent) -> void:
 	#if event.is_action_pressed("release_tool"):
@@ -15,12 +20,15 @@ extends PanelContainer
 		#tool_plant.release_focus()
 
 func _on_tool_axe_pressed() -> void:
+	player.current_tool = DataTypes.Tools.None
 	ToolManager.select_tool(DataTypes.Tools.AxeWood)
 
 func _on_tool_tilling_pressed() -> void:
+	player.current_tool = DataTypes.Tools.None
 	ToolManager.select_tool(DataTypes.Tools.TillGround)
 
 func _on_tool_water_pressed() -> void:
+	player.current_tool = DataTypes.Tools.None
 	ToolManager.select_tool(DataTypes.Tools.WaterCrops)
 
 func _on_tool_corn_pressed() -> void:
