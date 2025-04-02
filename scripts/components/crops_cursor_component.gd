@@ -61,49 +61,49 @@ func add_crop() -> void:
 			var corn_instance = corn_plant_scene.instantiate() as Node2D
 			corn_instance.global_position = local_cell_position
 			get_parent().find_child("CropFields").add_child(corn_instance)
-			energy_bar._set_energy(energy_bar.energy - 1)
+			energy_bar._set_energy(EnergyManager.energy - 1)
 	
 		if ToolManager.selected_tool == DataTypes.Tools.PlantTomato:
 			var tomato_instance = tomato_plant_scene.instantiate() as Node2D
 			tomato_instance.global_position = local_cell_position
 			get_parent().find_child("CropFields").add_child(tomato_instance)
-			energy_bar._set_energy(energy_bar.energy - 1)
+			energy_bar._set_energy(EnergyManager.energy - 1)
 
 		if ToolManager.selected_tool == DataTypes.Tools.PlantPotato:
 			var potato_instance = potato_plant_scene.instantiate() as Node2D
 			potato_instance.global_position = local_cell_position
 			get_parent().find_child("CropFields").add_child(potato_instance)
-			energy_bar._set_energy(energy_bar.energy - 1)
+			energy_bar._set_energy(EnergyManager.energy - 1)
 			
 		if ToolManager.selected_tool == DataTypes.Tools.PlantCarrot:
 			var carrot_instance = carrot_plant_scene.instantiate() as Node2D
 			carrot_instance.global_position = local_cell_position
 			get_parent().find_child("CropFields").add_child(carrot_instance)
-			energy_bar._set_energy(energy_bar.energy - 1)
+			energy_bar._set_energy(EnergyManager.energy - 1)
 
 		if ToolManager.selected_tool == DataTypes.Tools.PlantOnion:
 			var onion_instance = onion_plant_scene.instantiate() as Node2D
 			onion_instance.global_position = local_cell_position
 			get_parent().find_child("CropFields").add_child(onion_instance)
-			energy_bar._set_energy(energy_bar.energy - 1)
+			energy_bar._set_energy(EnergyManager.energy - 1)
 			
 		if ToolManager.selected_tool == DataTypes.Tools.PlantRadish:
 			var radish_instance = radish_plant_scene.instantiate() as Node2D
 			radish_instance.global_position = local_cell_position
 			get_parent().find_child("CropFields").add_child(radish_instance)
-			energy_bar._set_energy(energy_bar.energy - 1)
+			energy_bar._set_energy(EnergyManager.energy - 1)
 			
 		if ToolManager.selected_tool == DataTypes.Tools.PlantSpinach:
 			var spinach_instance = spinach_plant_scene.instantiate() as Node2D
 			spinach_instance.global_position = local_cell_position
 			get_parent().find_child("CropFields").add_child(spinach_instance)
-			energy_bar._set_energy(energy_bar.energy - 1)
+			energy_bar._set_energy(EnergyManager.energy - 1)
 			
 		if ToolManager.selected_tool == DataTypes.Tools.PlantTurnip:
 			var turnip_instance = turnip_plant_scene.instantiate() as Node2D
 			turnip_instance.global_position = local_cell_position
 			get_parent().find_child("CropFields").add_child(turnip_instance)
-			energy_bar._set_energy(energy_bar.energy - 1)
+			energy_bar._set_energy(EnergyManager.energy - 1)
 
 
 

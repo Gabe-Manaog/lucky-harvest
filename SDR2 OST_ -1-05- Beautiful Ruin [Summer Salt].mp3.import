@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dd1fyeastkpir"
+path="res://.godot/imported/SDR2 OST_ -1-05- Beautiful Ruin [Summer Salt].mp3-15ea2b2c7376024f88d17966bcc7c40f.mp3str"
+
+[deps]
+
+source_file="res://SDR2 OST_ -1-05- Beautiful Ruin [Summer Salt].mp3"
+dest_files=["res://.godot/imported/SDR2 OST_ -1-05- Beautiful Ruin [Summer Salt].mp3-15ea2b2c7376024f88d17966bcc7c40f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scripts/Ui/menu.gd" id="2_d6sum"]
 [ext_resource type="Texture2D" uid="uid://cs0bkkughv3sc" path="res://assets/background.jpg" id="3_hqy2e"]
 [ext_resource type="FontFile" uid="uid://d0oqjc5qjfs63" path="res://assets/art/pixelFont-7-8x14-sproutLands.ttf" id="4_ipq64"]
-[ext_resource type="AudioStream" uid="uid://jf7cotum0uqd" path="res://assets/music/menu.ogg" id="5_hocuy"]
+[ext_resource type="AudioStream" uid="uid://bjidgrbrwuk3d" path="res://scenes/Bubblaine - Super Mario Odyssey OST.mp3" id="5_qj12v"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -64,8 +64,8 @@ theme_override_font_sizes/normal_font_size = 100
 text = "Lucky Harvest"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("5_hocuy")
-volume_db = -10.0
+stream = ExtResource("5_qj12v")
+volume_db = -16.559
 autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]

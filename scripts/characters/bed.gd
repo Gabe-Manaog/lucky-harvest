@@ -18,4 +18,4 @@ func _unhandled_input(event: InputEvent) -> void:
 	if in_range:	
 		if event.is_action_pressed("show_dialogue"):
 			EnergyManager.energy=30
-			
+			DayAndNightManager.sleep()

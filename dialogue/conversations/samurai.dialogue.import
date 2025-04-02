@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://cjkeersg0mmr0"
+path="res://.godot/imported/samurai.dialogue-a9091842ace6de72ddfae21e5b7bac51.tres"
+
+[deps]
+
+source_file="res://dialogue/conversations/samurai.dialogue"
+dest_files=["res://.godot/imported/samurai.dialogue-a9091842ace6de72ddfae21e5b7bac51.tres"]
+
+[params]
+
+defaults=true

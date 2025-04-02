@@ -1,0 +1,124 @@
+[gd_scene load_steps=20 format=3 uid="uid://bcmpg6r7i07my"]
+
+[ext_resource type="Script" path="res://scripts/characters/samurai.gd" id="1_0ch2f"]
+[ext_resource type="Shader" path="res://scenes/shaders/replace_color.gdshader" id="2_hv2gd"]
+[ext_resource type="Texture2D" uid="uid://caee12ya4y101" path="res://assets/art/FREE_Samurai 2D Pixel Art v1.2/Sprites/IDLE.png" id="3_mrxjj"]
+[ext_resource type="PackedScene" uid="uid://cs8rarfno635j" path="res://scenes/components/interactable_component.tscn" id="4_0ru1p"]
+[ext_resource type="AudioStream" uid="uid://cgh2tai4c8cds" path="res://scenes/characters/FF VII victory theme.mp3" id="5_84w5h"]
+[ext_resource type="PackedScene" uid="uid://clipr62bh5xwq" path="res://scenes/components/interactable_label_component.tscn" id="5_n5etx"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ffrgk"]
+shader = ExtResource("2_hv2gd")
+shader_parameter/original_0 = Color(0.360784, 0.305882, 0.572549, 1)
+shader_parameter/original_1 = Color(0.462745, 0.427451, 0.666667, 1)
+shader_parameter/replace_0 = Color(0.924707, 0.537387, 0.142397, 1)
+shader_parameter/replace_1 = Color(0.191483, 0.711613, 0.681787, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qyppf"]
+atlas = ExtResource("3_mrxjj")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_op3lw"]
+atlas = ExtResource("3_mrxjj")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5sgi"]
+atlas = ExtResource("3_mrxjj")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_acx8j"]
+atlas = ExtResource("3_mrxjj")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cua58"]
+atlas = ExtResource("3_mrxjj")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50ift"]
+atlas = ExtResource("3_mrxjj")
+region = Rect2(480, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cogov"]
+atlas = ExtResource("3_mrxjj")
+region = Rect2(576, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3roy2"]
+atlas = ExtResource("3_mrxjj")
+region = Rect2(672, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j41hf"]
+atlas = ExtResource("3_mrxjj")
+region = Rect2(768, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5k4r"]
+atlas = ExtResource("3_mrxjj")
+region = Rect2(864, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gqln8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qyppf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_op3lw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r5sgi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_acx8j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cua58")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_50ift")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cogov")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3roy2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j41hf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u5k4r")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mhvo1"]
+radius = 20.025
+
+[node name="Samurai" type="Node2D"]
+script = ExtResource("1_0ch2f")
+
+[node name="FfViiVictoryTheme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_84w5h")
+volume_db = -20.613
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_ffrgk")
+position = Vector2(0, -3)
+sprite_frames = SubResource("SpriteFrames_gqln8")
+animation = &"Idle"
+autoplay = "Idle"
+frame = 1
+frame_progress = 0.384467
+
+[node name="InteractableComponent" parent="." instance=ExtResource("4_0ru1p")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent"]
+position = Vector2(-1, 12)
+shape = SubResource("CircleShape2D_mhvo1")
+
+[node name="InteractableLabelComponent" parent="." instance=ExtResource("5_n5etx")]
+offset_left = -30.0
+offset_top = -19.0
+offset_right = -12.0
+offset_bottom = -1.0

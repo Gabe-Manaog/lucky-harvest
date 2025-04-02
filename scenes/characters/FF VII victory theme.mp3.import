@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cgh2tai4c8cds"
+path="res://.godot/imported/FF VII victory theme.mp3-c3a1063f3bc8918467c433e605fd19d4.mp3str"
+
+[deps]
+
+source_file="res://scenes/characters/FF VII victory theme.mp3"
+dest_files=["res://.godot/imported/FF VII victory theme.mp3-c3a1063f3bc8918467c433e605fd19d4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

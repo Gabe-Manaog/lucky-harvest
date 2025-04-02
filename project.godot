@@ -31,7 +31,6 @@ EnergyManager="*res://energy_manager.gd"
 window/size/viewport_width=1600
 window/size/viewport_height=900
 window/size/resizable=false
-window/stretch/mode="canvas_items"
 mouse_cursor/custom_image="res://assets/art/mouse_icon.png"
 
 [editor_plugins]
@@ -99,12 +98,11 @@ remove_dirt={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogue/conversations/guide.dialogue", "res://dialogue/conversations/bed.dialogue", "res://dialogue/conversations/sailor_2.dialogue", "res://dialogue/conversations/sailor_1.dialogue", "res://dialogue/conversations/sailor_3.dialogue", "res://dialogue/conversations/sailor_4.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogue/conversations/guide.dialogue", "res://dialogue/conversations/bed.dialogue", "res://dialogue/conversations/sailor_2.dialogue", "res://dialogue/conversations/sailor_1.dialogue", "res://dialogue/conversations/sailor_3.dialogue", "res://dialogue/conversations/sailor_4.dialogue", "res://dialogue/conversations/samurai.dialogue")
 
 [layer_names]
 
 2d_physics/layer_1="Ground"
-2d_navigation/layer_1="Chicken Navigation"
 2d_physics/layer_2="Player"
 2d_physics/layer_3="Interactable"
 2d_physics/layer_4="Tool"
