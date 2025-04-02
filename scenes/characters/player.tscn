@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://i8tqpr2q1kd7"]
+[gd_scene load_steps=65 format=3 uid="uid://i8tqpr2q1kd7"]
 
 [ext_resource type="Script" path="res://scripts/characters/player.gd" id="1_2had2"]
 [ext_resource type="Texture2D" uid="uid://bqqcli27888xe" path="res://assets/animations/Basic Charakter Actions.png" id="2_eckuu"]
@@ -8,9 +8,12 @@
 [ext_resource type="Script" path="res://scripts/states/idle_state.gd" id="5_5farf"]
 [ext_resource type="Script" path="res://scripts/states/chopping_state.gd" id="7_jrs2f"]
 [ext_resource type="Script" path="res://scripts/states/tilling_state.gd" id="8_ju2vb"]
+[ext_resource type="AudioStream" uid="uid://dltvwjqom2rc6" path="res://scenes/axe_swing_final.mp3" id="8_uvbc8"]
 [ext_resource type="Script" path="res://scripts/states/watering_state.gd" id="9_nmho8"]
+[ext_resource type="AudioStream" uid="uid://42ue1qd5lbhh" path="res://scripts/components/till_sound_final.mp3" id="10_h2v5p"]
 [ext_resource type="PackedScene" uid="uid://2xpqnivarkg6" path="res://scenes/components/hit_component.tscn" id="10_k4mmy"]
 [ext_resource type="Texture2D" uid="uid://bw7hfvqmww45y" path="res://assets/art/basic_ui_sprites.png" id="11_hf5n6"]
+[ext_resource type="AudioStream" uid="uid://dmyvkxdcj6kkr" path="res://scripts/components/watering_sound.mp3" id="12_d34px"]
 [ext_resource type="PackedScene" uid="uid://ceiunirt4htmx" path="res://scenes/Ui/day_night_panel.tscn" id="12_jeoma"]
 [ext_resource type="PackedScene" uid="uid://d0jkbxjehcft7" path="res://scenes/Ui/tool_panel.tscn" id="13_o63qw"]
 [ext_resource type="PackedScene" uid="uid://cgdvbroy6c7s7" path="res://scenes/Ui/inventory_panel.tscn" id="14_006m4"]
@@ -450,16 +453,25 @@ player = NodePath("../..")
 animated_sprite_2d = NodePath("../../AnimatedSprite2D")
 hit_component_collision_shape = NodePath("../../HitComponent/HitComponentCollisionShape2D")
 
+[node name="Axe" type="AudioStreamPlayer2D" parent="State_Machine/Chopping"]
+stream = ExtResource("8_uvbc8")
+
 [node name="Tilling" type="Node" parent="State_Machine" node_paths=PackedStringArray("player", "animated_sprite_2d")]
 script = ExtResource("8_ju2vb")
 player = NodePath("../..")
 animated_sprite_2d = NodePath("../../AnimatedSprite2D")
+
+[node name="Hoe" type="AudioStreamPlayer2D" parent="State_Machine/Tilling"]
+stream = ExtResource("10_h2v5p")
 
 [node name="Watering" type="Node" parent="State_Machine" node_paths=PackedStringArray("player", "animated_sprite_2d", "hit_component_collision_shape")]
 script = ExtResource("9_nmho8")
 player = NodePath("../..")
 animated_sprite_2d = NodePath("../../AnimatedSprite2D")
 hit_component_collision_shape = NodePath("../../HitComponent/HitComponentCollisionShape2D")
+
+[node name="Watering" type="AudioStreamPlayer2D" parent="State_Machine/Watering"]
+stream = ExtResource("12_d34px")
 
 [node name="HitComponent" parent="." instance=ExtResource("10_k4mmy")]
 position = Vector2(1, 0)
