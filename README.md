@@ -89,7 +89,7 @@ Happy farming! 🌿🎮
 ---
 
 ## 🎥 Helpful Videos
-- [How to Make a Farming Game in Godot (Part 1)](https://www.youtube.com/watch?v=1EkJUdfnVzk&t=1804s&ab_channel=RapidVectors) – Rapid Vectors  
-- [How to Make a Farming Game in Godot (Part 2)](https://www.youtube.com/watch?v=875z4ZVITEY&ab_channel=RapidVectors) – Rapid Vectors  
+- [Day and Night Cycle](https://www.youtube.com/watch?v=1EkJUdfnVzk&t=1804s&ab_channel=RapidVectors)
+- [Animals](https://www.youtube.com/watch?v=875z4ZVITEY&ab_channel=RapidVectors)
 - [How to Make a Quest System in Godot](https://www.youtube.com/watch?v=1iucnMQ520Y)  
 
