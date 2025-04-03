@@ -77,15 +77,19 @@ Happy farming! 🌿🎮
 ![image](https://github.com/user-attachments/assets/dceaa894-0da2-4675-9dec-f16d84cf4c68)
 ![image](https://github.com/user-attachments/assets/7555a803-951e-41d6-bf0a-ac92ff9f7659)
 
+## 📚 References
+- **Sprite Assets:** [Sprout Lands Asset Pack](https://cupnooble.itch.io/sprout-lands-asset-pack)  
+- **Music / Sounds:**  
+  - Final Fantasy  
+  - Octopath Traveler  
+  - Minecraft  
+  - Berleezy  
+  *(All rights reserved to their respective owners.)*  
 
-## References
-https://cupnooble.itch.io/sprout-lands-asset-pack
-Music / Sounds From: Final Fantasy, Octopath Traveler, Minecraft, Berleezy
-All rights reserved to their owners
+---
 
-## Helpful Videos
-https://www.youtube.com/watch?v=1EkJUdfnVzk&t=1804s&ab_channel=RapidVectors
-https://www.youtube.com/watch?v=875z4ZVITEY&ab_channel=RapidVectors
-https://www.youtube.com/watch?v=1iucnMQ520Y
-
+## 🎥 Helpful Videos
+- [How to Make a Farming Game in Godot (Part 1)](https://www.youtube.com/watch?v=1EkJUdfnVzk&t=1804s&ab_channel=RapidVectors) – Rapid Vectors  
+- [How to Make a Farming Game in Godot (Part 2)](https://www.youtube.com/watch?v=875z4ZVITEY&ab_channel=RapidVectors) – Rapid Vectors  
+- [How to Make a Quest System in Godot](https://www.youtube.com/watch?v=1iucnMQ520Y)  
 
