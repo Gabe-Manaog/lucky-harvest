@@ -1,5 +1,6 @@
 # 🌾 Lucky Harvest
 
+### School Project
 ### Group Members: Milan Hennessy, Gabe Manaog
 
 ## 🎮 Concept
@@ -40,12 +41,6 @@ Lucky Harvest is designed for **PC players** who enjoy **casual, relaxing games*
    ```
 3. Run the game (instructions vary based on the development environment).
 
-## 📜 License
-This project is open-source. Feel free to contribute and improve Lucky Harvest!
-
-## 🤝 Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you’d like to change.
-
 ---
 
 ## 📝 Postmortem
@@ -75,3 +70,22 @@ Initially, the energy bar worked fine, but transitioning between scenes caused i
 ---
 
 Happy farming! 🌿🎮
+
+## Screenshots
+![image](https://github.com/user-attachments/assets/c153daa4-ef48-4062-a80c-4384a586dbc8)
+![image](https://github.com/user-attachments/assets/eded5ba6-d55d-42eb-8006-f5c920db153e)
+![image](https://github.com/user-attachments/assets/dceaa894-0da2-4675-9dec-f16d84cf4c68)
+![image](https://github.com/user-attachments/assets/7555a803-951e-41d6-bf0a-ac92ff9f7659)
+
+
+## References
+https://cupnooble.itch.io/sprout-lands-asset-pack
+Music / Sounds From: Final Fantasy, Octopath Traveler, Minecraft, Berleezy
+All rights reserved to their owners
+
+## Helpful Videos
+https://www.youtube.com/watch?v=1EkJUdfnVzk&t=1804s&ab_channel=RapidVectors
+https://www.youtube.com/watch?v=875z4ZVITEY&ab_channel=RapidVectors
+https://www.youtube.com/watch?v=1iucnMQ520Y
+
+
