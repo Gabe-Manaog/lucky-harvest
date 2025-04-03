@@ -78,7 +78,8 @@ Happy farming! 🌿🎮
 ![image](https://github.com/user-attachments/assets/7555a803-951e-41d6-bf0a-ac92ff9f7659)
 
 ## 📚 References
-- **Sprite Assets:** [Sprout Lands Asset Pack](https://cupnooble.itch.io/sprout-lands-asset-pack)  
+- **Sprite Assets:** [Sprout Lands Asset Pack](https://cupnooble.itch.io/sprout-lands-asset-pack)
+- **itch.io down currently :( will be updated later**
 - **Music / Sounds:**  
   - Final Fantasy  
   - Octopath Traveler  
@@ -89,7 +90,8 @@ Happy farming! 🌿🎮
 ---
 
 ## 🎥 Helpful Videos
-- [Day and Night Cycle](https://www.youtube.com/watch?v=1EkJUdfnVzk&t=1804s&ab_channel=RapidVectors)
-- [Animals](https://www.youtube.com/watch?v=875z4ZVITEY&ab_channel=RapidVectors)
+- [Animals](https://www.youtube.com/watch?v=1EkJUdfnVzk&t=1804s&ab_channel=RapidVectors)
+- [Day and Night Cycle](https://www.youtube.com/watch?v=875z4ZVITEY&ab_channel=RapidVectors)
+- [Tilling and Planting](https://www.youtube.com/watch?v=0MIQ35Ms_9M&list=PLWTXKdBN8RZe3ytf6qdR4g1JRy0j-93v9&index=19&ab_channel=RapidVectors)
 - [How to Make a Quest System in Godot](https://www.youtube.com/watch?v=1iucnMQ520Y)  
 
